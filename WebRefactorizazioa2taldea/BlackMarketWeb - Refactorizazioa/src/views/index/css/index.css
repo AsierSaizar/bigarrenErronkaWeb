@@ -1,0 +1,83 @@
+.main-content {
+    text-align: center;
+    background-color: rgb(35, 34, 34);
+    padding: 100px 0;
+    grid-template-columns: repeat(2, 50%);
+    
+}
+body{
+    background-color: #2d2c2c;
+}
+.mapa{
+    height: 300px;
+    width: 400px;
+    float: left;
+    padding-left: 10%;
+}
+
+.etiketaGB{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    margin: auto;
+    font-weight: bold;
+    
+    height: 300px;
+    width: 900px;
+    border-radius: 30px;
+    transition: border-radius, 0.3s;
+    transition: background, 0.3s;
+    border-radius: 20px;
+    background: linear-gradient(rgb(65, 65, 65), rgb(235, 235, 235));
+    box-shadow: 2px 2px 2px 2px rgba(2, 2, 2, 0.5);
+    
+}
+div>h2{
+    text-align: left;
+    padding-left: 10%;
+}
+.etiketaGB:hover{
+    border-radius: 30px;
+    background: linear-gradient(rgb(79, 44, 126), pink);
+    transform: scale(1.05);
+    box-shadow: 5px 5px 2px 5px rgba(118, 118, 118, 0.5);
+}
+.GBtext{
+    padding-top: 50px;
+}
+.myContainer {
+    background-color: #2d2c2c;
+}
+
+h1, h2 {
+    color: #ffffff;
+}
+
+p { 
+    color: black;
+    line-height: 1.6;
+}
+.creadores p{
+    color: rgb(23, 226, 226);
+}
+.creadores{
+   padding-top: 10px;
+    background-color: #2d2c2c;
+    color: #ffffff;
+    text-align: center;
+}
+.footer {
+    padding: 30px 0;
+    background-color: #2d2c2c;
+    color: #cbc8c8;
+    text-align: center;
+    
+}
+
+
+
+
+#sareSozialak {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 25%) ;
+}

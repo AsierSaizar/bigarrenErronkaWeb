@@ -1,0 +1,83 @@
+
+.myContainer {
+    min-height: 100vh;
+    background-color:whitesmoke;
+    
+}
+.filtroForm{
+    text-align: center;
+    padding-bottom: 15px;
+}
+.search-input{
+    border-radius: 10px;
+}
+.search-buttonFiltro{
+    background-color: grey;
+    border-radius: 6px;
+    color: white;
+    width: 60px;
+    height: 35px;
+}
+.search-buttonFiltro:hover{
+    transform: scale(1.05);
+}
+.barra{
+    display: grid;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding: 20px;
+}
+.filtroaFormDiv{
+    border-radius: 20px;
+    padding: 20px;
+    background-color: rgb(171, 169, 169);
+
+}
+
+.myContainer>div.productuak{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    grid-template-columns: repeat(auto-fit, 300px);
+    gap: 4em;
+    margin: auto;
+    
+}
+.etiketa2{
+    color: red;
+}
+.etiketa{
+    color: green;
+}
+.h1{
+    text-align: center;
+    
+}
+.myContainer>div.productuak>table{
+    width: 100%;
+    height: 300px;
+    box-shadow:3px 3px red,-1em 0 0.4em olive;
+    
+}
+.myContainer>div.productuak>div{
+    transition: border-radius, 0.3s;
+    transition: background, 0.3s;
+    border-radius: 20px;
+    background: linear-gradient(rgb(101, 101, 237), pink);
+    box-shadow: 2px 2px 2px 2px rgba(2, 2, 2, 0.5);
+}
+.myContainer>div.productuak>div:hover{
+     
+    border-radius: 30px;
+    background: linear-gradient(rgb(135, 73, 216), pink);
+    transform: scale(1.05);
+    box-shadow: 5px 5px 2px 5px rgba(5, 2, 2, 0.5);
+}
+
+
+img{
+    width: 270px;
+    height: 270px;
+}
+
+

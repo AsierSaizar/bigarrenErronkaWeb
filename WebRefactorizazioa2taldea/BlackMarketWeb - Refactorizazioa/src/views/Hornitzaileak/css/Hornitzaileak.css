@@ -1,0 +1,85 @@
+
+.myContainer {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  min-height: max-content;
+} 
+div.formularioa {
+  align-self: center;
+}
+.formularioa>h3{
+  text-align: center;
+}
+
+form {
+    width: 60%;
+    height: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(rgb(81, 81, 233), 20%, rgb(236, 123, 142));
+    border-radius: 30px;
+    grid-template-rows: repeat(30%, 300px);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.7);
+  }
+  textarea{
+    
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.7);
+    min-height: 40px;
+    max-height: 40px;
+    min-width: calc(100% - 20px);
+    max-width: calc(100% - 20px);
+  }
+  input[type="submit"],
+  input[type="reset"] {
+    width: 100%;
+    font-weight: bold;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(rgb(28, 177, 47), 10%, rgb(13, 207, 159));
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 1px rgba(2, 2, 2, 0.7);
+
+  }
+  input[type="submit"]:hover,
+  input[type="reset"]:hover {
+    width: 100%;
+    transform: scale(1.01);
+  }
+  
+  input[type="submit"]:hover{
+    background: #2cd34d;
+  }
+  input[type="reset"]:hover {
+    background: #ff0404;
+    
+  }
+  
+  input[type="submit"]:focus,
+  input[type="reset"]:focus {
+    outline: none;
+  }
+  

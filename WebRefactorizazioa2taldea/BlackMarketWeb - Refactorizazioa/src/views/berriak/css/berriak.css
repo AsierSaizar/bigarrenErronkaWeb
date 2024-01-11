@@ -1,0 +1,74 @@
+ 
+.myContainer {
+    
+    min-height: 100vh;
+    background-color:whitesmoke;
+} 
+.myContainer>div.BERRIAK{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    grid-template-columns: repeat(auto-fit, 100%);
+    gap: 4em;
+    margin: auto;
+    width: 80%;
+}
+.filtroak{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    padding-top: 10px;
+}
+.filtroForm,
+.filtroForm1{
+    background-color: rgb(171, 169, 169);
+    width: 500px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 20px;
+    box-shadow:3px 3px red,-1em 0 0.4em olive;
+    box-shadow: 2px 2px 2px 2px rgba(2, 2, 2, 0.5);
+}
+.search-input{
+    border-radius: 10px;
+}
+
+.search-buttonFiltro{
+    background-color: grey;
+    border-radius: 6px;
+    color: white;
+    width: 60px;
+    height: 35px;
+}
+.h1{
+    text-align: center;
+}
+
+.myContainer>div.BERRIAK>table{
+    width: 80%;
+    height: 300px;
+    
+    
+}
+.etiketak{
+    padding: 30px;
+}
+.myContainer>div.BERRIAK>div{
+    
+    transition: background, 0.3s;
+    border-radius: 10px;
+    background: linear-gradient(rgb(106, 0, 255), pink);
+    box-shadow: 2px 2px 2px 2px rgba(2, 2, 2, 0.5);
+}
+.myContainer>div.BERRIAK>div:hover{
+    transform: scale(1.05);
+    
+    background: linear-gradient(rgb(135, 73, 216), pink);
+    
+    box-shadow: 5px 5px 2px 5px rgba(5, 2, 2, 0.5);
+}
+
+
+
+
