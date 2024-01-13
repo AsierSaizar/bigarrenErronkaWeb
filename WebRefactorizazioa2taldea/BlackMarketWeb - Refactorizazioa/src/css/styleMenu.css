@@ -30,7 +30,7 @@ div>header{
     justify-items: center;
     height: 38px;
 }
-nav a {
+.menuNavBoton {
     color: white;
     text-decoration: none;
     padding: 7px 25px;
@@ -39,7 +39,7 @@ nav a {
 .search-form{
     align-self: center;
 }
-nav a:hover {
+.menuNavBoton:hover {
     background-color: rgb(221, 221, 221);
     border-radius: 30px;
     color: black;
@@ -54,9 +54,13 @@ nav a:hover {
 .backGroundColorSideBar{
     background-color: #b4b4b4;
 }
-.offcanvas-body{
+.navMenu{
     display: grid;
 }
 .offcanvas-body {
     flex-grow: 0;
 }
+.zestoaIkono i {
+    font-size: 34px; 
+    padding-top: 2px;
+  }

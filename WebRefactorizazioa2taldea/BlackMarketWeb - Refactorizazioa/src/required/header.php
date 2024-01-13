@@ -35,19 +35,29 @@
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                <a href="../../../../src/views/index/php/index.php">Guri buruz</a>
-                <a href="../../../../src/views/konponenteak/php/pagina_konponenteak.php">konponenteak</a>
-                <a href="../../../../src/views/berriak/php/berriak.php">Berriak</a>
-                <a href="../../../../src/views/Hornitzaileak/php/Hornitzaileak.php">Hornitzaileak</a>
+                    <div class="navMenu">
+                        <a class="menuNavBoton" href="../../../../src/views/index/php/index.php">Guri buruz</a>
+                        <a class="menuNavBoton" href="../../../../src/views/konponenteak/php/pagina_konponenteak.php">konponenteak</a>
+                        <a class="menuNavBoton" href="../../../../src/views/berriak/php/berriak.php">Berriak</a>
+                        <a class="menuNavBoton" href="../../../../src/views/Hornitzaileak/php/Hornitzaileak.php">Hornitzaileak</a>
+                    </div>
+                    <br>
+                    <div class="zestaVistaPrevia">
+                        <p>Zestoan dituzun produktuen zerrenda:</p>
+                    </div>
+
+
                 </div>
             </div>
-
+    
             <div class="search-form">
                 <input aria-label="Buscar" id="search-input" placeholder="Buscar" class="search-input" value="">
                 <button aria-label="Search" type="submit" class="search-button" id="search-button">Buscar</button>
                 
             </div>
-
+            <div class="zestoaIkono">
+                <a href="../../../../src/views/Zesta/php/zesta.php"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
         </nav>
 
         <script>
