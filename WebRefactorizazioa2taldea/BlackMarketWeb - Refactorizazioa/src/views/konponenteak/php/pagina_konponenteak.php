@@ -1,5 +1,5 @@
         <link rel="stylesheet" type="text/css" href="../../../../src/views/konponenteak/css/pagina_konponenteak.css" media="screen" />
-        <link rel="stylesheet" type="text/css" href="../../../../src/css/styleMenu.css"  media="screen">
+        
         <?php
         require_once("../../../required/header.php");
         ?>
@@ -116,7 +116,6 @@
             }
 
             
-
             if ($opcion2 != "") {
                 if ($conditionAdded == true) {
                     $query = $query . " and";
@@ -165,7 +164,7 @@
                 
                 
                 while ($row = $result->fetch_assoc()) {
-                    echo "<div><img src='../../../../public/".$row["img"]."' ><br><br>" . "<b>" .$row["modelo"] . "<br><div class=\"etiketa\">" ."Balorazioa:".$row["balorazioa"]. "🌟 </div>  <div class=\"etiketa2\">" .$row["prezioa"]."€ </div><b> </div>";
+                    echo "<div><img src='../../../../public/".$row["img"]."' ><br><br>" . "<b>" .$row["modelo"] . "<br><div class=\"etiketa\">" ."Balorazioa:".$row["balorazioa"]. "🌟 </div>  <div class=\"etiketa2\">" .$row["prezioa"]."€ </div><b><button class=\"zestaraGehituBotoia\">Zesta+</button> </div>";
                 }
                 
             } else { 

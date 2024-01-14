@@ -1,5 +1,5 @@
         <link rel="stylesheet" type="text/css" href="../../../../src/views/Hornitzaileak/css/Hornitzaileak.css" media="screen" />
-        <link rel="stylesheet" type="text/css" href="../../../../src/css/styleMenu.css"  media="screen"/>
+        
         
         <?php
         require_once("../../../required/header.php");

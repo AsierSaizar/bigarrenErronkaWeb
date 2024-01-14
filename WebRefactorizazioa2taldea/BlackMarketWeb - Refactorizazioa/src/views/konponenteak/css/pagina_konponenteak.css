@@ -80,4 +80,11 @@ img{
     height: 270px;
 }
 
-
+.zestaraGehituBotoia{
+    background-color: rgb(234, 130, 243);
+    border-color:  rgb(234, 130, 243);
+    border-radius: 6px;
+    color: white;
+    width: 60px;
+    height: 35px;
+}
