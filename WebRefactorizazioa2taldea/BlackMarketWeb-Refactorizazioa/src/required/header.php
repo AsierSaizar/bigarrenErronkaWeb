@@ -13,7 +13,10 @@
     <link rel="stylesheet" type="text/css" href="../css/index.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="../../../../src/css/styleMenu.css" media="screen" />
     <script src="https://kit.fontawesome.com/7f605dc8fe.js" crossorigin="anonymous"></script>
-
+    <?php
+    define('APP_DIR', $_SERVER['DOCUMENT_ROOT'] . '/BlackMarketWeb-Refactorizazioa'); //Aplikazioaren karpeta edozein lekutatik atzitzeko.
+    define('HREF_VIEWS_DIR', '//BlackMarketWeb-Refactorizazioa/src/views'); //Aplikazioaren views karpeta edozein lekutatik deitzeko
+    ?>
 </head>
 
 <body class="">
@@ -55,7 +58,11 @@
                 <button aria-label="Search" type="submit" class="search-button" id="search-button">Buscar</button>
                 
             </div>
+
             <div class="zestoaIkono">
+            <?php
+            require_once(APP_DIR . "/src/translations/translations.php"); //APP_DIR erabilita itzulpenen dokumentua atzitu dugu.
+            ?>
                 <a href="../../../../src/views/Zesta/php/zesta.php"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </nav>
