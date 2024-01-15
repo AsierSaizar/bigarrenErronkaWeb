@@ -15,9 +15,12 @@ return [
 
     
     "Gure Produktuak" => "Gure Produktuak",
-    "Kontaktoa3" => "Contacto",
-    "Kontaktoa4" => "Contacto",
-    "Kontaktoa5" => "Contacto",
-    "Kontaktoa6" => "Contacto",
+    "Aukeratu Konponentre mota" => "Aukeratu Konponentre mota",
+    "Marka" => "Marka",
+    "Prezioa" => "Prezioa",
+    "Ordenatu" => "Ordenatu",
+    "Bilatu" => "Bilatu",
+    "Balorazioa" => "Balorazioa",
+    "Bilatu2" => "Search",
 ];
  

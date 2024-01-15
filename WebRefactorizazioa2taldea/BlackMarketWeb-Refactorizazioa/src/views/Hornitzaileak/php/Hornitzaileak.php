@@ -9,7 +9,7 @@
 
         <div class="formularioa">
             <h3><b>Hornitzaile izateko formulario hau bete:</b></h3>
-            <form method="post">
+            <form id="formularioaForm" method="post">
 
 
             <label for="tlfzenb">Empresarako Telefono Zenbakia:</label>

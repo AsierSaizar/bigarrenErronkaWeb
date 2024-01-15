@@ -8,7 +8,7 @@
         <div class="barra">
             <div class="filtroaFormDiv">
                 <form class="filtroForm" action="pagina_konponenteak.php" method="get">
-                    <label for="lang">Aukeratu Konponentre mota:</label>
+                    <label for="lang"><?= trans("Aukeratu Konponentre mota") ?>:</label>
                     <select name="seleccion1" id="lang"  class="search-input">
                         <option value="" <?php if (isset($_GET['seleccion1']) && $_GET['seleccion1'] === 'DENAK') echo 'selected="selected"'; ?>>DENAK</option>
                         <option value="Placa" <?php if (isset($_GET['seleccion1']) && $_GET['seleccion1'] === 'Placa') echo 'selected="selected"'; ?>>Placa</option>
@@ -25,7 +25,7 @@
                         <option value="Caja de Ordenador" <?php if (isset($_GET['seleccion1']) && $_GET['seleccion1'] === 'Caja de Ordenador') echo 'selected="selected"'; ?>>Caja de Ordenador</option>
                     </select>
                     <br><br>
-                    <label for="lang">Marka:</label>
+                    <label for="lang"><?= trans("Marka") ?>:</label>
                     <select name="seleccion2" id="lang"  class="search-input">
                         <option value="" <?php if (isset($_GET['seleccion2']) && $_GET['seleccion2'] === 'DENAK') echo 'selected="selected"'; ?>>DENAK</option>
                         <option value="asus" <?php if (isset($_GET['seleccion2']) && $_GET['seleccion2'] === 'asus') echo 'selected="selected"'; ?>>asus</option>
@@ -55,7 +55,7 @@
 
                     </select>
                     <br><br>
-                    <label for="lang">Prezioa:</label>
+                    <label for="lang"><?= trans("Prezioa") ?>:</label>
                     <select name="seleccion3" id="lang"  class="search-input">
                         <option value="" <?php if (isset($_GET['seleccion3']) && $_GET['seleccion3'] === 'DENAK') echo 'selected="selected"'; ?>>DENAK</option>
                         <option value="0-50" <?php if (isset($_GET['seleccion3']) && $_GET['seleccion3'] === '0-50') echo 'selected="selected"'; ?>>0-50€</option>
@@ -72,7 +72,7 @@
                         
                     </select>
                     <br><br>
-                    <label for="lang">Ordenatu:</label>
+                    <label for="lang"><?= trans("Ordenatu") ?>:</label>
                     <select name="seleccion4" id="lang"  class="search-input">
                         <option value="" <?php if (isset($_GET['seleccion4']) && $_GET['seleccion4'] === 'Normal') echo 'selected="selected"'; ?>>Normal</option>
                         <option value="Prezioa ↑" <?php if (isset($_GET['seleccion4']) && $_GET['seleccion4'] === 'Prezioa ↑') echo 'selected="selected"'; ?>>Prezioa ↑</option>
@@ -81,7 +81,7 @@
                         <option value="Balorazioa ↓" <?php if (isset($_GET['seleccion4']) && $_GET['seleccion4'] === 'Balorazioa ↓') echo 'selected="selected"'; ?>>Balorazioa ↓</option>
                     </select>
 
-                    <input class="search-buttonFiltro" type="submit" value="Bilatu" />
+                    <input class="search-buttonFiltro" type="submit" value="<?= trans("Bilatu") ?>" />
                 </form>
             </div>
         </div>

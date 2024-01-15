@@ -15,10 +15,13 @@ return [
 
     
     "Gure Produktuak" => "Our products",
-    "Kontaktoa3" => "Contacto",
-    "Kontaktoa4" => "Contacto",
-    "Kontaktoa5" => "Contacto",
-    "Kontaktoa6" => "Contacto",
+    "Aukeratu Konponentre mota" => "Choose the type of conponent",
+    "Marka" => "Brand",
+    "Prezioa" => "Price",
+    "Ordenatu" => "Order by",
+    "Bilatu" => "Search",
+    "Balorazioa" => "Baloration",
+    "Bilatu2" => "Search",
     
 ];
  

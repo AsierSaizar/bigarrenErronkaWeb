@@ -48,7 +48,7 @@ div>h2{
     background-color: #2d2c2c;
 }
 
-h1, h2 {
+#ongoEtorri, h2 {
     color: #ffffff;
 }
 
@@ -72,12 +72,22 @@ p {
     text-align: center;
     
 }
+.creadores{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
 
+.sareSozialakBotoia{
+    text-decoration: none;
+    color: #ffffff;
 
-
-
+}
+.sareSozialakBotoia:hover{
+    color: #cbc8c8;
+}
 #sareSozialak {
     display: grid;
+
     align-items: center;
     grid-template-columns: repeat(4, 25%) ;
 }

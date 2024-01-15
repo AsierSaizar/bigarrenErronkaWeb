@@ -11,7 +11,7 @@ div.formularioa {
   text-align: center;
 }
 
-form {
+#formularioaForm {
     width: 60%;
     margin: 0 auto;
     padding: 20px;

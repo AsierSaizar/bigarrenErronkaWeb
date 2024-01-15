@@ -9,14 +9,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
 
-    <link rel="stylesheet" type="text/css" href="../css/index.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="../../../../src/css/styleMenu.css" media="screen" />
     <script src="https://kit.fontawesome.com/7f605dc8fe.js" crossorigin="anonymous"></script>
     <?php
     define('APP_DIR', $_SERVER['DOCUMENT_ROOT'] . '/Desktop/WebRefactorizazioa/WebRefactorizazioa2taldea/BlackMarketWeb-Refactorizazioa'); //Aplikazioaren karpeta edozein lekutatik atzitzeko.
     define('HREF_VIEWS_DIR', '/Desktop/WebRefactorizazioa/WebRefactorizazioa2taldea/BlackMarketWeb-Refactorizazioa/src/views'); //Aplikazioaren views karpeta edozein lekutatik deitzeko
     ?>
+    <link rel="stylesheet" type="text/css" href="../css/index.css" media="screen" />
 <!-- servidorea pasatzeakon aldatu hau!!!!!!!! -->
 
 </head>
@@ -27,10 +28,10 @@
 
         <!-- hau da menua eta logoa, pagina guztietan berdina (hemen hasten da) -->
 
-        <nav id="menu">
+        <nav id="menua">
             <div id="botoiaSideBar">
                 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">MENU</button>
+                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fa-solid fa-bars"></i></button>
             </div>
 
             <div class="backGroundColorSideBar offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"

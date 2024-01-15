@@ -14,9 +14,12 @@ return [
     // pagina_konponenteak.php
 
     "Gure Produktuak" => "Nuestros productos",
-    "Kontaktoa3" => "Contacto",
-    "Kontaktoa4" => "Contacto",
-    "Kontaktoa5" => "Contacto",
-    "Kontaktoa6" => "Contacto",
+    "Aukeratu Konponentre mota" => "Elije el tipo de conponente",
+    "Marka" => "Marca",
+    "Prezioa" => "Precio",
+    "Ordenatu" => "Ordenar",
+    "Bilatu" => "Buscar",
+    "Balorazioa" => "Valoracion",
+    "Bilatu2" => "Search",
 
 ]; 
