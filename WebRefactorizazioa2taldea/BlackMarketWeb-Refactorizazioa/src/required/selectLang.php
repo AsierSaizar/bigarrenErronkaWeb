@@ -13,6 +13,12 @@
                             //formulariotik ez bada hizkuntzarik aukeratu eta sesioan gaztelera badago => selected
                             
                             ?>> ES</option>
+        <option value="en" <?php
+                            //formulariotik aukeratutako hizkuntza gaztelera bada => selected
+                            
+                            //formulariotik ez bada hizkuntzarik aukeratu eta sesioan gaztelera badago => selected
+                            
+                            ?>> EN</option>
     </select>
     <button>Aldatu</button>
 </form>

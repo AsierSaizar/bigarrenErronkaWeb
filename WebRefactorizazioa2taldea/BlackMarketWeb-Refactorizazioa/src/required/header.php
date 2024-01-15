@@ -14,9 +14,11 @@
     <link rel="stylesheet" type="text/css" href="../../../../src/css/styleMenu.css" media="screen" />
     <script src="https://kit.fontawesome.com/7f605dc8fe.js" crossorigin="anonymous"></script>
     <?php
-    define('APP_DIR', $_SERVER['DOCUMENT_ROOT'] . '/BlackMarketWeb-Refactorizazioa'); //Aplikazioaren karpeta edozein lekutatik atzitzeko.
-    define('HREF_VIEWS_DIR', '//BlackMarketWeb-Refactorizazioa/src/views'); //Aplikazioaren views karpeta edozein lekutatik deitzeko
+    define('APP_DIR', $_SERVER['DOCUMENT_ROOT'] . '/Desktop/WebRefactorizazioa/WebRefactorizazioa2taldea/BlackMarketWeb-Refactorizazioa'); //Aplikazioaren karpeta edozein lekutatik atzitzeko.
+    define('HREF_VIEWS_DIR', '/Desktop/WebRefactorizazioa/WebRefactorizazioa2taldea/BlackMarketWeb-Refactorizazioa/src/views'); //Aplikazioaren views karpeta edozein lekutatik deitzeko
     ?>
+<!-- servidorea pasatzeakon aldatu hau!!!!!!!! -->
+
 </head>
 
 <body class="">
@@ -46,7 +48,7 @@
                     </div>
                     <br>
                     <div class="zestaVistaPrevia">
-                        <p>Zestoan dituzun produktuen zerrenda:</p>
+                        <p>bista previa</p>
                     </div>
 
 
@@ -58,13 +60,16 @@
                 <button aria-label="Search" type="submit" class="search-button" id="search-button">Buscar</button>
                 
             </div>
-
-            <div class="zestoaIkono">
+            <div class="language">
             <?php
-            require_once(APP_DIR . "/src/translations/translations.php"); //APP_DIR erabilita itzulpenen dokumentua atzitu dugu.
+            $link = APP_DIR . "/src/language/translations.php";
+            require_once($link); //APP_DIR erabilita itzulpenen dokumentua atzitu dugu.
             ?>
+            </div>
+            <div class="zestoaIkono">
                 <a href="../../../../src/views/Zesta/php/zesta.php"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
+            
         </nav>
 
         <script>

@@ -4,7 +4,7 @@
         require_once("../../../required/header.php");
         ?>
 
-        <div class="h1"><H1>Gure Produktuak</H1></div>
+        <div class="h1"><H1><?= trans("Gure Produktuak") ?></H1></div>
         <div class="barra">
             <div class="filtroaFormDiv">
                 <form class="filtroForm" action="pagina_konponenteak.php" method="get">
