@@ -14,11 +14,6 @@ changeSessionLanguage(); //Beti funtzio hontan sartzen gara
 
 ?>
 
-<!-- HTML-A -->
-<div class="header grid-elem">
-<?php require_once(APP_DIR . "/src/required/selectLang.php"); ?>
-</div>
-
 
 <?php
 

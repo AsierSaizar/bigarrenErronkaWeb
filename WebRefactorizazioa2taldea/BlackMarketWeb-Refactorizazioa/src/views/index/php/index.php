@@ -14,7 +14,7 @@
             </div>
             <div class="etiketaGB">
                 <div>
-                    <h2><?= trans("GuriBuruz") ?></h2>
+                    <h2><?= trans("GuriBuruz") ?>:</h2>
                     <img src="../../../../public/empresaargazkia.jpg">
                 </div>
                 <div class="GBtext">

@@ -20,5 +20,5 @@
                             
                             ?>> EN</option>
     </select>
-    <button>Aldatu</button>
+    <button><?= trans("aldatu") ?></button>
 </form>

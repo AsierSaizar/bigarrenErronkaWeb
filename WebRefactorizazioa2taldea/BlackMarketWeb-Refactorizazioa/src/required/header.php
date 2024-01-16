@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
+
 
     <link rel="stylesheet" type="text/css" href="../../../../src/css/styleMenu.css" media="screen" />
     <script src="https://kit.fontawesome.com/7f605dc8fe.js" crossorigin="anonymous"></script>
@@ -18,7 +18,12 @@
     define('HREF_VIEWS_DIR', '/Desktop/WebRefactorizazioa/WebRefactorizazioa2taldea/BlackMarketWeb-Refactorizazioa/src/views'); //Aplikazioaren views karpeta edozein lekutatik deitzeko
     ?>
     <link rel="stylesheet" type="text/css" href="../css/index.css" media="screen" />
-<!-- servidorea pasatzeakon aldatu hau!!!!!!!! -->
+    <!-- servidorea pasatzeakon aldatu hau!!!!!!!! -->
+
+    <?php
+    $link = APP_DIR . "/src/language/translations.php";
+    require_once($link); //APP_DIR erabilita itzulpenen dokumentua atzitu dugu.
+    ?>
 
 </head>
 
@@ -31,21 +36,22 @@
         <nav id="menua">
             <div id="botoiaSideBar">
                 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fa-solid fa-bars"></i></button>
+                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i
+                        class="fa-solid fa-bars"></i></button>
             </div>
 
-            <div class="backGroundColorSideBar offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
-                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="backGroundColorSideBar offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
+                tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasScrollingLabel">BLACK MARKET</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
                     <div class="navMenu">
-                        <a class="menuNavBoton" href="../../../../src/views/index/php/index.php">Guri buruz</a>
-                        <a class="menuNavBoton" href="../../../../src/views/konponenteak/php/pagina_konponenteak.php">konponenteak</a>
-                        <a class="menuNavBoton" href="../../../../src/views/berriak/php/berriak.php">Berriak</a>
-                        <a class="menuNavBoton" href="../../../../src/views/Hornitzaileak/php/Hornitzaileak.php">Hornitzaileak</a>
+                        <a class="menuNavBoton" href="../../../../src/views/index/php/index.php"><?= trans("GuriBuruz") ?></a>
+                        <a class="menuNavBoton" href="../../../../src/views/konponenteak/php/pagina_konponenteak.php"><?= trans("Konponenteak") ?></a>
+                        <a class="menuNavBoton" href="../../../../src/views/berriak/php/berriak.php"><?= trans("Berriak") ?></a>
+                        <a class="menuNavBoton" href="../../../../src/views/Hornitzaileak/php/Hornitzaileak.php"><?= trans("Hornitzaileak") ?></a>
                     </div>
                     <br>
                     <div class="zestaVistaPrevia">
@@ -55,22 +61,30 @@
 
                 </div>
             </div>
-    
-            <div class="search-form">
-                <input aria-label="Buscar" id="search-input" placeholder="Buscar" class="search-input" value="">
-                <button aria-label="Search" type="submit" class="search-button" id="search-button">Buscar</button>
-                
-            </div>
-            <div class="language">
             <?php
             $link = APP_DIR . "/src/language/translations.php";
             require_once($link); //APP_DIR erabilita itzulpenen dokumentua atzitu dugu.
             ?>
+
+            <div class="search-form">
+                <input aria-label="Buscar" id="search-input" placeholder="Bilatu" class="search-input" value="">
+                <button aria-label="Search" type="submit" class="search-button" id="search-button">
+                    <?= trans("Bilatu") ?>
+                </button>
+
+            </div>
+            <div class="language">
+
+                <!-- HTML-A -->
+                <div class="header grid-elem">
+                    <?php require_once(APP_DIR . "/src/required/selectLang.php"); ?>
+</div>
+
             </div>
             <div class="zestoaIkono">
                 <a href="../../../../src/views/Zesta/php/zesta.php"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
-            
+
         </nav>
 
         <script>

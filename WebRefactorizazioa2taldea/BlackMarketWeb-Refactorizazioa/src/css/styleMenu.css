@@ -23,7 +23,7 @@ div>header{
 }
 #menua {
     display:flex;
-    padding-left: 6em;
+    padding-left: 70px;
     padding-right: 6em;
     justify-content:space-between;
     background-color: #606060;
