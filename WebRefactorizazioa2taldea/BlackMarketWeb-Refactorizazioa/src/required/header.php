@@ -55,7 +55,7 @@
                     </div>
                     <br>
                     <div class="zestaVistaPrevia">
-                        <p>bista previa</p>
+                        <p><?= trans("zestokoVistaPrevia") ?>:</p>
                     </div>
 
 
@@ -67,7 +67,7 @@
             ?>
 
             <div class="search-form">
-                <input aria-label="Buscar" id="search-input" placeholder="Bilatu" class="search-input" value="">
+                <input aria-label="Buscar" id="search-input" placeholder="<?= trans("Bilatu") ?>" class="search-input" value="">
                 <button aria-label="Search" type="submit" class="search-button" id="search-button">
                     <?= trans("Bilatu") ?>
                 </button>

@@ -11,9 +11,9 @@ return [
     "sortzaileak" => "Black Market founders",
     "Kontaktoa" => "Contact",
     "Kontakto eta sare sozialak" => "Contact and social medias",
-    // pagina_konponenteak.php
 
-    
+
+    // pagina_konponenteak.php
     "Gure Produktuak" => "Our products",
     "Aukeratu Konponentre mota" => "Choose the type of conponent",
     "Konponenteak" => "Conponents",
@@ -21,12 +21,12 @@ return [
     "Prezioa" => "Price",
     "Ordenatu" => "Order by",
     "Bilatu" => "Search",
-    "Balorazioa" => "Baloration",
+    "Balorazioa" => "Valoration",
     "aldatu" => "Change",
     "Berriak" => "News",
     "Hornitzaileak" => "Suppliers",
-    "aldatu3" => "Aldatu",
-    "aldatu4" => "Aldatu",
+    "Denak" => "All",
+    "Ez dago irizpide hauek betetzen dituet produkturik." => "There are no products that meet these criteria.",
     "aldatu5" => "Aldatu",
     "aldatu6" => "Aldatu",
     "aldatu7" => "Aldatu",

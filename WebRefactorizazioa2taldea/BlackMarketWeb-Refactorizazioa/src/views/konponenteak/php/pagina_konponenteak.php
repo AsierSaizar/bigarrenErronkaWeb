@@ -10,7 +10,7 @@
                 <form class="filtroForm" action="pagina_konponenteak.php" method="get">
                     <label for="lang"><?= trans("Aukeratu Konponentre mota") ?>:</label>
                     <select name="seleccion1" id="lang"  class="search-input">
-                        <option value="" <?php if (isset($_GET['seleccion1']) && $_GET['seleccion1'] === 'DENAK') echo 'selected="selected"'; ?>>DENAK</option>
+                        <option value="" <?php if (isset($_GET['seleccion1']) && $_GET['seleccion1'] === '<?= trans("Denak") ?>') echo 'selected="selected"'; ?>><?= trans("Denak") ?></option>
                         <option value="Placa" <?php if (isset($_GET['seleccion1']) && $_GET['seleccion1'] === 'Placa') echo 'selected="selected"'; ?>>Placa</option>
                         <option value="ram" <?php if (isset($_GET['seleccion1']) && $_GET['seleccion1'] === 'ram') echo 'selected="selected"'; ?>>ram</option>
                         <option value="CPU" <?php if (isset($_GET['seleccion1']) && $_GET['seleccion1'] === 'CPU') echo 'selected="selected"'; ?>>CPU</option>
@@ -27,7 +27,7 @@
                     <br><br>
                     <label for="lang"><?= trans("Marka") ?>:</label>
                     <select name="seleccion2" id="lang"  class="search-input">
-                        <option value="" <?php if (isset($_GET['seleccion2']) && $_GET['seleccion2'] === 'DENAK') echo 'selected="selected"'; ?>>DENAK</option>
+                        <option value="" <?php if (isset($_GET['seleccion2']) && $_GET['seleccion2'] === '<?= trans("Denak") ?>') echo 'selected="selected"'; ?>><?= trans("Denak") ?></option>
                         <option value="asus" <?php if (isset($_GET['seleccion2']) && $_GET['seleccion2'] === 'asus') echo 'selected="selected"'; ?>>asus</option>
                         <option value="msi" <?php if (isset($_GET['seleccion2']) && $_GET['seleccion2'] === 'msi') echo 'selected="selected"'; ?>>msi</option>
                         <option value="GigaByte" <?php if (isset($_GET['seleccion2']) && $_GET['seleccion2'] === 'GigaByte') echo 'selected="selected"'; ?>>GigaByte</option>
@@ -57,7 +57,7 @@
                     <br><br>
                     <label for="lang"><?= trans("Prezioa") ?>:</label>
                     <select name="seleccion3" id="lang"  class="search-input">
-                        <option value="" <?php if (isset($_GET['seleccion3']) && $_GET['seleccion3'] === 'DENAK') echo 'selected="selected"'; ?>>DENAK</option>
+                        <option value="" <?php if (isset($_GET['seleccion3']) && $_GET['seleccion3'] === '<?= trans("Denak") ?>') echo 'selected="selected"'; ?>><?= trans("Denak") ?></option>
                         <option value="0-50" <?php if (isset($_GET['seleccion3']) && $_GET['seleccion3'] === '0-50') echo 'selected="selected"'; ?>>0-50€</option>
                         <option value="50-100" <?php if (isset($_GET['seleccion3']) && $_GET['seleccion3'] === '50-100') echo 'selected="selected"'; ?>>50-100€</option>
                         <option value="100-150" <?php if (isset($_GET['seleccion3']) && $_GET['seleccion3'] === '100-150') echo 'selected="selected"'; ?>>100-150€</option>
@@ -75,10 +75,10 @@
                     <label for="lang"><?= trans("Ordenatu") ?>:</label>
                     <select name="seleccion4" id="lang"  class="search-input">
                         <option value="" <?php if (isset($_GET['seleccion4']) && $_GET['seleccion4'] === 'Normal') echo 'selected="selected"'; ?>>Normal</option>
-                        <option value="Prezioa ↑" <?php if (isset($_GET['seleccion4']) && $_GET['seleccion4'] === 'Prezioa ↑') echo 'selected="selected"'; ?>>Prezioa ↑</option>
-                        <option value="Prezioa ↓" <?php if (isset($_GET['seleccion4']) && $_GET['seleccion4'] === 'Prezioa ↓') echo 'selected="selected"'; ?>>Prezioa ↓</option>
-                        <option value="Balorazioa ↑" <?php if (isset($_GET['seleccion4']) && $_GET['seleccion4'] === 'Balorazioa ↑') echo 'selected="selected"'; ?>>Balorazioa ↑</option>
-                        <option value="Balorazioa ↓" <?php if (isset($_GET['seleccion4']) && $_GET['seleccion4'] === 'Balorazioa ↓') echo 'selected="selected"'; ?>>Balorazioa ↓</option>
+                        <option value="<?= trans("Prezioa") ?> ↑" <?php if (isset($_GET['seleccion4']) && $_GET['seleccion4'] === trans("Prezioa") . ' ↑') echo 'selected="selected"'; ?>><?= trans("Prezioa") ?> ↑</option>
+                        <option value="<?= trans("Prezioa") ?> ↓" <?php if (isset($_GET['seleccion4']) && $_GET['seleccion4'] === trans("Prezioa") . ' ↓') echo 'selected="selected"'; ?>><?= trans("Prezioa") ?> ↓</option>
+                        <option value="<?= trans("Balorazioa") ?> ↑" <?php if (isset($_GET['seleccion4']) && $_GET['seleccion4'] === trans("Balorazioa") . ' ↑') echo 'selected="selected"'; ?>><?= trans("Balorazioa") ?> ↑</option>
+                        <option value="<?= trans("Balorazioa") ?> ↓" <?php if (isset($_GET['seleccion4']) && $_GET['seleccion4'] === trans("Balorazioa") . ' ↓') echo 'selected="selected"'; ?>><?= trans("Balorazioa") ?> ↓</option>
                     </select>
 
                     <input class="search-buttonFiltro" type="submit" value="<?= trans("Bilatu") ?>" />
@@ -140,35 +140,44 @@
             if ($opcion4 != "") {
                 switch ($opcion4) {
                     case "Prezioa ↑":
+                    case "Precio ↑":
+                    case "Price ↑":
                         $query = $query . " ORDER BY prezioa ASC";
                         $conditionAdded = true;
                         break;
                     case "Prezioa ↓":
+                    case "Precio ↓":
+                    case "Price ↓":
                         $query = $query . " ORDER BY prezioa DESC";
                         $conditionAdded = true;
                         break;
                     case "Balorazioa ↑":
+                    case "Valoracion ↑":
+                    case "Valoration ↑":
                         $query = $query . " ORDER BY balorazioa ASC";
                         $conditionAdded = true;
                         break;
                     case "Balorazioa ↓":
-                        $query = $query . " ORDER BY balorazioa DESC";
-                        $conditionAdded = true;
-                        break;
+                        case "Valoracion ↓":
+                        case "Valoration ↓":
+                            $query = $query . " ORDER BY balorazioa DESC";
+                            $conditionAdded = true;
+                            break;
+                    
+                    
                 }
-            }    
+            }
             
             $result = $conn->query($query);
 
             if ($result->num_rows > 0) {
-                
-                
+
                 while ($row = $result->fetch_assoc()) {
-                    echo "<div><img src='../../../../public/".$row["img"]."' ><br><br>" . "<b>" .$row["modelo"] . "<br><div class=\"etiketa\">" ."Balorazioa:".$row["balorazioa"]. "🌟 </div>  <div class=\"etiketa2\">" .$row["prezioa"]."€ </div><b><button class=\"zestaraGehituBotoia\">Zesta+</button> </div>";
+                    echo "<div><img src='../../../../public/".$row["img"]."' ><br><br>" . "<b>" .$row["modelo"] . "<br><div class=\"etiketa\">" .trans("Balorazioa")." ".$row["balorazioa"]. "🌟 </div>  <div class=\"etiketa2\">" .$row["prezioa"]."€ <b></div><button class=\"zestaraGehituBotoia\">Zesta+</button> </div>";
                 }
                 
             } else { 
-                echo "Ez dago irizpide hauek betetzen dituet produkturik.";
+                echo trans("Ez dago irizpide hauek betetzen dituet produkturik.");
             }
 
             
