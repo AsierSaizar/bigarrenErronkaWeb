@@ -2,7 +2,7 @@
 <?php
 
 // EKINTZAK
-
+session_start();
 //Sesioa hasten dugu bertan gordetzeko zein hizkuntzatan ari garen
 
 if (!isset($_SESSION["_LANGUAGE"])) { //Sesioan hizkuntza ez bada gorde
@@ -13,7 +13,6 @@ if (!isset($_SESSION["_LANGUAGE"])) { //Sesioan hizkuntza ez bada gorde
 changeSessionLanguage(); //Beti funtzio hontan sartzen gara
 
 ?>
-
 
 <?php
 
