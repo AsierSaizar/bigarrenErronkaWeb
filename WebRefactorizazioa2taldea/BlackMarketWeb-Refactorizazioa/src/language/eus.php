@@ -2,6 +2,7 @@
 return [
      
     "zestokoVistaPrevia" => "Saskietako produktuen aurrebista", 
+    "faboriton Lista" => "Gustuko productuak",
 
     // index.php
     "OngiEtorri" => "Ongi etorri BLACK MARKET-era", 

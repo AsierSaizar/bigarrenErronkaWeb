@@ -54,9 +54,7 @@
                         <a class="menuNavBoton" href="../../../../src/views/Hornitzaileak/php/Hornitzaileak.php"><?= trans("Hornitzaileak") ?></a>
                     </div>
                     <br>
-                    <div class="zestaVistaPrevia">
-                        <p><?= trans("zestokoVistaPrevia") ?>:</p>
-                    </div>
+                    
 
 
                 </div>
@@ -78,7 +76,7 @@
                 <!-- HTML-A -->
                 <div class="header grid-elem">
                     <?php require_once(APP_DIR . "/src/required/selectLang.php"); ?>
-</div>
+            </div>
 
             </div>
             <div class="zestoaIkono">
