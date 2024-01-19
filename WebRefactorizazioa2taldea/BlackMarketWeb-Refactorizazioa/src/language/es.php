@@ -1,12 +1,12 @@
 <?php
 return [
-    
+
     "zestokoVistaPrevia" => "Vista previa de los productos de la cesta",
-    "faboriton Lista" => "Favorite products",
+    "faboriton Lista" => "Productos favoritos",
 
     // index.php
-    "OngiEtorri" => "Bienvenido a Black Market", 
-    "GuriBuruztext" => "¡Hola! Aunque \"Black Market\" está en rehabilitación, nuestro objetivo es ofrecer productos de alta calidad a bajo coste. Ofrecemos oportunidades y previsiones adaptadas a las necesidades de nuestros clientes, siempre que la tecnología se esté adelantando al mundo. Nuestro compromiso es poner la calidad y la satisfacción de los clientes. ¡Con nosotros, para que tengas a nuestro alcance las nuevas tecnologías!", 
+    "OngiEtorri" => "Bienvenido a Black Market",
+    "GuriBuruztext" => "¡Hola! Aunque \"Black Market\" está en rehabilitación, nuestro objetivo es ofrecer productos de alta calidad a bajo coste. Ofrecemos oportunidades y previsiones adaptadas a las necesidades de nuestros clientes, siempre que la tecnología se esté adelantando al mundo. Nuestro compromiso es poner la calidad y la satisfacción de los clientes. ¡Con nosotros, para que tengas a nuestro alcance las nuevas tecnologías!",
     "GuriBuruz" => "Sobre nosotros",
     "kokapena" => "Ubicacion",
     "sortzaileak" => "Fundadores de Black Market",
@@ -33,4 +33,3 @@ return [
     "aldatu8" => "Aldatu",
 ];
 
- 

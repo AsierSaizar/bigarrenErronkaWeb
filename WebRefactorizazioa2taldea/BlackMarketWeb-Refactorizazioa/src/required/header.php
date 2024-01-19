@@ -23,8 +23,8 @@
     <?php
     $link = APP_DIR . "/src/language/translations.php";
     require_once($link); //APP_DIR erabilita itzulpenen dokumentua atzitu dugu.
+    
     ?>
-
 </head>
 
 <body class="">
@@ -48,14 +48,75 @@
                 </div>
                 <div class="offcanvas-body">
                     <div class="navMenu">
-                        <a class="menuNavBoton" href="../../../../src/views/index/php/index.php"><?= trans("GuriBuruz") ?></a>
-                        <a class="menuNavBoton" href="../../../../src/views/konponenteak/php/pagina_konponenteak.php"><?= trans("Konponenteak") ?></a>
-                        <a class="menuNavBoton" href="../../../../src/views/berriak/php/berriak.php"><?= trans("Berriak") ?></a>
-                        <a class="menuNavBoton" href="../../../../src/views/Hornitzaileak/php/Hornitzaileak.php"><?= trans("Hornitzaileak") ?></a>
+                        <a class="menuNavBoton" href="../../../../src/views/index/php/index.php">
+                            <?= trans("GuriBuruz") ?>
+                        </a>
+                        <a class="menuNavBoton" href="../../../../src/views/konponenteak/php/pagina_konponenteak.php">
+                            <?= trans("Konponenteak") ?>
+                        </a>
+                        <a class="menuNavBoton" href="../../../../src/views/berriak/php/berriak.php">
+                            <?= trans("Berriak") ?>
+                        </a>
+                        <a class="menuNavBoton" href="../../../../src/views/Hornitzaileak/php/Hornitzaileak.php">
+                            <?= trans("Hornitzaileak") ?>
+                        </a>
                     </div>
                     <br>
-                    
+                    <h3>
+                        <?= trans("faboriton Lista") ?>:
+                    </h3>
+                    <br>
+                    <div id="offcanvas-body">
+                        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+                        <script>
+                            $(document).ready(function () {
 
+                                var favoritos = sessionStorage.getItem('favoritos');
+                                if (favoritos) {
+                                    $('#offcanvas-body').html(favoritos);
+
+
+                                    $('.addToFavourite').each(function () {
+                                        var id = $(this).siblings("#id").val();
+                                        if ($('#offcanvas-body #kaja' + id).length > 0) {
+                                            $(this).addClass("yaGehituta");
+                                            $(this).removeClass("addToFavourite");
+                                        }
+                                    });
+                                }
+                            });
+
+                            $(".addToFavourite").click(function () {
+                                var id = $(this).siblings("#id").val();
+                                var modelo = $(this).siblings("#modelo").val();
+                                var precio = $(this).siblings("#precio").val();
+
+                                if ($('#offcanvas-body #kaja' + id).length > 0) {
+                                    $(this).addClass("addToFavourite");
+                                    $(this).removeClass("yaGehituta");
+
+                                    $("#kaja" + id).remove();
+                                } else {
+                                    var offcanvasBody = $('#offcanvas-body');
+                                    var pModelo = $('<div><p>').text('Modelo: ' + modelo);
+                                    var pPrecio = $('<p>').text('Precio: ' + precio + '€');
+
+                                    offcanvasBody.append("<div class=\"faboritotakoKajak\" id='kaja" + id + "'>");
+                                    var favorites = $('#kaja' + id);
+                                    favorites.append(pModelo);
+                                    favorites.append(pPrecio);
+                                    offcanvasBody.append("</div>");
+
+                                    $(this).addClass("yaGehituta");
+                                    $(this).removeClass("addToFavourite");
+
+
+                                    sessionStorage.setItem('favoritos', offcanvasBody.html());
+                                }
+                            });
+                        </script>
+
+                    </div>
 
                 </div>
             </div>
@@ -65,7 +126,8 @@
             ?>
 
             <div class="search-form">
-                <input aria-label="Buscar" id="search-input" placeholder="<?= trans("Bilatu") ?>" class="search-input" value="">
+                <input aria-label="Buscar" id="search-input" placeholder="<?= trans("Bilatu") ?>" class="search-input"
+                    value="">
                 <button aria-label="Search" type="submit" class="search-button" id="search-button">
                     <?= trans("Bilatu") ?>
                 </button>
@@ -76,7 +138,7 @@
                 <!-- HTML-A -->
                 <div class="header grid-elem">
                     <?php require_once(APP_DIR . "/src/required/selectLang.php"); ?>
-            </div>
+                </div>
 
             </div>
             <div class="zestoaIkono">

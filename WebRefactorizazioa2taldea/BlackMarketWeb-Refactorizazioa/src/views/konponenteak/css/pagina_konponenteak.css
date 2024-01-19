@@ -1,231 +1,117 @@
-
 .myContainer {
-    min-height: 100vh;
-    background-color:whitesmoke;
-    
+  min-height: 100vh;
+  background-color: whitesmoke;
 }
-.filtroForm{
-    text-align: center;
-    padding-bottom: 15px;
+.filtroForm {
+  text-align: center;
+  padding-bottom: 15px;
 }
 
-.search-buttonFiltro{
-    background-color: grey;
-    border-radius: 6px;
-    color: white;
-    width: 60px;
+.search-buttonFiltro {
+  background-color: grey;
+  border-radius: 6px;
+  color: white;
+  width: 60px;
+  height: 35px;
+}
+.search-buttonFiltro:hover {
+  transform: scale(1.05);
+}
+.barra {
+  display: grid;
+  justify-content: center;
+  padding-bottom: 20px;
+  padding: 20px;
+}
+.filtroaFormDiv {
+  border-radius: 20px;
+  padding: 20px;
+  background-color: rgb(171, 169, 169);
+}
+
+.myContainer > div.productuak {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  grid-template-columns: repeat(auto-fit, 300px);
+  gap: 4em;
+  margin: auto;
+}
+.prezioClass {
+  color: red;
+}
+.balorazioClass {
+  color: green;
+}
+.h1 {
+  text-align: center;
+}
+.myContainer > div.productuak > table {
+  width: 100%;
+  height: 300px;
+  box-shadow: 3px 3px red, -1em 0 0.4em olive;
+}
+.myContainer > div.productuak > div {
+  transition: border-radius, 0.3s;
+  transition: background, 0.3s;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 2px 2px 2px 2px rgba(2, 2, 2, 0.5);
+}
+.myContainer > div.productuak > div:hover {
+  border-radius: 30px;
+  background: #f0f0f0;
+  transform: scale(1.05);
+  box-shadow: 5px 5px 2px 5px rgba(5, 2, 2, 0.5);
+}
+
+img {
+  width: 270px;
+  height: 270px;
+}
+
+.zestaraGehituBotoia {
+  background-color: rgb(33, 29, 253);
+  border-color: rgb(33, 29, 253);
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  width: 200px;
+  height: 35px;
+  margin-bottom: 10px;
+  position: -webkit-sticky;
+}
+.zestaraGehituBotoia:hover {
+  background-color: rgb(137, 165, 250);
+  border-color: rgb(137, 165, 250);
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  width: 200px;
+  height: 35px;
+  margin-bottom: 10px;
+  position: -webkit-sticky;
+}
+.addToFavourite {
+  background-color: rgb(89, 129, 247);
+  border-color: rgb(89, 129, 247);
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  width: 50px;
+  height: 35px;
+  margin-bottom: 10px;
+  position: -webkit-sticky;
+}
+.addToFavourite:hover {
+  background-color: rgb(255, 251, 0);
+  border-color: rgb(255, 251, 0);
+}
+.yaGehituta{
+    background-color: rgb(255, 232, 27);
+    border-color: rgb(255, 232, 27);
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    width: 50px;
     height: 35px;
-}
-.search-buttonFiltro:hover{
-    transform: scale(1.05);
-}
-.barra{
-    display: grid;
-    justify-content: center;
-    padding-bottom: 20px;
-    padding: 20px;
-}
-.filtroaFormDiv{
-    border-radius: 20px;
-    padding: 20px;
-    background-color: rgb(171, 169, 169);
-
+    margin-bottom: 10px;
+    position: -webkit-sticky;
 }
 
-.myContainer>div.productuak{
-    display: grid;
-    justify-content: center;
-    text-align: center;
-    grid-template-columns: repeat(auto-fit, 300px);
-    gap: 4em;
-    margin: auto;
-    
-}
-.etiketa2{
-    color: red;
-}
-.etiketa{
-    color: green;
-}
-.h1{
-    text-align: center;
-    
-}
-.myContainer>div.productuak>table{
-    width: 100%;
-    height: 300px;
-    box-shadow:3px 3px red,-1em 0 0.4em olive;
-    
-}
-.myContainer>div.productuak>div{
-    transition: border-radius, 0.3s;
-    transition: background, 0.3s;
-    border-radius: 20px;
-    background: linear-gradient(rgb(101, 101, 237), pink);
-    box-shadow: 2px 2px 2px 2px rgba(2, 2, 2, 0.5);
-}
-.myContainer>div.productuak>div:hover{
-     
-    border-radius: 30px;
-    background: linear-gradient(rgb(135, 73, 216), pink);
-    transform: scale(1.05);
-    box-shadow: 5px 5px 2px 5px rgba(5, 2, 2, 0.5);
-}
-
-
-img{
-    width: 270px;
-    height: 270px;
-}
-
-.zestaraGehituBotoia{
-    background-color: rgb(234, 130, 243);
-    border-color:  rgb(234, 130, 243);
-    border-radius: 6px;
-    color: white;
-    width: 60px;
-    height: 35px;
-}
-
-
-
-
-*::after,
-*::before,
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.container-cart-icon{
-    display: flex;
-    justify-content:end;
-    
-}
-body{
-    margin: 0 auto;
-
-    font-family: 'Lato';
-    color: #333;
-}
-
-.icon-cart{
-    width: 40px;
-    height: 40px;
-    stroke: #000;
-}
-
-.icon-cart:hover{
-    cursor: pointer;
-}
-
-img{
-    max-width: 100%;
-}
-
-/* Header */
-header{
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 0 40px 0;
-}
-
-.container-icon{
-    position: relative;
-}
-
-.count-products{
-    position: absolute;
-    top: 55%;
-    right: 0;
-
-    background-color: #000;
-    color: #fff;
-    width: 25px;
-    height: 25px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-}
-
-#contador-productos{
-    font-size: 12px;
-}
-
-.container-cart-products{
-    position: absolute;
-    top: 50px;
-    right: 0;
-
-    background-color: #fff;
-    width: 400px;
-    z-index: 1;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
-    border-radius: 10px;
-    
-}
-
-.cart-product{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px;
-
-    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
-
-}
-
-.info-cart-product{
-    display: flex;
-    justify-content: space-between;
-    flex: 0.8;
-}
-
-.titulo-producto-carrito{
-    font-size: 20px;
-}
-
-.precio-producto-carrito{
-    font-weight: 700;
-    font-size: 20px;
-    margin-left: 10px;
-}
-
-.cantidad-producto-carrito{
-    font-weight: 400;
-    font-size: 20px;
-}
-
-.icon-close{
-    width: 25px;
-    height: 25px;
-}
-
-.icon-close:hover{
-    stroke: red;
-    cursor: pointer;
-}
-
-.cart-total{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
-    gap: 20px;
-}
-
-.cart-total h3{
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.total-pagar{
-    font-size: 20px;
-    font-weight: 900;
-}
-
-.hidden-cart{
-    display: none;
-}

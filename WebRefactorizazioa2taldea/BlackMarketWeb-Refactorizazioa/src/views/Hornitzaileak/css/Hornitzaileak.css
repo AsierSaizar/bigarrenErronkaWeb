@@ -15,7 +15,7 @@ div.formularioa {
     width: 60%;
     margin: 0 auto;
     padding: 20px;
-    background: linear-gradient(rgb(81, 81, 233), 20%, rgb(236, 123, 142));
+    background:#b1b1b1;
     border-radius: 30px;
     grid-template-rows: repeat(30%, 300px);
   }

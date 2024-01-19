@@ -2,7 +2,7 @@
 return [
     
     "zestokoVistaPrevia" => "Preview of cart products",
-    "faboriton Lista" => "Gustuko productuak",
+    "faboriton Lista" => "Favorite products",
     
     // index.php
     "OngiEtorri" => "Welcome to Black Market", 
