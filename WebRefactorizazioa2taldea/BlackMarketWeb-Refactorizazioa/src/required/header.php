@@ -90,12 +90,10 @@
 
             </div>
             <div class="language">
-
                 <!-- HTML-A -->
                 <div class="header grid-elem">
                     <?php require_once(APP_DIR . "/src/required/selectLang.php"); ?>
                 </div>
-
             </div>
             <div class="zestoaIkono">
                 <a href="../../../../src/views/Zesta/php/zesta.php"><i class="fa-solid fa-cart-shopping"></i></a>
