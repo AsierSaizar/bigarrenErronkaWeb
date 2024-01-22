@@ -16,14 +16,16 @@
     <?php
     define('APP_DIR', $_SERVER['DOCUMENT_ROOT'] . '/Desktop/WebRefactorizazioa/WebRefactorizazioa2taldea/BlackMarketWeb-Refactorizazioa'); //Aplikazioaren karpeta edozein lekutatik atzitzeko.
     define('HREF_VIEWS_DIR', '/Desktop/WebRefactorizazioa/WebRefactorizazioa2taldea/BlackMarketWeb-Refactorizazioa/src/views'); //Aplikazioaren views karpeta edozein lekutatik deitzeko
+    define('HREF_SRC_DIR', '/Desktop/WebRefactorizazioa/WebRefactorizazioa2taldea/BlackMarketWeb-Refactorizazioa/src'); //Aplikazioaren views karpeta edozein lekutatik deitzeko
+
     ?>
-    <link rel="stylesheet" type="text/css" href="../css/index.css" media="screen" />
+
     <!-- servidorea pasatzeakon aldatu hau!!!!!!!! -->
 
     <?php
     $link = APP_DIR . "/src/language/translations.php";
     require_once($link); //APP_DIR erabilita itzulpenen dokumentua atzitu dugu.
-    
+  
     ?>
 </head>
 
@@ -67,9 +69,8 @@
                     </h3>
                     <br>
                     <div id="offcanvas-body">
-                        
-                        
-                       
+
+
 
                     </div>
 
@@ -101,22 +102,8 @@
             </div>
 
         </nav>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                document.getElementById('search-button').addEventListener('click', function (e) {
-                    e.preventDefault();
-                    var searchTerm = document.getElementById('search-input').value;
-                    searchProducts(searchTerm);
-                });
-
-                function searchProducts(term) {
-                    var found = window.find(term, false, false, true, false, true, false);
-                    if (!found) {
-                        alert("No se encontraron coincidencias.");
-                    }
-                }
-            });
-        </script>
-        <!-- BILATZAILEAREN SCRIPTA -->
         <!-- hau da menua eta logoa, pagina guztietan berdina (hemen bukatzen da) -->
+        
+     
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="<?= HREF_SRC_DIR ?>/required/funzioak.js"></script>

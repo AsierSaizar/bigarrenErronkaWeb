@@ -12,9 +12,6 @@ if (!isset($_SESSION["_LANGUAGE"])) { //Sesioan hizkuntza ez bada gorde
 
 changeSessionLanguage(); //Beti funtzio hontan sartzen gara
 
-?>
-
-<?php
 
 /** FUNTZIOAK */
 function setSessionLanguageToDefault()
