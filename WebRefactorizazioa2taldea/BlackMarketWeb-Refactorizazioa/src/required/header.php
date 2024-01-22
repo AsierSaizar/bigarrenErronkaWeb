@@ -67,54 +67,9 @@
                     </h3>
                     <br>
                     <div id="offcanvas-body">
-                        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-                        <script>
-                            $(document).ready(function () {
-
-                                var favoritos = sessionStorage.getItem('favoritos');
-                                if (favoritos) {
-                                    $('#offcanvas-body').html(favoritos);
-
-
-                                    $('.addToFavourite').each(function () {
-                                        var id = $(this).siblings("#id").val();
-                                        if ($('#offcanvas-body #kaja' + id).length > 0) {
-                                            $(this).addClass("yaGehituta");
-                                            $(this).removeClass("addToFavourite");
-                                        }
-                                    });
-                                }
-                            });
-
-                            $(".addToFavourite").click(function () {
-                                var id = $(this).siblings("#id").val();
-                                var modelo = $(this).siblings("#modelo").val();
-                                var precio = $(this).siblings("#precio").val();
-
-                                if ($('#offcanvas-body #kaja' + id).length > 0) {
-                                    $(this).addClass("addToFavourite");
-                                    $(this).removeClass("yaGehituta");
-
-                                    $("#kaja" + id).remove();
-                                } else {
-                                    var offcanvasBody = $('#offcanvas-body');
-                                    var pModelo = $('<div><p>').text('Modelo: ' + modelo);
-                                    var pPrecio = $('<p>').text('Precio: ' + precio + '€');
-
-                                    offcanvasBody.append("<div class=\"faboritotakoKajak\" id='kaja" + id + "'>");
-                                    var favorites = $('#kaja' + id);
-                                    favorites.append(pModelo);
-                                    favorites.append(pPrecio);
-                                    offcanvasBody.append("</div>");
-
-                                    $(this).addClass("yaGehituta");
-                                    $(this).removeClass("addToFavourite");
-
-
-                                    sessionStorage.setItem('favoritos', offcanvasBody.html());
-                                }
-                            });
-                        </script>
+                        
+                        
+                       
 
                     </div>
 

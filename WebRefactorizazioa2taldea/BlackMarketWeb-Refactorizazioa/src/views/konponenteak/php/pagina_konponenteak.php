@@ -272,8 +272,7 @@ require_once("../../../required/header.php");
                 </b>
 
 
-                <button class="zestaraGehituBotoia">Saskira gehitu</button>
-
+                <button id="saskiraGehitu" class="addToSaskia">Saskira gehitu</button>
                 <button id="faboritotaGehitu" class="addToFavourite"><i class="fa-solid fa-star"></i></button>
 
                 <input type="hidden" id="id" value="<?= $row['id'] ?>">
