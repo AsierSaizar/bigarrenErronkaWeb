@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
   document
     .getElementById("search-button")
@@ -20,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
 //      FABORITOTA GEHITZEKOSCRIPTA:
 
 $(document).ready(function () {
-
   var favoritos = sessionStorage.getItem("favoritos");
 
   if (favoritos) {
@@ -41,7 +39,6 @@ $(document).ready(function () {
     var precio = $(this).siblings("#precio").val();
     var offcanvasBody = $("#offcanvas-body");
     if ($("#offcanvas-body #kaja" + id).length > 0) {
-      alert("aaaaaaaaaaaa");
       $(this).addClass("addToFavourite");
       $(this).removeClass("yaGehituta");
 
@@ -67,56 +64,113 @@ $(document).ready(function () {
   });
 });
 
-
 //////////////////////////////////////////////////////////////////////////////////////////////////
-//      FABORITOTA GEHITZEKOSCRIPTA:
+//      SASKIA GEHITZEKOSCRIPTA:
 
 $(document).ready(function () {
-  var saskikoGauzak = sessionStorage.getItem("saskikoGauzak");
-
-  if (saskikoGauzak) {
-    $("#saskikoProductuakGordetzeko").html(saskikoGauzak);
-
-    $(".saskiaBotoia").each(function () {
-      var id = $(this).siblings("#id").val();
-      if ($("#saskikoProductuakGordetzeko #kajasaskia" + id).length > 0) {
-        $(this).addClass("yaGehitutasaskia");
-        $(this).removeClass("addToSaskia");
-      }
-    });
-  }
+  getInPHPSession("saskikoGauzak", idatziSaskian); /////////////////
 
   $(".saskiaBotoia").click(function () {
-    
     var id = $(this).siblings("#id").val();
     var modelo = $(this).siblings("#modelo").val();
     var precio = $(this).siblings("#precio").val();
-    alert(modelo + " saskian Sartu da");
-    var saskikoProductuakGordetzekoLekua = $("#saskikoProductuakGordetzeko");
-    if ($("#saskikoProductuakGordetzeko #kajasaskia" + id).length > 0) {
-      alert("aaaaaaaaaaaasaskia");                          //TO DO: alert hau ez du egiten ez delako zesta paginan ezer imprimitzen
-      $(this).addClass("addToSaskia");
-      $(this).removeClass("yaGehitutasaskia");
+    var saskikoProductuakGordetzekoLekua = "";
 
-      $("#kajasaskia" + id).remove();
-      sessionStorage.setItem("saskikoGauzak", saskikoProductuakGordetzekoLekua.html());
-    } else {
+    var kajaId = "#kajasaskia" + id;
+
+    
+      alert(modelo + " saskian Sartu da");
       var pModelo = $("<div><p>").text("Modelo: " + modelo);
       var pPrecio = $("<p>").text("Precio: " + precio + "€");
 
-      saskikoProductuakGordetzekoLekua.append(
-        '<div class="saskikoKajak" id=\'kajasaskia' + id + "'>"
-      );
-      var cartProducts = $("#kajasaskia" + id);
-      cartProducts.append(pModelo);
-      cartProducts.append(pPrecio);
-      saskikoProductuakGordetzekoLekua.append("</div>");
+      saskikoProductuakGordetzekoLekua = saskikoProductuakGordetzekoLekua + '<div class="saskikoKajak" id="' + kajaId.substring(1) + '">';
+     
+      saskikoProductuakGordetzekoLekua = saskikoProductuakGordetzekoLekua+"<p>"+"Modelo: " + modelo+"<p>"+"Precio: " + precio + "€";
 
-      $(this).addClass("yaGehitutasaskia");
-      $(this).removeClass("addToSaskia");
 
-      sessionStorage.setItem("saskikoGauzak", saskikoProductuakGordetzekoLekua.html());
-    }
+
+
+      setInPHPSession("saskikoGauzak", saskikoProductuakGordetzekoLekua, id);
+
+    
   });
+
+
+
+
+  $("#borratzekoBotoia").click(function () {
+    var postDir = $("#postDir").val();
+    var sessionKey = "saskikoGauzak";
+  
+    $.ajax({
+      url: postDir,
+      type: "POST",
+      data: { action: "denaBorratu",  key: sessionKey },
+    })
+    location.reload()
+      
+  })
+  
+
 });
+
+function setInPHPSession(sessionKey, sessionValue, idProduct) {
+  var postDir = $("#postDir").val();
+  var balioa = "setInSession";
+
+  $.ajax({
+    url: postDir,
+    type: "POST",
+    data: { action: balioa, key: sessionKey, value: sessionValue, idPro: idProduct},
+    dataType: "json",
+  })
+    .done(function (data) {
+      
+    })
+    .fail(function () {
+      console.error("Error: AJAX request failed.");
+    });
+}
+
+function getInPHPSession(sessionKey, funtzioIzena) {
+
+  var postDir = $("#postDir").val();
+  var balioa = "getInSession";
+
+  $.ajax({
+    url: postDir,
+    type: "POST",
+    data: { action: balioa, key: sessionKey },
+  })
+
+  .done(function (data) {
+    
+    if (data) {
+      var parsedData = JSON.parse(data);
+      
+
+      funtzioIzena(parsedData);
+
+        
+    } else {
+      console.error("Error: No data received from the server.");
+    }
+  })
+    .fail(function () {});
+
+}
+function idatziSaskian(parsedSaskiZerrenda) {
+  for (var i = 0; i < Object.keys(parsedSaskiZerrenda).length; i++) {
+
+
+    var id = Object.keys(parsedSaskiZerrenda)[i];
+
+    var zenbValue = parsedSaskiZerrenda[id]['zenb'];
+    var htmlValue = parsedSaskiZerrenda[id]['html'];
+
+    $("#sasProGord").append(htmlValue);
+  
+  }
+}
+
 

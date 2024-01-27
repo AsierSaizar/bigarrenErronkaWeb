@@ -2,17 +2,22 @@
 <?php
 require_once("../../../required/header.php");
 ?>
-<div class="background">
+<div class="background">    
         <br>
         <div class="saskiaContainer">
-                <h1 id="saskiaTitle">Saskia</h1>
+                <div id="saskikoHeader">
+                        <h1 id="saskiaTitle">Saskia</h1>
+                        <button id="borratzekoBotoia"><i class="fa-solid fa-trash"></i></button>
+                </div>
+
                 <hr size="2px" color="black">
-                <div id="saskikoProductuakGordetzeko">
-                        
+                <div id="sasProGord">
+
 
                 </div>
 
-                
+
+
         </div>
 
 

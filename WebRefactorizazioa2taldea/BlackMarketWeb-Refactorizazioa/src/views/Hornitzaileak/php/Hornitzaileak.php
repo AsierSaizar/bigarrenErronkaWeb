@@ -27,8 +27,8 @@
             <input type="text" id="empresahel" name="empresahel" required><br>
 
 
-            <label for="nan">NAN:</label>
-            <input type="text" id="nan" name="nan" required><br>
+            <label for="NanNif">NanNif:</label>
+            <input type="text" id="NanNif" name="NanNif" required><br>
 
             <label for="eskeintzeko">Zer eskaintzen duzue?:</label>
             <textarea id="eskeintzeko" name="eskeintzeko"></textarea><br>
@@ -42,20 +42,21 @@
             <?php
             
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                require_once"../../../functions/functions.php";
+                $linkHornitzaile = APP_DIR . "/src/required/functions.php";
+                require_once($linkHornitzaile); 
                 $conn = connection();
 
-                    
+                $tlfzenb = $_POST["tlfzenb"];
                 $empresaizena = $_POST["empresaizena"];
                 $korreoa = $_POST["korreoa"];
                 $empresahel = $_POST["empresahel"];
-                $nan = $_POST["nan"];
+                $NanNif = $_POST["NanNif"];
                 $eskeintzeko = $_POST["eskeintzeko"];
 
-                $sql = "INSERT INTO hornitzaileak (EmpresarekoTlfZenbakia, EmpresarenIzena, EmpresarenKorreoa, Helbidea, NAN, testua) VALUES (?, ?, ?, ?, ?, ?)";
+                $sql = "INSERT INTO hornitzaileak (EmpresarekoTlfZenbakia, EmpresarenIzena, EmpresarenKorreoa, Helbidea, NANNif, testua) VALUES (?, ?, ?, ?, ?, ?)";
 
                 $stmt = $conn->prepare($sql);
-                $stmt->bind_param("ssssss", $tlfzenb, $empresaizena, $korreoa, $empresahel, $nan, $eskeintzeko);
+                $stmt->bind_param("ssssss", $tlfzenb, $empresaizena, $korreoa, $empresahel, $NanNif, $eskeintzeko);
 
                 if ($stmt->execute()) {
                     echo "Datuak zuzen gorde dira.";

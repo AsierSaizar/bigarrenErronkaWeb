@@ -101,7 +101,7 @@
 
         </nav>
         <!-- hau da menua eta logoa, pagina guztietan berdina (hemen bukatzen da) -->
-        
+        <input type="hidden" id="postDir" value="<?= HREF_SRC_DIR ?>/required/post.php">
      
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script src="<?= HREF_SRC_DIR ?>/required/funzioak.js"></script>
