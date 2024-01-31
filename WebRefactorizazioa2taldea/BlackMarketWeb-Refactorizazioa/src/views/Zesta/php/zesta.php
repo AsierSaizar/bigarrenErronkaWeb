@@ -14,14 +14,38 @@ require_once("../../../required/header.php");
 
                 <div class="containerZesta">
                         <div id="sasProGord">
-                                <div class="gastosEnvio"><b>
-<pre>Bidalketako gastuak:5.99€   
-⚠39.00€ baino erosketa altuagoetan gastu gabe!⚠</pre></b>
-                                </div>
+                                
                                 
                         </div>
                         <div class="prezioakSaskia">
+                        <div class="gastosEnvio"><b>
+<pre>Bidalketako gastuak:5.99€   
+⚠100€ baino erosketa altuagoetan gastu gabe!⚠</pre></b>
+                                </div>
+                                <p><h2>Guztira:</h2></p><hr>
+                                <div id="BidalketakoGastuakDiv">
+                                        <div>Bidalketako Gastuak:</div>
+                                        
+                                        <div id="BidalketakoGastuakZenbakia">5.99€</div>
+                                </div>
+                                <hr>
+                                <div id="prezioTotalaDiv">
+                                        <div>Prezio totala:</div>
+                                        
+                                        <div id="prezioTotalaZenbakia">0€</div>
+                                </div>
+                                <hr><hr>
+                                <div id="prezioTotalaDivDefinitiboa">
+                                        <div>Prezio totala (DEFINITIBOA):</div>
+                                        
+                                        <div id="prezioTotalaZenbakiaDefini">0€</div>
+                                </div>
+                                <hr>
+                                <div id="erostekoBotoiaDiv">
+                                        <Button id="erostekoBotoia">Erosketa burutu</Button>
+                                </div>
 
+                                
 
                         </div>
                 </div>

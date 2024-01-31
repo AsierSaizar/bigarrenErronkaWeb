@@ -78,37 +78,40 @@ $(document).ready(function () {
 
     var kajaId = "#kajasaskia" + id;
 
-    
-      alert(modelo + " saskian Sartu da");
-      var pModelo = $("<div><p>").text("Modelo: " + modelo);
-      var pPrecio = $("<p>").text("Precio: " + precio + "€");
+    alert(modelo + " saskian Sartu da");
+    var pModelo = $("<div><p>").text("Modelo: " + modelo);
+    var pPrecio = $("<p>").text("Precio: " + precio + "€");
 
-      saskikoProductuakGordetzekoLekua = saskikoProductuakGordetzekoLekua + '<div class="saskikoKajak" id="' + kajaId.substring(1) + '">';
-     
-      saskikoProductuakGordetzekoLekua = saskikoProductuakGordetzekoLekua+"<div>"+ modelo+"</div><div id='prezioa" + id + "' class='kantitateaPro prezioaEskubitanJartzeko'></div><div class='prezioaEskubitanJartzeko'>"+ precio + "€</div><hr/>";
-      
-      setInPHPSession("saskikoGauzak", saskikoProductuakGordetzekoLekua, id);
+    saskikoProductuakGordetzekoLekua =
+      saskikoProductuakGordetzekoLekua +
+      '<div class="saskikoKajak" id="' +
+      kajaId.substring(1) +
+      '">';
 
-    
+    saskikoProductuakGordetzekoLekua =
+      saskikoProductuakGordetzekoLekua +
+      "<div>" +
+      modelo +
+      "</div><div id='prezioa" +
+      id +
+      "' class='kantitateaPro prezioaEskubitanJartzeko'></div><div class='prezioaEskubitanJartzeko prezioProBakoitz'>" +
+      precio +
+      "€</div><div id='proBorratzeko" +id +"''><button class='botoiaBorratzekoIndi' id='proBorratzekoBotoia" +id +"'>Ezabatu <i class='fa-solid fa-trash'></i></button></div><hr>";
+
+    setInPHPSession("saskikoGauzak", saskikoProductuakGordetzekoLekua, id);
   });
-
-
-
 
   $("#borratzekoBotoia").click(function () {
     var postDir = $("#postDir").val();
     var sessionKey = "saskikoGauzak";
-  
+
     $.ajax({
       url: postDir,
       type: "POST",
-      data: { action: "denaBorratu",  key: sessionKey },
-    })
-    location.reload()
-      
-  })
-  
-
+      data: { action: "denaBorratu", key: sessionKey },
+    });
+    location.reload();
+  });
 });
 
 function setInPHPSession(sessionKey, sessionValue, idProduct) {
@@ -118,19 +121,21 @@ function setInPHPSession(sessionKey, sessionValue, idProduct) {
   $.ajax({
     url: postDir,
     type: "POST",
-    data: { action: balioa, key: sessionKey, value: sessionValue, idPro: idProduct},
+    data: {
+      action: balioa,
+      key: sessionKey,
+      value: sessionValue,
+      idPro: idProduct,
+    },
     dataType: "json",
   })
-    .done(function (data) {
-
-    })
+    .done(function (data) {})
     .fail(function () {
       console.error("Error: AJAX request failed.");
     });
 }
 
 function getInPHPSession(sessionKey, funtzioIzena) {
-
   var postDir = $("#postDir").val();
   var balioa = "getInSession";
 
@@ -140,37 +145,70 @@ function getInPHPSession(sessionKey, funtzioIzena) {
     data: { action: balioa, key: sessionKey },
   })
 
-  .done(function (data) {
-    
-    if (data) {
-      var parsedData = JSON.parse(data);
-      
+    .done(function (data) {
+      if (data) {
+        var parsedData = JSON.parse(data);
 
-      funtzioIzena(parsedData);
-
-        
-    } else {
-      console.error("Error: No data received from the server.");
-    }
-  })
+        funtzioIzena(parsedData);
+      } else {
+        console.error("Error: No data received from the server.");
+      }
+    })
     .fail(function () {});
-
 }
 
 function idatziSaskian(parsedSaskiZerrenda) {
   for (var i = 0; i < Object.keys(parsedSaskiZerrenda).length; i++) {
-
     var id = Object.keys(parsedSaskiZerrenda)[i];
 
-    var zenbValue = parsedSaskiZerrenda[id]['zenb'];
-    var htmlValue = parsedSaskiZerrenda[id]['html'];
-    
+    var zenbValue = parsedSaskiZerrenda[id]["zenb"];
+    var htmlValue = parsedSaskiZerrenda[id]["html"];
 
     $("#sasProGord").append(htmlValue);
-    $("#prezioa"+id).html("x"+zenbValue);
-
-  
+    $("#prezioa" + id).html("x" + zenbValue);
   }
+
+  var total = 0;
+
+  $(".prezioProBakoitz").each(function () {
+    var cantidadText = $(this).siblings(".kantitateaPro").text();
+
+    var cantidad = parseInt(cantidadText.replace("x", ""));
+
+    var precio = parseFloat($(this).text());
+
+    total += cantidad * precio;
+  });
+
+  $("#prezioTotalaZenbakia").text(total.toFixed(2) + "€");
+
+  if (total >= 100) {
+    $("#BidalketakoGastuakZenbakia").text("0.00€");
+  } else {
+    $("#BidalketakoGastuakZenbakia").text("5.99€");
+  }
+  var bidalketakoGastuakValue = parseFloat(
+    $("#BidalketakoGastuakZenbakia").text().replace("€", "")
+  );
+
+  total += bidalketakoGastuakValue;
+
+  $("#prezioTotalaZenbakiaDefini").text(total.toFixed(2) + "€");
+
+
+
+
+
+  $(".botoiaBorratzekoIndi").click(function () {
+    var postDir = $("#postDir").val();
+    var idDelBoton = $(this).attr("id");
+    var idDelBotonZenbakia = idDelBoton.match(/\d$/);
+
+    $.ajax({
+      url: postDir,
+      type: "POST",
+      data: { action: "proBorratu",id: idDelBotonZenbakia},
+    });
+    location.reload();
+  });
 }
-
-

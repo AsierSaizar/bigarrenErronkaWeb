@@ -53,3 +53,47 @@
     background-color: rgb(0, 179, 255);
     color: rgb(0, 0, 0);
 }
+#BidalketakoGastuakDiv,
+ #prezioTotalaDiv,
+ #prezioTotalaDivDefinitiboa{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+#BidalketakoGastuakZenbakia,
+ #prezioTotalaZenbakia,
+ #prezioTotalaZenbakiaDefini{
+    justify-self: end;
+}
+
+.prezioaEskubitanJartzeko{
+    color: rgb(36, 13, 245);
+    text-decoration: double;
+}
+.kantitateaPro{
+    color: red;
+}
+#erostekoBotoia{
+    background-color: rgb(7, 246, 7);
+    border-color:  rgb(7, 246, 7);
+    border-radius: 8px;
+    color: white;
+    height: 30px;
+}
+#erostekoBotoia:hover{
+    background-color:rgb(5, 242, 250);
+    border-color:  rgb(5, 242, 250);
+}
+#erostekoBotoiaDiv{
+    padding-left: 33%;
+    padding-bottom: 15px;
+
+}
+.botoiaBorratzekoIndi{
+    background-color: rgb(246, 7, 7);
+    border-color:   rgb(246, 7, 7);
+    border-radius: 8px;
+    color: white;
+    height: 30px;
+    width: 100px;
+}

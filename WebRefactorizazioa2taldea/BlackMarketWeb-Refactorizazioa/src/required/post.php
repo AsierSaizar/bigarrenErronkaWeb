@@ -19,7 +19,7 @@ if (isset($_POST["action"])) {
                     echo "Gorde dira datuak";
                 }
                 
-             
+                
                 break;
             }
 
@@ -34,7 +34,13 @@ if (isset($_POST["action"])) {
             }
         case "denaBorratu": {  
             unset($_SESSION["saskikoGauzak"]);
-            echo $_SESSION[$_POST["key"]];
+
+            break;
+        }
+        case "proBorratu": {
+            $id = $_POST["id"][0]; 
+            unset($_SESSION["saskikoGauzak"][$id]);
+            $a="a";
             break;
         }
     }
