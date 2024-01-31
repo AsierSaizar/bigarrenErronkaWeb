@@ -85,11 +85,8 @@ $(document).ready(function () {
 
       saskikoProductuakGordetzekoLekua = saskikoProductuakGordetzekoLekua + '<div class="saskikoKajak" id="' + kajaId.substring(1) + '">';
      
-      saskikoProductuakGordetzekoLekua = saskikoProductuakGordetzekoLekua+"<p>"+"Modelo: " + modelo+"<p>"+"Precio: " + precio + "€";
-
-
-
-
+      saskikoProductuakGordetzekoLekua = saskikoProductuakGordetzekoLekua+"<div>"+ modelo+"</div><div id='prezioa" + id + "' class='kantitateaPro prezioaEskubitanJartzeko'></div><div class='prezioaEskubitanJartzeko'>"+ precio + "€</div><hr/>";
+      
       setInPHPSession("saskikoGauzak", saskikoProductuakGordetzekoLekua, id);
 
     
@@ -125,7 +122,7 @@ function setInPHPSession(sessionKey, sessionValue, idProduct) {
     dataType: "json",
   })
     .done(function (data) {
-      
+
     })
     .fail(function () {
       console.error("Error: AJAX request failed.");
@@ -159,16 +156,19 @@ function getInPHPSession(sessionKey, funtzioIzena) {
     .fail(function () {});
 
 }
+
 function idatziSaskian(parsedSaskiZerrenda) {
   for (var i = 0; i < Object.keys(parsedSaskiZerrenda).length; i++) {
-
 
     var id = Object.keys(parsedSaskiZerrenda)[i];
 
     var zenbValue = parsedSaskiZerrenda[id]['zenb'];
     var htmlValue = parsedSaskiZerrenda[id]['html'];
+    
 
     $("#sasProGord").append(htmlValue);
+    $("#prezioa"+id).html("x"+zenbValue);
+
   
   }
 }

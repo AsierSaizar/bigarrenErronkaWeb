@@ -2,7 +2,7 @@
 <?php
 require_once("../../../required/header.php");
 ?>
-<div class="background">    
+<div class="background">
         <br>
         <div class="saskiaContainer">
                 <div id="saskikoHeader">
@@ -11,10 +11,21 @@ require_once("../../../required/header.php");
                 </div>
 
                 <hr size="2px" color="black">
-                <div id="sasProGord">
+
+                <div class="containerZesta">
+                        <div id="sasProGord">
+                                <div class="gastosEnvio"><b>
+<pre>Bidalketako gastuak:5.99€   
+⚠39.00€ baino erosketa altuagoetan gastu gabe!⚠</pre></b>
+                                </div>
+                                
+                        </div>
+                        <div class="prezioakSaskia">
 
 
+                        </div>
                 </div>
+
 
 
 

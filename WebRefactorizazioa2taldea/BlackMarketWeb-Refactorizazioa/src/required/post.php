@@ -8,8 +8,17 @@ if (isset($_POST["action"])) {
                 $key = $_POST["key"]; // "saskikoGauzak" gordetzen du
                 $value = $_POST["value"]; // "null" gordetzen du
                 $id = $_POST["idPro"];
-                $_SESSION[$key][$id] = ["zenb" => 1, "html" => $value];
-                echo "Gorde dira datuak";
+
+                
+                if (isset($_SESSION[$key]) && array_key_exists($id, $_SESSION[$key])){
+                    $kantitatea = $_SESSION[$key][$id]["zenb"];
+                    $_SESSION[$key][$id] = ["zenb" => $kantitatea+1, "html" => $value];
+                    
+                }else{
+                    $_SESSION[$key][$id] = ["zenb" => 1, "html" => $value];
+                    echo "Gorde dira datuak";
+                }
+                
              
                 break;
             }

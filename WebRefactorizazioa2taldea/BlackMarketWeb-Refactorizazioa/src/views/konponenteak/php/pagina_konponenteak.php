@@ -278,6 +278,7 @@ require_once("../../../required/header.php");
                 <input type="hidden" id="id" value="<?= $row['id'] ?>">
                 <input type="hidden" id="modelo" value="<?= $row['modelo'] ?>">
                 <input type="hidden" id="precio" value="<?= $row['prezioa'] ?>">
+       
             </div>
             <?php
         }
