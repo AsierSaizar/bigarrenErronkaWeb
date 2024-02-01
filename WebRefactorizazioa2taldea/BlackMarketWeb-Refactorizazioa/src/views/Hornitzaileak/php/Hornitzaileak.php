@@ -53,7 +53,7 @@
                 $NanNif = $_POST["NanNif"];
                 $eskeintzeko = $_POST["eskeintzeko"];
 
-                $sql = "INSERT INTO hornitzaileak (EmpresarekoTlfZenbakia, EmpresarenIzena, EmpresarenKorreoa, Helbidea, NANNif, testua) VALUES (?, ?, ?, ?, ?, ?)";
+                $sql = "INSERT INTO hornitzaileak (EmpresarakoTlfZenbakia, EmpresarenIzena, EmpresarenKorreoa, Helbidea, NanNif, testua) VALUES (?, ?, ?, ?, ?, ?)";
 
                 $stmt = $conn->prepare($sql);
                 $stmt->bind_param("ssssss", $tlfzenb, $empresaizena, $korreoa, $empresahel, $NanNif, $eskeintzeko);

@@ -76,9 +76,13 @@
 
             if ($sql->num_rows > 0) {
                 
-                
+                $aukeraLanguage = $_SESSION["_LANGUAGE"];
                 while ($row = $sql->fetch_assoc()) {
-                    echo "<div class=\"etiketak\"><b>".$row["izenburua"] . "</b><br><br>" . $row["descripcioLaburra"]. "<br><br><b>". $row["fecha"]."</b></div>" ;
+                    ?>
+                        <div class="etiketak"><b><?=$row["izenburua_".$aukeraLanguage] ?></b><br><br>
+                        <?=$row["descripcioLaburra_".$aukeraLanguage]?><br><br><b>
+                        <?=$row["fecha"]?></b></div>;
+                    <?php
                 }
                 
             } else {
