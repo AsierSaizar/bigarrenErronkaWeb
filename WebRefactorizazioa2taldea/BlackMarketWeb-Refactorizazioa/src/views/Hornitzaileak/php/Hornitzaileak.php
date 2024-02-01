@@ -8,33 +8,33 @@
         
 
         <div class="formularioa">
-            <h3><b>Hornitzaile izateko formulario hau bete:</b></h3>
+            <h3><b><?= trans("HornitzaileaIzateko") ?>:</b></h3>
             <form id="formularioaForm" method="post">
 
 
-            <label for="tlfzenb">Empresarako Telefono Zenbakia:</label>
+            <label for="tlfzenb"><?= trans("Telefono") ?>:</label>
             <input type="number" id="tlfzenb" name="tlfzenb" required><br>
 
 
-            <label for="empresaizena">Empresaren Izena:</label>
+            <label for="empresaizena"><?= trans("Empresaren Izena") ?>:</label>
             <input type="text" id="empresaizena" name="empresaizena" required><br>
 
-            <label for="korreoa">Empresaren Korreoa:</label>
+            <label for="korreoa"><?= trans("Korreoa") ?>:</label>
             <input type="email" id="korreoa" name="korreoa" required><br>
 
 
-            <label for="empresahel">Empresaren Helbidea:</label>
+            <label for="empresahel"><?= trans("Helbidea") ?>:</label>
             <input type="text" id="empresahel" name="empresahel" required><br>
 
 
-            <label for="NanNif">NanNif:</label>
+            <label for="NanNif"><?= trans("NanNif") ?>:</label>
             <input type="text" id="NanNif" name="NanNif" required><br>
 
-            <label for="eskeintzeko">Zer eskaintzen duzue?:</label>
+            <label for="eskeintzeko"><?= trans("eskaintzen") ?>:</label>
             <textarea id="eskeintzeko" name="eskeintzeko"></textarea><br>
 
-            <input type="submit" value="Hornitzaile bihurtu">
-            <input type="reset" value="Ezabatu">
+            <input type="submit" value="<?= trans("Hornitzaile bihurtu") ?>">
+            <input type="reset" value="<?= trans("Ezabatu") ?>">
 
 
             </form>

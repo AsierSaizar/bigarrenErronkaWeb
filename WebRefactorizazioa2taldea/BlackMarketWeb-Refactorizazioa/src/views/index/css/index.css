@@ -91,3 +91,14 @@ p {
     align-items: center;
     grid-template-columns: repeat(4, 25%) ;
 }
+.Form{
+    background-color: #2d2c2c;
+    width: 700px;
+    height: 570px;
+    margin-left: 30%;
+    margin-top: 1%;
+    color: white;
+}
+.kokapena{
+    color: white;
+}

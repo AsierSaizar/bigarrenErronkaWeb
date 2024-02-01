@@ -76,10 +76,7 @@
 
                 </div>
             </div>
-            <?php
-            $link = APP_DIR . "/src/language/translations.php";
-            require_once($link); //APP_DIR erabilita itzulpenen dokumentua atzitu dugu.
-            ?>
+            
 
             <div class="search-form">
                 <input aria-label="Buscar" id="search-input" placeholder="<?= trans("Bilatu") ?>" class="search-input"

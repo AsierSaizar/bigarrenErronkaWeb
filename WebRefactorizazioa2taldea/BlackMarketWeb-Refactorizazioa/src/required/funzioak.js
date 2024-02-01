@@ -96,7 +96,7 @@ $(document).ready(function () {
       id +
       "' class='kantitateaPro prezioaEskubitanJartzeko'></div><div class='prezioaEskubitanJartzeko prezioProBakoitz'>" +
       precio +
-      "€</div><div id='proBorratzeko" +id +"''><button class='botoiaBorratzekoIndi' id='proBorratzekoBotoia" +id +"'>Ezabatu <i class='fa-solid fa-trash'></i></button></div><hr>";
+      "€</div><div id='proBorratzeko" +id +"''><button class='botoiaBorratzekoIndi' id='proBorratzekoBotoia" +id +"'><i class='fa-solid fa-trash'></i></button></div><hr>";
 
     setInPHPSession("saskikoGauzak", saskikoProductuakGordetzekoLekua, id);
   });

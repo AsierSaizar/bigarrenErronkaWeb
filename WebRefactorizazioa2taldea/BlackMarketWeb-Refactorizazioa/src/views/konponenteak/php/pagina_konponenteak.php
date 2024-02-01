@@ -272,7 +272,7 @@ require_once("../../../required/header.php");
                 </b>
 
 
-                <button id="saskiraGehitu" class="saskiaBotoia addToSaskia">Saskira gehitu</button>
+                <button id="saskiraGehitu" class="saskiaBotoia addToSaskia"><?= trans("saskiraGehitu") ?></button>
                 <button id="faboritotaGehitu" class="izarBotoia addToFavourite"><i class="fa-solid fa-star"></i></button>
 
                 <input type="hidden" id="id" value="<?= $row['id'] ?>">
