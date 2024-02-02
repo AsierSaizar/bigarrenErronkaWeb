@@ -81,7 +81,7 @@
                     ?>
                         <div class="etiketak"><b><?=$row["izenburua_".$aukeraLanguage] ?></b><br><br>
                         <?=$row["descripcioLaburra_".$aukeraLanguage]?><br><br><b>
-                        <?=$row["fecha"]?></b></div>;
+                        <?=$row["fecha"]?></b></div>
                     <?php
                 }
                 

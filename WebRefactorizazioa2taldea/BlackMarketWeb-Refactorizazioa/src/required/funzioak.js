@@ -112,6 +112,34 @@ $(document).ready(function () {
     });
     location.reload();
   });
+
+  $("#metodoDePago").hide();
+  $("#paypalPago").hide();
+  $("#bizumPago").hide();
+  $("#visaPago").hide();
+
+  $("#erostekoBotoia").click(function () {
+    $("#metodoDePago").show();
+  })
+  $("#paypal").click(function () {
+    $("#paypalPago").hide();
+    $("#bizumPago").hide();
+    $("#visaPago").hide();
+    $("#paypalPago").show();
+  })
+  $("#bizum").click(function () {
+    $("#paypalPago").hide();
+    $("#bizumPago").hide();
+    $("#visaPago").hide();
+    $("#bizumPago").show();
+  })
+  $("#visa").click(function () {
+    $("#paypalPago").hide();
+    $("#bizumPago").hide();
+    $("#visaPago").hide();
+    $("#visaPago").show();
+  })
+
 });
 
 function setInPHPSession(sessionKey, sessionValue, idProduct) {
