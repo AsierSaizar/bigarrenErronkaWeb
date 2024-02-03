@@ -47,8 +47,8 @@
         <div class="h1"><H1><?= trans("Berriak") ?>:</H1></div>
         <div class="BERRIAK">
         <?php
-        require_once "../../../required/functions.php";
-        $conn = connection();
+            require_once "../../../required/functions.php";
+            $conn = connection();
             
             
 

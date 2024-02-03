@@ -68,64 +68,67 @@ require_once("../../../required/header.php");
                                 <h2>Haukeratu ordainketa burutzeko metodoa:</h2>
                                 <div id="aukerak">
                                         <div id="paypal" class="aukerak">Paypal<br><img id="img1MetoPag"
-                                                        src="../../../../public/Paypal.png"></div>
+                                                src="../../../../public/Paypal.png">
+                                        </div>
                                         <div id="bizum" class="aukerak">Bizum<br><img id="img2MetoPag"
-                                                        src="../../../../public/Bizum.png"></div>
+                                                src="../../../../public/Bizum.png">
+                                        </div>
                                         <div id="visa" class="aukerak">Visa<br><img id="img2MetoPag"
-                                                        src="../../../../public/Visa.png"></div>
+                                                src="../../../../public/Visa.png">
+                                        </div>
                                 </div>
 
                         </div>
                         <div id="paypalPago">
                                 <h2 class="h2">PAYPAL</h2>
                                 <div class="containerPatzeko">
-                                        <form action="#" method="post">
-                                                <label for="nombre">Nombre completo:</label>
-                                                <input type="text" id="nombre" name="nombre" required>
+                                
+                                        <label class="label" for="nombre">Nombre completo:</label>
+                                        <input class="patzekoInputak" type="text" id="nombre_1" name="nombre" required>
 
-                                                <label for="abizena1">abizena:</label>
-                                                <input type="text" id="abizena1" name="abizena1" required>
+                                        <label class="label" for="abizena1">abizena:</label>
+                                        <input class="patzekoInputak" type="text" id="abizena1_1" name="abizena1" required>
 
-                                                <label for="abizena2">bigarren abizena:</label>
-                                                <input type="text" id="abizena2" name="abizena2" required>
+                                        <label class="label" for="abizena2">bigarren abizena:</label>
+                                        <input class="patzekoInputak" type="text" id="abizena2_1" name="abizena2" required>
 
-                                                <label for="telefono">Teléfono:</label>
-                                                <input type="tel" id="telefono" name="telefono" required>
+                                        <label class="label" for="telefono">Teléfono:</label>
+                                        <input class="patzekoInputak" type="number" id="telefono_1" name="telefono" required>
 
-                                                <label for="helbidea">Helbidea:</label>
-                                                <input type="text" id="helbidea" name="helbidea" required>
+                                        <label class="label" for="helbidea">Helbidea:</label>
+                                        <input class="patzekoInputak" type="text" id="helbidea_1" name="helbidea" required>
 
-                                                <label for="dni">Dni:</label>
-                                                <input type="text" id="dni" name="dni" required>
+                                        <label class="label" for="dni">Dni:</label>
+                                        <input class="patzekoInputak" type="text" id="dni_1" name="dni" required>
 
-                                                <button type="submit" class="botonPagar">Pagar con Bizum</button>
-                                        </form>
+                                        <button type="submit" class="botonPagar_1">Pagar con Paypal</button>
+                                
                                 </div>
                         </div>
                         <div id="bizumPago">
                                 <h2 class="h2">BIZUM</h2>
                                 <div class="containerPatzeko">
-                                        <form action="#" method="post">
-                                                <label for="nombre">Nombre completo:</label>
-                                                <input type="text" id="nombre" name="nombre" required>
+                                
+                                        <label class="label" for="nombre">Nombre completo:</label>
+                                        <input class="patzekoInputak" type="text" id="nombre_2" name="nombre" required>
 
-                                                <label for="abizena1">abizena:</label>
-                                                <input type="text" id="abizena1" name="abizena1" required>
+                                        <label class="label" for="abizena1">abizena:</label>
+                                        <input class="patzekoInputak" type="text" id="abizena1_2" name="abizena1" required>
 
-                                                <label for="abizena2">bigarren abizena:</label>
-                                                <input type="text" id="abizena2" name="abizena2" required>
+                                        <label class="label" for="abizena2">bigarren abizena:</label>
+                                        <input class="patzekoInputak" type="text" id="abizena2_2" name="abizena2" required>
 
-                                                <label for="telefono">Teléfono:</label>
-                                                <input type="tel" id="telefono" name="telefono" required>
+                                        <label class="label" for="telefono">Teléfono:</label>
+                                        <input class="patzekoInputak" type="number" id="telefono_2" name="telefono" required>
 
-                                                <label for="helbidea">Helbidea:</label>
-                                                <input type="text" id="helbidea" name="helbidea" required>
+                                        <label class="label" for="helbidea">Helbidea:</label>
+                                        <input class="patzekoInputak" type="text" id="helbidea_2" name="helbidea" required>
 
-                                                <label for="dni">Dni:</label>
-                                                <input type="text" id="dni" name="dni" required>
+                                        <label class="label" for="dni">Dni:</label>
+                                        <input class="patzekoInputak" type="text" id="dni_2" name="dni" required>
 
-                                                <button type="submit" class="botonPagar">Pagar con Bizum</button>
-                                        </form>
+                                        <button type="submit" class="botonPagar_2">Pagar con Bizum</button>
+                                
                                 </div>
 
 
@@ -133,27 +136,30 @@ require_once("../../../required/header.php");
                         <div id="visaPago">
                                 <h2 class="h2">VISA</h2>
                                 <div class="containerPatzeko">
-                                        <form action="#" method="post">
-                                                <label for="nombre">Nombre completo:</label>
-                                                <input type="text" id="nombre" name="nombre" required>
+                                
+                                        <label class="label" for="nombre">Nombre completo:</label>
+                                        <input class="patzekoInputak" type="text" id="nombre_3" name="nombre" required>
 
-                                                <label for="abizena1">abizena:</label>
-                                                <input type="text" id="abizena1" name="abizena1" required>
+                                        <label class="label" for="abizena1">abizena:</label>
+                                        <input class="patzekoInputak" type="text" id="abizena1_3" name="abizena1" required>
 
-                                                <label for="abizena2">bigarren abizena:</label>
-                                                <input type="text" id="abizena2" name="abizena2" required>
+                                        <label class="label" for="abizena2">bigarren abizena:</label>
+                                        <input class="patzekoInputak" type="text" id="abizena2_3" name="abizena2" required>
 
-                                                <label for="telefono">Teléfono:</label>
-                                                <input type="tel" id="telefono" name="telefono" required>
+                                        <label class="label" for="telefono">Teléfono:</label>
+                                        <input class="patzekoInputak" type="number" id="telefono_3" name="telefono" required>
 
-                                                <label for="helbidea">Helbidea:</label>
-                                                <input type="text" id="helbidea" name="helbidea" required>
+                                        <label class="label" for="banku_zenb">Banku Zenbakia:</label>
+                                        <input class="patzekoInputak" type="number" id="banku_zenb_3" name="banku_zenb" required>
 
-                                                <label for="dni">Dni:</label>
-                                                <input type="text" id="dni" name="dni" required>
+                                        <label class="label" for="helbidea">Helbidea:</label>
+                                        <input class="patzekoInputak" type="text" id="helbidea_3" name="helbidea" required>
 
-                                                <button type="submit" class="botonPagar">Pagar con Bizum</button>
-                                        </form>
+                                        <label class="label" for="dni">Dni:</label>
+                                        <input class="patzekoInputak" type="text" id="dni_3" name="dni" required>
+
+                                        <button type="submit" class="botonPagar_3">Pagar con Visa</button>
+                                
                                 </div>
 
 

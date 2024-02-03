@@ -1,6 +1,6 @@
 .background{
     background-color: grey;
-    min-height: 100vh;
+    min-height: 100%;
 }
 .saskiaContainer{
     background-color: white;
@@ -37,7 +37,7 @@
 
 #metodoDePago{
     background-color: rgb(255, 255, 255);
-    width: 100vh;
+    width: 100%;
     height: 200px;
     margin: 20px;
     border: rgb(138, 138, 138) 20px solid;
@@ -161,18 +161,16 @@
 
 
 
-form {
+.form {
     margin-top: 20px;
 }
 
-label {
+.label {
     display: block;
     margin-bottom: 5px;
 }
 
-input[type="text"],
-input[type="tel"],
-input[type="number"] {
+.patzekoInputak{
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
@@ -180,7 +178,9 @@ input[type="number"] {
     border-radius: 4px;
 }
 
-.botonPagar{
+.botonPagar_1,
+.botonPagar_2,
+.botonPagar_3{
     width: 100%;
     padding: 10px;
     background-color: #007bff;

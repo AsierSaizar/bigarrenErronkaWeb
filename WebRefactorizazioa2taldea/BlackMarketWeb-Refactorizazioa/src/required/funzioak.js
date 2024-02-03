@@ -96,7 +96,11 @@ $(document).ready(function () {
       id +
       "' class='kantitateaPro prezioaEskubitanJartzeko'></div><div class='prezioaEskubitanJartzeko prezioProBakoitz'>" +
       precio +
-      "€</div><div id='proBorratzeko" +id +"''><button class='botoiaBorratzekoIndi' id='proBorratzekoBotoia" +id +"'><i class='fa-solid fa-trash'></i></button></div><hr>";
+      "€</div><div id='proBorratzeko" +
+      id +
+      "''><button class='botoiaBorratzekoIndi' id='proBorratzekoBotoia" +
+      id +
+      "'><i class='fa-solid fa-trash'></i></button></div><hr>";
 
     setInPHPSession("saskikoGauzak", saskikoProductuakGordetzekoLekua, id);
   });
@@ -113,6 +117,19 @@ $(document).ready(function () {
     location.reload();
   });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
   $("#metodoDePago").hide();
   $("#paypalPago").hide();
   $("#bizumPago").hide();
@@ -120,27 +137,219 @@ $(document).ready(function () {
 
   $("#erostekoBotoia").click(function () {
     $("#metodoDePago").show();
-  })
+  });
   $("#paypal").click(function () {
     $("#paypalPago").hide();
     $("#bizumPago").hide();
     $("#visaPago").hide();
     $("#paypalPago").show();
-  })
+  });
   $("#bizum").click(function () {
     $("#paypalPago").hide();
     $("#bizumPago").hide();
     $("#visaPago").hide();
     $("#bizumPago").show();
-  })
+  });
   $("#visa").click(function () {
     $("#paypalPago").hide();
     $("#bizumPago").hide();
     $("#visaPago").hide();
     $("#visaPago").show();
-  })
+  });
 
+  //erosketa egitekobotoian logica
+  // Paypaleko ordainketa logika
+  $(".botonPagar_1").click(function () {
+    if (verificarInputs("#paypalPago")) {
+      var nombre = $("#nombre_1").val();
+      var abizena1 = $("#abizena1_1").val();
+      var abizena2 = $("#abizena2_1").val();
+      var telefono = $("#telefono_1").val();
+      var helbidea = $("#helbidea_1").val();
+      var dni = $("#dni_1").val();
+
+      // Realizar la llamada AJAX a post.php
+      $.ajax({
+        type: "POST",
+        url: "../../../required/post.php",
+        data: {
+          action: "erosi1Paypal",
+          nombre: nombre,
+          abizena1: abizena1,
+          abizena2: abizena2,
+          telefono: telefono,
+          helbidea: helbidea,
+          dni: dni,
+        },
+        success: function (response) {
+          // Aquí puedes manejar la respuesta del servidor si es necesaria
+          console.log(response);
+        },
+      }).done(function (data) {
+        alert(data);
+        $("#nombre_1").val("");
+        $("#abizena1_1").val("");
+        $("#abizena2_1").val("");
+        $("#telefono_1").val("");
+        $("#helbidea_1").val("");
+        $("#dni_1").val("");
+
+        $("#paypalPago").hide();
+        $("#metodoDePago").hide();
+        $.ajax({
+          url: "../../../required/post.php",
+          type: "POST",
+          data: { action: "denaBorratu", key: "saskikoGauzak" },
+        });
+        location.reload();
+
+      });
+    }
+  });
+
+  // Bizumeko ordainketa logika
+  $(".botonPagar_2").click(function () {
+    if (verificarInputs("#bizumPago")) {
+      var nombre = $("#nombre_2").val();
+      var abizena1 = $("#abizena1_2").val();
+      var abizena2 = $("#abizena2_2").val();
+      var telefono = $("#telefono_2").val();
+      var helbidea = $("#helbidea_2").val();
+      var dni = $("#dni_2").val();
+
+      // Realizar la llamada AJAX a post.php
+      $.ajax({
+        type: "POST",
+        url: "../../../required/post.php",
+        data: {
+          action: "erosi2Bizum",
+          nombre: nombre,
+          abizena1: abizena1,
+          abizena2: abizena2,
+          telefono: telefono,
+          helbidea: helbidea,
+          dni: dni,
+        },
+        success: function (response) {
+          // Aquí puedes manejar la respuesta del servidor si es necesaria
+          console.log(response);
+        },
+      }).done(function (data) {
+        alert(data);
+        $("#nombre_2").val("");
+        $("#abizena1_2").val("");
+        $("#abizena2_2").val("");
+        $("#telefono_2").val("");
+        $("#helbidea_2").val("");
+        $("#dni_2").val("");
+
+        $("#bizumPago").hide();
+        $("#metodoDePago").hide();
+        $.ajax({
+          url: "../../../required/post.php",
+          type: "POST",
+          data: { action: "denaBorratu", key: "saskikoGauzak" },
+        });
+        location.reload();
+
+
+      });
+    }
+  });
+
+  // Viasko ordainketa logika
+  $(".botonPagar_3").click(function () {
+    if (verificarInputs("#visaPago")) {
+      var nombre = $("#nombre_3").val();
+      var abizena1 = $("#abizena1_3").val();
+      var abizena2 = $("#abizena2_3").val();
+      var telefono = $("#telefono_3").val();
+      var banku_zenb = $("#banku_zenb_3").val();
+      var helbidea = $("#helbidea_3").val();
+      var dni = $("#dni_3").val();
+
+      // Realizar la llamada AJAX a post.php
+      $.ajax({
+        type: "POST",
+        url: "../../../required/post.php",
+        data: {
+          action: "erosi3Visa",
+          nombre: nombre,
+          abizena1: abizena1,
+          abizena2: abizena2,
+          telefono: telefono,
+          banku_zenb: banku_zenb,
+          helbidea: helbidea,
+          dni: dni,
+        },
+        success: function (response) {
+          // Aquí puedes manejar la respuesta del servidor si es necesaria
+          console.log(response);
+        },
+      }).done(function (data) {
+        alert(data);
+        $("#nombre_3").val("");
+        $("#abizena1_3").val("");
+        $("#abizena2_3").val("");
+        $("#telefono_3").val("");
+        $("#banku_zenb_3").val("");
+        $("#helbidea_3").val("");
+        $("#dni_3").val("");
+
+        $("#visaPago").hide();
+        $("#metodoDePago").hide();
+        $.ajax({
+          url: "../../../required/post.php",
+          type: "POST",
+          data: { action: "denaBorratu", key: "saskikoGauzak" },
+        });
+        location.reload();
+
+
+
+      });
+    }
+  });
+
+  // denak beteta daudela egiaztatzeko funtzioa
+  function verificarInputs(formId) {
+    var inputs = $(
+      formId + " input[type='text'], " + formId + " input[type='number']"
+    );
+    var allFilled = true;
+
+    inputs.each(function () {
+      if ($(this).val() === "") {
+        allFilled = false;
+        return false;
+      }
+    });
+
+    if (!allFilled) {
+      alert("Por favor, rellene todos los campos.");
+    }
+
+    return allFilled;
+  }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function setInPHPSession(sessionKey, sessionValue, idProduct) {
   var postDir = $("#postDir").val();
@@ -223,19 +432,17 @@ function idatziSaskian(parsedSaskiZerrenda) {
 
   $("#prezioTotalaZenbakiaDefini").text(total.toFixed(2) + "€");
 
-
-
-
-
   $(".botoiaBorratzekoIndi").click(function () {
     var postDir = $("#postDir").val();
     var idDelBoton = $(this).attr("id");
-    var idDelBotonZenbakia = idDelBoton.match(/\d$/);
+    alert(idDelBoton);
+    var idDelBotonZenbakia = idDelBoton.replace(/[^0-9]/g, "");
+    alert(idDelBotonZenbakia);
 
     $.ajax({
       url: postDir,
       type: "POST",
-      data: { action: "proBorratu",id: idDelBotonZenbakia},
+      data: { action: "proBorratu", id: idDelBotonZenbakia },
     });
     location.reload();
   });
