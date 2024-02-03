@@ -106,15 +106,19 @@ $(document).ready(function () {
   });
 
   $("#borratzekoBotoia").click(function () {
-    var postDir = $("#postDir").val();
-    var sessionKey = "saskikoGauzak";
+    if (!$("#metodoDePago").is(":hidden")) {
+      alert("Ordainketa martxan dago, ezin dituzu produktuak orain ezabatu");
+    } else {
+      var postDir = $("#postDir").val();
+      var sessionKey = "saskikoGauzak";
 
-    $.ajax({
-      url: postDir,
-      type: "POST",
-      data: { action: "denaBorratu", key: sessionKey },
-    });
-    location.reload();
+      $.ajax({
+        url: postDir,
+        type: "POST",
+        data: { action: "denaBorratu", key: sessionKey },
+      });
+      location.reload();
+    }
   });
 
 
@@ -136,7 +140,12 @@ $(document).ready(function () {
   $("#visaPago").hide();
 
   $("#erostekoBotoia").click(function () {
-    $("#metodoDePago").show();
+    if ($("#sasProGord").children().length > 0) {
+      $("#metodoDePago").show();
+    } else {
+      alert("Ez dago produkturik erosketa burutzeko");
+    }
+
   });
   $("#paypal").click(function () {
     $("#paypalPago").hide();
@@ -432,7 +441,12 @@ function idatziSaskian(parsedSaskiZerrenda) {
 
   $("#prezioTotalaZenbakiaDefini").text(total.toFixed(2) + "€");
 
+
+
   $(".botoiaBorratzekoIndi").click(function () {
+    if (!$("#metodoDePago").is(":hidden")) {
+      alert("Ordainketa martxan dago, ezin dituzu produktuak orain ezabatu");
+    } else {
     var postDir = $("#postDir").val();
     var idDelBoton = $(this).attr("id");
     alert(idDelBoton);
@@ -445,5 +459,6 @@ function idatziSaskian(parsedSaskiZerrenda) {
       data: { action: "proBorratu", id: idDelBotonZenbakia },
     });
     location.reload();
+    }
   });
 }

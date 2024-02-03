@@ -48,8 +48,10 @@ if (isset($_POST["action"])) {
 
 
 
+
+
         case "erosi1Paypal": {
-            // Aquí puedes acceder a los datos enviados desde el formulario de PayPal
+
             $nombre = $_POST["nombre"];
             $abizena1 = $_POST["abizena1"];
             $abizena2 = $_POST["abizena2"];
@@ -63,22 +65,31 @@ if (isset($_POST["action"])) {
             $conn = connection();
             $sql = "INSERT INTO erronka.bezeroak (izena, abizena1, abizena2, nan, helbidea, telefonoa) VALUES (?, ?, ?, ?, ?, ?);";
 
+            $stmt1 = $conn->prepare($sql);
+            $stmt1->bind_param("ssssss", $nombre, $abizena1, $abizena2, $dni, $helbidea, $telefono);
+
+            $sql = "INSERT INTO erronka.saskia (nan_bezeroa, segimentua) VALUES (?, 'PROZESUAN');";
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param("ssssss", $nombre, $abizena1, $abizena2, $dni, $helbidea, $telefono);
-            if ($stmt->execute()) {
-                echo "Datuak zuzen gorde dira.";
-                echo "Erosketa egin da!";
+            $stmt->bind_param("s", $dni);
+
+    
+
+
+            if ($stmt->execute() && $stmt1->execute()) {
+                echo "Datuak zuzen gorde dira.<br>";
+                echo "Erosketa egin da!<br>";
             } else {
                 echo "Errorea datuak datu-basean sartzerakoan: " . $stmt->error;
             }
             
 
             $stmt->close();
+            $stmt1->close();
             $conn->close();
             break;
         }
         case "erosi2Bizum": {
-            // Aquí puedes acceder a los datos enviados desde el formulario de Bizum
+
             $nombre = $_POST["nombre"];
             $abizena1 = $_POST["abizena1"];
             $abizena2 = $_POST["abizena2"];
@@ -92,9 +103,16 @@ if (isset($_POST["action"])) {
             $conn = connection();
             $sql = "INSERT INTO erronka.bezeroak (izena, abizena1, abizena2, nan, helbidea, telefonoa) VALUES (?, ?, ?, ?, ?, ?);";
 
+            $stmt1 = $conn->prepare($sql);
+            $stmt1->bind_param("ssssss", $nombre, $abizena1, $abizena2, $dni, $helbidea, $telefono);
+            
+
+            $sql = "INSERT INTO erronka.saskia (nan_bezeroa, segimentua) VALUES (?, 'PROZESUAN');";
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param("ssssss", $nombre, $abizena1, $abizena2, $dni, $helbidea, $telefono);
-            if ($stmt->execute()) {
+            $stmt->bind_param("s", $dni);
+
+
+            if ($stmt->execute() && $stmt1->execute()) {
                 echo "Datuak zuzen gorde dira.";
                 echo "Erosketa egin da!";
             } else {
@@ -107,7 +125,7 @@ if (isset($_POST["action"])) {
             break;
         }
         case "erosi3Visa": {
-            // Aquí puedes acceder a los datos enviados desde el formulario de Visa
+
             $nombre = $_POST["nombre"];
             $abizena1 = $_POST["abizena1"];
             $abizena2 = $_POST["abizena2"];
@@ -121,9 +139,17 @@ if (isset($_POST["action"])) {
             $conn = connection();
             $sql = "INSERT INTO erronka.bezeroak (izena, abizena1, abizena2, nan, banku_zenbakia, helbidea, telefonoa) VALUES (?, ?, ?, ?, ?, ?, ?);";
 
+            $stmt1 = $conn->prepare($sql);
+            $stmt1->bind_param("sssssss", $nombre, $abizena1, $abizena2, $dni, $banku_zenb, $helbidea, $telefono);
+
+
+
+            $sql = "INSERT INTO erronka.saskia (nan_bezeroa, segimentua) VALUES (?, 'PROZESUAN');";
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param("sssssss", $nombre, $abizena1, $abizena2, $dni, $banku_zenb, $helbidea, $telefono);
-            if ($stmt->execute()) {
+            $stmt->bind_param("s", $dni);
+
+
+            if ($stmt->execute() && $stmt1->execute()) {
                 echo "Datuak zuzen gorde dira.";
                 echo "Erosketa egin da!";
             } else {
@@ -141,3 +167,4 @@ if (isset($_POST["action"])) {
 } else {
     echo "Error: Invalid action.";
 }
+
