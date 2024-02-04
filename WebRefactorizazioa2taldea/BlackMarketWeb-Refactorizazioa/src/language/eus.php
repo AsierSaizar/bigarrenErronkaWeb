@@ -1,6 +1,8 @@
 <?php
 return [
-     
+    //ZESTA
+
+
     "zestokoVistaPrevia" => "Saskietako produktuen aurrebista", 
     "faboriton Lista" => "Gustuko productuak",
     "saskia" => "Saskia",
@@ -11,6 +13,28 @@ return [
     "DEFINITIBOA" => "DEFINITIBOA",
     "ErosketaBurutu" => "Erosketa Burutu",
     "form" => "Formulario hau bete hobetzen laguntzeko",
+    "Haukeratu ordainketa burutzeko metodoa" => "Haukeratu ordainketa burutzeko metodoa",
+
+
+
+
+    
+    "Izena" => "Izena",
+    "abizena1" => "Lehen abizena",
+    "abizena2" => "DEFINITIBOA",
+    "telefono" => "Mugikor zenbakia",
+    "helbidea" => "Helbidea",
+    "bankuZenb" => "Banku zenbakia",
+    "PagarCon" => "Ordaindu",
+    "GordeDira" => "Gorde dira datuak",
+    "ezdaudePro" => "Ez daude produktuak saskian",
+    "erosEginda'" => "Erosketa egin da",
+    "ErroreaDatu" => "Errorea datu basean sartzerakoan",
+    "DEFINITIBdOA" => "DEFINITIBOA",
+    "DEFINITIBOdA" => "DEFINITIBOA",
+    "DEFINITIBOfA" => "DEFINITIBOA",
+    "DEFINITIsBOA" => "DEFINITIBOA",
+    "DEFINITIBsOA" => "DEFINITIBOA",
 
 
     

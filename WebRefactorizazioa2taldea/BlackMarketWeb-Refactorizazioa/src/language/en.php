@@ -14,6 +14,27 @@ return [
 
 
 
+    
+    "Haukeratu ordainketa burutzeko metodoa" => "choose the method of payment",
+    "Izena" => "Name",
+    "abizena1" => "First surname",
+    "abizena2" => "Second surname",
+    "telefono" => "Phone number",
+    "helbidea" => "Direction",
+    "bankuZenb" => "Bank account number",
+    "PagarCon" => "Pay with",
+    "GordeDira" => "Data have been saved",
+    "ezdaudePro" => "No items in cart",
+    "erosEginda'" => "The purchase has been made",
+    "ErroreaDatu" => "Error when entering data in database",
+    "DEFINITIBdOA" => "DEFINITIBOA",
+    "DEFINITIBOdA" => "DEFINITIBOA",
+    "DEFINITIBOfA" => "DEFINITIBOA",
+    "DEFINITIsBOA" => "DEFINITIBOA",
+    "DEFINITIBsOA" => "DEFINITIBOA",
+
+
+
     // index.php
     "OngiEtorri" => "Welcome to Black Market", 
     "GuriBuruztext" => "Hello! Although Black Market is in rehabilitation, our goal is to offer high-quality products at low cost. We offer opportunities and forecasts tailored to the needs of our customers, as long as technology is advancing to the world. Our commitment is to bring quality and customer satisfaction. With us, so that you have at our fingertips the new technologies!", 

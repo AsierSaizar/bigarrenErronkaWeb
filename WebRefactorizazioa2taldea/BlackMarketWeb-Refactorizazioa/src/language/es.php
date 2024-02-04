@@ -11,6 +11,30 @@ return [
     "DEFINITIBOA" => "DEFINITIVO",
     "ErosketaBurutu" => "Realizar compra",
     "form" => "Rellena este formulario para ayudarnos a mejorar",
+    "Haukeratu ordainketa burutzeko metodoa" => "Eligue el metodo de pago",
+
+
+
+
+
+
+    "Izena" => "Nombre",
+    "abizena1" => "Primer apedillo",
+    "abizena2" => "Segundo apedillo",
+    "telefono" => "Numero de telefono",
+    "helbidea" => "Direccion",
+    "bankuZenb" => "Numero de banco",
+    "PagarCon" => "Pagar con",
+    "GordeDira" => "Los datos se han guardado",
+    "ezdaudePro" => "No hay productos en la cesta",
+    "erosEginda" => "La compra ha sido realizada",
+    "ErroreaDatu'" => "Error al meter datos en la base de datos",
+    "DEFINITIBOAñ" => "DEFINITIBOA",
+    "DEFINITIBdOA" => "DEFINITIBOA",
+    "DEFINITIBOdA" => "DEFINITIBOA",
+    "DEFINITIBOfA" => "DEFINITIBOA",
+    "DEFINITIsBOA" => "DEFINITIBOA",
+    "DEFINITIBsOA" => "DEFINITIBOA",
 
     
 

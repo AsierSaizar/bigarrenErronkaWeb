@@ -64,7 +64,11 @@ if (isset($_POST["action"])) {
                 require_once("functions.php");
 
                 $conn = connection();
-                $sql = "INSERT INTO erronka.bezeroak (izena, abizena1, abizena2, nan, helbidea, telefonoa) VALUES (?, ?, ?, ?, ?, ?);";
+
+
+                $sql = "INSERT INTO erronka.bezeroak (izena, abizena1, abizena2, nan, helbidea, telefonoa) 
+                VALUES (?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE
+                izena = VALUES(izena), abizena1 = VALUES(abizena1), abizena2 = VALUES(abizena2), helbidea = VALUES(helbidea), telefonoa = VALUES(telefonoa);";
 
                 $stmt1 = $conn->prepare($sql);
                 $stmt1->bind_param("ssssss", $nombre, $abizena1, $abizena2, $dni, $helbidea, $telefono);
@@ -82,7 +86,7 @@ if (isset($_POST["action"])) {
                 }
 
                 $sql = "SELECT * FROM erronka.saskia where nan_bezeroa= '$dni';";
-
+ 
                 $result = $conn->query($sql);
 
                 while ($row = $result->fetch_assoc()) {
@@ -151,7 +155,12 @@ if (isset($_POST["action"])) {
                 require_once("functions.php");
 
                 $conn = connection();
-                $sql = "INSERT INTO erronka.bezeroak (izena, abizena1, abizena2, nan, helbidea, telefonoa) VALUES (?, ?, ?, ?, ?, ?);";
+
+
+
+                $sql = "INSERT INTO erronka.bezeroak (izena, abizena1, abizena2, nan, helbidea, telefonoa) 
+                VALUES (?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE
+                izena = VALUES(izena), abizena1 = VALUES(abizena1), abizena2 = VALUES(abizena2), helbidea = VALUES(helbidea), telefonoa = VALUES(telefonoa);";
 
                 $stmt1 = $conn->prepare($sql);
                 $stmt1->bind_param("ssssss", $nombre, $abizena1, $abizena2, $dni, $helbidea, $telefono);
@@ -238,7 +247,13 @@ if (isset($_POST["action"])) {
                 require_once("functions.php");
 
                 $conn = connection();
-                $sql = "INSERT INTO erronka.bezeroak (izena, abizena1, abizena2, nan, banku_zenbakia, helbidea, telefonoa) VALUES (?, ?, ?, ?, ?, ?, ?);";
+
+
+                
+
+                $sql = "INSERT INTO erronka.bezeroak (izena, abizena1, abizena2, nan, banku_zenbakia, helbidea, telefonoa) 
+                VALUES (?, ?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE
+                izena = VALUES(izena), abizena1 = VALUES(abizena1), abizena2 = VALUES(abizena2), banku_zenbakia = VALUES(banku_zenbakia), helbidea = VALUES(helbidea), telefonoa = VALUES(telefonoa);";
 
                 $stmt1 = $conn->prepare($sql);
                 $stmt1->bind_param("sssssss", $nombre, $abizena1, $abizena2, $dni, $banku_zenb, $helbidea, $telefono);

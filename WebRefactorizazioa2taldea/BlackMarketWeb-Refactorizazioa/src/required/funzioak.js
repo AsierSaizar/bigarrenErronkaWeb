@@ -10,7 +10,22 @@ document.addEventListener("DOMContentLoaded", function () {
   function searchProducts(term) {
     var found = window.find(term, false, false, true, false, true, false);
     if (!found) {
-      alert("No se encontraron coincidencias.");
+      var aukeraHizkuntzaSelect = $("#selectHizkuntzaAukeratzeko").val();
+      switch (aukeraHizkuntzaSelect) {
+        case "eus":{
+          alert("Ez da aurkitu bilatutakoa.");
+          break;
+        }
+        case "es":{
+          alert("No se encontraron coincidencias.");
+          break;
+        }
+        case "en":{
+          alert("No matches found.");
+          break;
+        }
+      }
+
     }
   }
 });
@@ -78,7 +93,23 @@ $(document).ready(function () {
 
     var kajaId = "#kajasaskia" + id;
 
-    alert(modelo + " saskian Sartu da");
+    var aukeraHizkuntzaSelect = $("#selectHizkuntzaAukeratzeko").val();
+    switch (aukeraHizkuntzaSelect) {
+      case "eus":{
+        alert(modelo + " saskian Sartu da");
+        break;
+      }
+      case "es":{
+        alert(modelo + " se agrego a la cesta");
+        break;
+      }
+      case "en":{
+        alert(modelo + " add to cart");
+        break;
+      }
+
+    }
+
     var pModelo = $("<div><p>").text("Modelo: " + modelo);
     var pPrecio = $("<p>").text("Precio: " + precio + "€");
 
@@ -107,7 +138,21 @@ $(document).ready(function () {
 
   $("#borratzekoBotoia").click(function () {
     if (!$("#metodoDePago").is(":hidden")) {
-      alert("Ordainketa martxan dago, ezin dituzu produktuak orain ezabatu");
+      var aukeraHizkuntzaSelect = $("#selectHizkuntzaAukeratzeko").val();
+      switch (aukeraHizkuntzaSelect) {
+        case "eus":{
+          alert("Ordainketa martxan dago, ezin dituzu produktuak orain ezabatu");
+          break;
+        }
+        case "es":{
+          alert("La compra esta en proceso, no puedes borrar articulos en este momento");
+          break;
+        }
+        case "en":{
+          alert("Purchase is in process, you can't delete items right now");
+          break;
+        }
+      }
     } else {
       var postDir = $("#postDir").val();
       var sessionKey = "saskikoGauzak";
@@ -130,7 +175,21 @@ $(document).ready(function () {
     if ($("#sasProGord").children().length > 0) {
       $("#metodoDePago").show();
     } else {
-      alert("Ez dago produkturik erosketa burutzeko");
+      var aukeraHizkuntzaSelect = $("#selectHizkuntzaAukeratzeko").val();
+      switch (aukeraHizkuntzaSelect) {
+        case "eus":{
+          alert("Ez dago produkturik erosketa burutzeko");
+          break;
+        }
+        case "es":{
+          alert("No hay ningun articulo para comprar");
+          break;
+        }
+        case "en":{
+          alert("There is no item to buy");
+          break;
+        }
+      }
     }
   });
   $("#paypal").click(function () {
@@ -368,7 +427,22 @@ $(document).ready(function () {
     });
 
     if (!allFilled) {
-      alert("Por favor, rellene todos los campos.");
+      var aukeraHizkuntzaSelect = $("#selectHizkuntzaAukeratzeko").val();
+      switch (aukeraHizkuntzaSelect) {
+        case "eus":{
+          alert("Bete hutsune guztiak mesedez.");
+          break;
+        }
+        case "es":{
+          alert("Por favor, rellene todos los campos.");
+          break;
+        }
+        case "en":{
+          alert("Fill all the gaps please");
+          break;
+        }
+      }
+
     }
 
     return allFilled;
@@ -458,7 +532,22 @@ function idatziSaskian(parsedSaskiZerrenda) {
 
   $(".botoiaBorratzekoIndi").click(function () {
     if (!$("#metodoDePago").is(":hidden")) {
-      alert("Ordainketa martxan dago, ezin dituzu produktuak orain ezabatu");
+      var aukeraHizkuntzaSelect = $("#selectHizkuntzaAukeratzeko").val();
+      switch (aukeraHizkuntzaSelect) {
+        case "eus":{
+          alert("Ordainketa martxan dago, ezin dituzu produktuak orain ezabatu");
+          break;
+        }
+        case "es":{
+          alert("La compra esta en proceso, no puedes borrar articulos en este momento");
+          break;
+        }
+        case "en":{
+          alert("Purchase is in process, you can't delete items right now");
+          break;
+        }
+      }
+      
     } else {
       var postDir = $("#postDir").val();
       var idDelBoton = $(this).attr("id");
