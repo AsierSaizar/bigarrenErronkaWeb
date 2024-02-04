@@ -121,19 +121,6 @@ $(document).ready(function () {
     }
   });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   $("#metodoDePago").hide();
   $("#paypalPago").hide();
   $("#bizumPago").hide();
@@ -145,7 +132,6 @@ $(document).ready(function () {
     } else {
       alert("Ez dago produkturik erosketa burutzeko");
     }
-
   });
   $("#paypal").click(function () {
     $("#paypalPago").hide();
@@ -177,11 +163,28 @@ $(document).ready(function () {
       var helbidea = $("#helbidea_1").val();
       var dni = $("#dni_1").val();
 
+      var datosArray = {};
+
+      // Iterar sobre cada div con la clase 'saskikoKajak'
+      $(".saskikoKajak").each(function (index) {
+        var id = $(this).attr("id").replace("kajasaskia", "");
+        var cantidad = $(this)
+          .find('div[id^="prezioa"]')
+          .text()
+          .replace("x", "");
+
+       
+        datosArray[id] = parseInt(cantidad);
+      });
+
+      console.log(datosArray);
+
       // Realizar la llamada AJAX a post.php
       $.ajax({
         type: "POST",
         url: "../../../required/post.php",
         data: {
+          erosketaData:datosArray,
           action: "erosi1Paypal",
           nombre: nombre,
           abizena1: abizena1,
@@ -211,7 +214,6 @@ $(document).ready(function () {
           data: { action: "denaBorratu", key: "saskikoGauzak" },
         });
         location.reload();
-
       });
     }
   });
@@ -226,11 +228,29 @@ $(document).ready(function () {
       var helbidea = $("#helbidea_2").val();
       var dni = $("#dni_2").val();
 
+
+      var datosArray = {};
+
+      // Iterar sobre cada div con la clase 'saskikoKajak'
+      $(".saskikoKajak").each(function (index) {
+        var id = $(this).attr("id").replace("kajasaskia", "");
+        var cantidad = $(this)
+          .find('div[id^="prezioa"]')
+          .text()
+          .replace("x", "");
+
+       
+        datosArray[id] = parseInt(cantidad);
+      });
+
+      console.log(datosArray);
+
       // Realizar la llamada AJAX a post.php
       $.ajax({
         type: "POST",
         url: "../../../required/post.php",
         data: {
+          erosketaData:datosArray,
           action: "erosi2Bizum",
           nombre: nombre,
           abizena1: abizena1,
@@ -260,8 +280,6 @@ $(document).ready(function () {
           data: { action: "denaBorratu", key: "saskikoGauzak" },
         });
         location.reload();
-
-
       });
     }
   });
@@ -277,11 +295,29 @@ $(document).ready(function () {
       var helbidea = $("#helbidea_3").val();
       var dni = $("#dni_3").val();
 
+
+      var datosArray = {};
+
+      // Iterar sobre cada div con la clase 'saskikoKajak'
+      $(".saskikoKajak").each(function (index) {
+        var id = $(this).attr("id").replace("kajasaskia", "");
+        var cantidad = $(this)
+          .find('div[id^="prezioa"]')
+          .text()
+          .replace("x", "");
+
+       
+        datosArray[id] = parseInt(cantidad);
+      });
+
+      console.log(datosArray);
+
       // Realizar la llamada AJAX a post.php
       $.ajax({
         type: "POST",
         url: "../../../required/post.php",
         data: {
+          erosketaData:datosArray,
           action: "erosi3Visa",
           nombre: nombre,
           abizena1: abizena1,
@@ -313,9 +349,6 @@ $(document).ready(function () {
           data: { action: "denaBorratu", key: "saskikoGauzak" },
         });
         location.reload();
-
-
-
       });
     }
   });
@@ -341,24 +374,6 @@ $(document).ready(function () {
     return allFilled;
   }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function setInPHPSession(sessionKey, sessionValue, idProduct) {
   var postDir = $("#postDir").val();
@@ -441,24 +456,20 @@ function idatziSaskian(parsedSaskiZerrenda) {
 
   $("#prezioTotalaZenbakiaDefini").text(total.toFixed(2) + "€");
 
-
-
   $(".botoiaBorratzekoIndi").click(function () {
     if (!$("#metodoDePago").is(":hidden")) {
       alert("Ordainketa martxan dago, ezin dituzu produktuak orain ezabatu");
     } else {
-    var postDir = $("#postDir").val();
-    var idDelBoton = $(this).attr("id");
-    alert(idDelBoton);
-    var idDelBotonZenbakia = idDelBoton.replace(/[^0-9]/g, "");
-    alert(idDelBotonZenbakia);
+      var postDir = $("#postDir").val();
+      var idDelBoton = $(this).attr("id");
+      var idDelBotonZenbakia = idDelBoton.replace(/[^0-9]/g, "");
 
-    $.ajax({
-      url: postDir,
-      type: "POST",
-      data: { action: "proBorratu", id: idDelBotonZenbakia },
-    });
-    location.reload();
+      $.ajax({
+        url: postDir,
+        type: "POST",
+        data: { action: "proBorratu", id: idDelBotonZenbakia },
+      });
+      location.reload();
     }
   });
 }
