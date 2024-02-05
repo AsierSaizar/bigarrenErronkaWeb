@@ -7,7 +7,7 @@ return [
     "Bidalketako gastuak" => "Gastos de envio",
     "⚠100€ baino erosketa altuagoetan gastu gabe!⚠" => "⚠¡Sin gastos en compras superiores a 100€!⚠",
     "Guztira" => "Total",
-    "Prezio totala" => "Precio tot",
+    "Prezio totala" => "Precio total",
     "DEFINITIBOA" => "DEFINITIVO",
     "ErosketaBurutu" => "Realizar compra",
     "form" => "Rellena este formulario para ayudarnos a mejorar",

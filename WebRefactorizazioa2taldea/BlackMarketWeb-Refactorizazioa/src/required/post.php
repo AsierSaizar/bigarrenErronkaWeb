@@ -52,6 +52,7 @@ if (isset($_POST["action"])) {
 
         case "erosi1Paypal": {
                 $erosketaData = $_POST["erosketaData"];
+                $prezioTotala = $_POST["prezioTotala"];
 
                 $nombre = $_POST["nombre"];
                 $abizena1 = $_POST["abizena1"];
@@ -59,24 +60,24 @@ if (isset($_POST["action"])) {
                 $telefono = $_POST["telefono"];
                 $helbidea = $_POST["helbidea"];
                 $dni = $_POST["dni"];
-
+                $egoera = "PRAZESUAN";
 
                 require_once("functions.php");
 
                 $conn = connection();
 
 
-                $sql = "INSERT INTO erronka.bezeroak (izena, abizena1, abizena2, nan, helbidea, telefonoa) 
+                $sql = "INSERT INTO bezeroak (izena, abizena1, abizena2, nan, helbidea, telefonoa) 
                 VALUES (?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE
                 izena = VALUES(izena), abizena1 = VALUES(abizena1), abizena2 = VALUES(abizena2), helbidea = VALUES(helbidea), telefonoa = VALUES(telefonoa);";
 
                 $stmt1 = $conn->prepare($sql);
                 $stmt1->bind_param("ssssss", $nombre, $abizena1, $abizena2, $dni, $helbidea, $telefono);
 
-                $sql = "INSERT INTO erronka.saskia (nan_bezeroa, segimentua) VALUES (?, 'PROZESUAN');";
+                $sql = "INSERT INTO saskia (nan_bezeroa, segimentua, prezioTotala) VALUES (?, ?, ?);";
 
                 $stmt = $conn->prepare($sql);
-                $stmt->bind_param("s", $dni);
+                $stmt->bind_param("sss", $dni, $egoera, $prezioTotala);
 
                 if ($stmt->execute() && $stmt1->execute()) {
                     echo "Datuak zuzen gorde dira.";
@@ -85,7 +86,7 @@ if (isset($_POST["action"])) {
                     echo "Errorea datuak datu-basean sartzerakoan: " . $stmt->error;
                 }
 
-                $sql = "SELECT * FROM erronka.saskia where nan_bezeroa= '$dni';";
+                $sql = "SELECT * FROM saskia where nan_bezeroa= '$dni';";
  
                 $result = $conn->query($sql);
 
@@ -93,7 +94,7 @@ if (isset($_POST["action"])) {
                     $id_eskaera = $row["id_eskaera"];
                 }
 
-                $sql = "INSERT INTO erronka.produktueskaera(ideskaera, idProduktua, Kopurua) VALUES (?, ?, ?)";
+                $sql = "INSERT INTO produktueskaera(ideskaera, idProduktua, Kopurua) VALUES (?, ?, ?)";
                 $stmt3 = $conn->prepare($sql);
 
                 // Verificar si la preparación de la consulta fue exitosa
@@ -119,7 +120,7 @@ if (isset($_POST["action"])) {
 
                 // Iterar sobre el array
                 foreach ($erosketaData as $idProduktua => $Kopurua) {
-                    $sql = "UPDATE erronka.konponenteak SET kantitatea = kantitatea  - $Kopurua WHERE id = $idProduktua;";
+                    $sql = "UPDATE konponenteak SET kantitatea = kantitatea  - $Kopurua WHERE id = $idProduktua;";
                     $stmt4 = $conn->prepare($sql);
                     $result = $stmt4->execute();
 
@@ -143,6 +144,7 @@ if (isset($_POST["action"])) {
             }
         case "erosi2Bizum": {
                 $erosketaData = $_POST["erosketaData"];
+                $prezioTotala = $_POST["prezioTotala"];
 
                 $nombre = $_POST["nombre"];
                 $abizena1 = $_POST["abizena1"];
@@ -150,6 +152,7 @@ if (isset($_POST["action"])) {
                 $telefono = $_POST["telefono"];
                 $helbidea = $_POST["helbidea"];
                 $dni = $_POST["dni"];
+                $egoera = "PRAZESUAN";
 
 
                 require_once("functions.php");
@@ -158,7 +161,7 @@ if (isset($_POST["action"])) {
 
 
 
-                $sql = "INSERT INTO erronka.bezeroak (izena, abizena1, abizena2, nan, helbidea, telefonoa) 
+                $sql = "INSERT INTO bezeroak (izena, abizena1, abizena2, nan, helbidea, telefonoa) 
                 VALUES (?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE
                 izena = VALUES(izena), abizena1 = VALUES(abizena1), abizena2 = VALUES(abizena2), helbidea = VALUES(helbidea), telefonoa = VALUES(telefonoa);";
 
@@ -166,9 +169,9 @@ if (isset($_POST["action"])) {
                 $stmt1->bind_param("ssssss", $nombre, $abizena1, $abizena2, $dni, $helbidea, $telefono);
 
 
-                $sql = "INSERT INTO erronka.saskia (nan_bezeroa, segimentua) VALUES (?, 'PROZESUAN');";
+                $sql = "INSERT INTO saskia (nan_bezeroa, segimentua, prezioTotala) VALUES (?, ?, ?);";
                 $stmt = $conn->prepare($sql);
-                $stmt->bind_param("s", $dni);
+                $stmt->bind_param("sss", $dni, $egoera, $prezioTotala);
 
 
                 if ($stmt->execute() && $stmt1->execute()) {
@@ -177,7 +180,7 @@ if (isset($_POST["action"])) {
                 } else {
                     echo "Errorea datuak datu-basean sartzerakoan: " . $stmt->error;
                 }
-                $sql = "SELECT * FROM erronka.saskia where nan_bezeroa= '$dni';";
+                $sql = "SELECT * FROM saskia where nan_bezeroa= '$dni';";
 
                 $result = $conn->query($sql);
 
@@ -185,7 +188,7 @@ if (isset($_POST["action"])) {
                     $id_eskaera = $row["id_eskaera"];
                 }
 
-                $sql = "INSERT INTO erronka.produktueskaera(ideskaera, idProduktua, Kopurua) VALUES (?, ?, ?)";
+                $sql = "INSERT INTO produktueskaera(ideskaera, idProduktua, Kopurua) VALUES (?, ?, ?)";
                 $stmt3 = $conn->prepare($sql);
 
                 // Verificar si la preparación de la consulta fue exitosa
@@ -211,7 +214,7 @@ if (isset($_POST["action"])) {
 
                 // Iterar sobre el array
                 foreach ($erosketaData as $idProduktua => $Kopurua) {
-                    $sql = "UPDATE erronka.konponenteak SET kantitatea = kantitatea  - $Kopurua WHERE id = $idProduktua;";
+                    $sql = "UPDATE konponenteak SET kantitatea = kantitatea  - $Kopurua WHERE id = $idProduktua;";
                     $stmt4 = $conn->prepare($sql);
                     $result = $stmt4->execute();
 
@@ -235,6 +238,7 @@ if (isset($_POST["action"])) {
             }
         case "erosi3Visa": {
                 $erosketaData = $_POST["erosketaData"];
+                $prezioTotala = $_POST["prezioTotala"];
 
                 $nombre = $_POST["nombre"];
                 $abizena1 = $_POST["abizena1"];
@@ -243,6 +247,7 @@ if (isset($_POST["action"])) {
                 $banku_zenb = $_POST["banku_zenb"];
                 $helbidea = $_POST["helbidea"];
                 $dni = $_POST["dni"];
+                $egoera = "PRAZESUAN";
 
                 require_once("functions.php");
 
@@ -251,7 +256,7 @@ if (isset($_POST["action"])) {
 
                 
 
-                $sql = "INSERT INTO erronka.bezeroak (izena, abizena1, abizena2, nan, banku_zenbakia, helbidea, telefonoa) 
+                $sql = "INSERT INTO bezeroak (izena, abizena1, abizena2, nan, banku_zenbakia, helbidea, telefonoa) 
                 VALUES (?, ?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE
                 izena = VALUES(izena), abizena1 = VALUES(abizena1), abizena2 = VALUES(abizena2), banku_zenbakia = VALUES(banku_zenbakia), helbidea = VALUES(helbidea), telefonoa = VALUES(telefonoa);";
 
@@ -260,9 +265,9 @@ if (isset($_POST["action"])) {
 
 
 
-                $sql = "INSERT INTO erronka.saskia (nan_bezeroa, segimentua) VALUES (?, 'PROZESUAN');";
+                $sql = "INSERT INTO saskia (nan_bezeroa, segimentua, prezioTotala) VALUES (?, ?, ?);";
                 $stmt = $conn->prepare($sql);
-                $stmt->bind_param("s", $dni);
+                $stmt->bind_param("sss", $dni, $egoera, $prezioTotala);
 
 
                 if ($stmt->execute() && $stmt1->execute()) {
@@ -271,7 +276,7 @@ if (isset($_POST["action"])) {
                 } else {
                     echo "Errorea datuak datu-basean sartzerakoan: " . $stmt->error;
                 }
-                $sql = "SELECT * FROM erronka.saskia where nan_bezeroa= '$dni';";
+                $sql = "SELECT * FROM saskia where nan_bezeroa= '$dni';";
 
                 $result = $conn->query($sql);
 
@@ -279,7 +284,7 @@ if (isset($_POST["action"])) {
                     $id_eskaera = $row["id_eskaera"];
                 }
 
-                $sql = "INSERT INTO erronka.produktueskaera(ideskaera, idProduktua, Kopurua) VALUES (?, ?, ?)";
+                $sql = "INSERT INTO produktueskaera(ideskaera, idProduktua, Kopurua) VALUES (?, ?, ?)";
                 $stmt3 = $conn->prepare($sql);
 
                 // Verificar si la preparación de la consulta fue exitosa
@@ -305,7 +310,7 @@ if (isset($_POST["action"])) {
 
                 // Iterar sobre el array
                 foreach ($erosketaData as $idProduktua => $Kopurua) {
-                    $sql = "UPDATE erronka.konponenteak SET kantitatea = kantitatea  - $Kopurua WHERE id = $idProduktua;";
+                    $sql = "UPDATE konponenteak SET kantitatea = kantitatea  - $Kopurua WHERE id = $idProduktua;";
                     $stmt4 = $conn->prepare($sql);
                     $result = $stmt4->execute();
 

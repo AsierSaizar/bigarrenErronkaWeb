@@ -221,7 +221,9 @@ $(document).ready(function () {
       var telefono = $("#telefono_1").val();
       var helbidea = $("#helbidea_1").val();
       var dni = $("#dni_1").val();
-
+      var prezioTotalaDiv = $('#prezioTotalaZenbakiaDefini').text();
+      var prezioTotala = prezioTotalaDiv.replace('€', '');
+      
       var datosArray = {};
 
       // Iterar sobre cada div con la clase 'saskikoKajak'
@@ -243,6 +245,7 @@ $(document).ready(function () {
         type: "POST",
         url: "../../../required/post.php",
         data: {
+          prezioTotala:prezioTotala,
           erosketaData:datosArray,
           action: "erosi1Paypal",
           nombre: nombre,
@@ -286,6 +289,9 @@ $(document).ready(function () {
       var telefono = $("#telefono_2").val();
       var helbidea = $("#helbidea_2").val();
       var dni = $("#dni_2").val();
+      var prezioTotalaDiv = $('#prezioTotalaZenbakiaDefini').text();
+      var prezioTotala = prezioTotalaDiv.replace('€', '');
+      
 
 
       var datosArray = {};
@@ -309,6 +315,7 @@ $(document).ready(function () {
         type: "POST",
         url: "../../../required/post.php",
         data: {
+          prezioTotala:prezioTotala,
           erosketaData:datosArray,
           action: "erosi2Bizum",
           nombre: nombre,
@@ -353,6 +360,9 @@ $(document).ready(function () {
       var banku_zenb = $("#banku_zenb_3").val();
       var helbidea = $("#helbidea_3").val();
       var dni = $("#dni_3").val();
+      var prezioTotalaDiv = $('#prezioTotalaZenbakiaDefini').text();
+      var prezioTotala = prezioTotalaDiv.replace('€', '');
+      
 
 
       var datosArray = {};
@@ -376,6 +386,7 @@ $(document).ready(function () {
         type: "POST",
         url: "../../../required/post.php",
         data: {
+          prezioTotala:prezioTotala,
           erosketaData:datosArray,
           action: "erosi3Visa",
           nombre: nombre,
@@ -385,6 +396,7 @@ $(document).ready(function () {
           banku_zenb: banku_zenb,
           helbidea: helbidea,
           dni: dni,
+          prezioTotala: prezioTotala,
         },
         success: function (response) {
           // Aquí puedes manejar la respuesta del servidor si es necesaria

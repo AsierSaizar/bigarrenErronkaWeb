@@ -30,7 +30,7 @@
             <label for="NanNif"><?= trans("NanNif") ?>:</label>
             <input type="text" id="NanNif" name="NanNif" required><br>
 
-            <label for="eskeintzeko"><?= trans("eskaintzen") ?>:</label>
+            <label for="eskeintzeko"><?= trans("eskaintzen") ?></label>
             <textarea id="eskeintzeko" name="eskeintzeko"></textarea><br>
 
             <input type="submit" value="<?= trans("Hornitzaile bihurtu") ?>">

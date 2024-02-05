@@ -21,7 +21,7 @@ return [
     
     "Izena" => "Izena",
     "abizena1" => "Lehen abizena",
-    "abizena2" => "DEFINITIBOA",
+    "abizena2" => "Bigarren abizena",
     "telefono" => "Mugikor zenbakia",
     "helbidea" => "Helbidea",
     "bankuZenb" => "Banku zenbakia",
