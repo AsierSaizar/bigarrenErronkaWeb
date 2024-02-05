@@ -83,6 +83,11 @@ img {
 .addToSaskia:hover {
   background-color: rgb(137, 165, 250);
   border-color: rgb(137, 165, 250);
+  
+}
+.yaGehitutasaskia{
+  background-color: rgb(29, 253, 66);
+  border-color: rgb(29, 253, 66);
   border-radius: 3px;
   color: rgb(255, 255, 255);
   width: 200px;
@@ -90,6 +95,7 @@ img {
   margin-bottom: 10px;
   position: -webkit-sticky;
 }
+
 .addToFavourite {
   background-color: rgb(89, 129, 247);
   border-color: rgb(89, 129, 247);
@@ -101,8 +107,8 @@ img {
   position: -webkit-sticky;
 }
 .addToFavourite:hover {
-  background-color: rgb(255, 251, 0);
-  border-color: rgb(255, 251, 0);
+  background-color: rgb(137, 165, 250);
+  border-color: rgb(137, 165, 250);
 }
 .yaGehituta{
     background-color: rgb(255, 232, 27);

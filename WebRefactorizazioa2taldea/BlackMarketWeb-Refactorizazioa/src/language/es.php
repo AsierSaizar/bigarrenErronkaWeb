@@ -3,6 +3,40 @@ return [
 
     "zestokoVistaPrevia" => "Vista previa de los productos de la cesta",
     "faboriton Lista" => "Productos favoritos",
+    "saskia" => "Cesta",
+    "Bidalketako gastuak" => "Gastos de envio",
+    "⚠100€ baino erosketa altuagoetan gastu gabe!⚠" => "⚠¡Sin gastos en compras superiores a 100€!⚠",
+    "Guztira" => "Total",
+    "Prezio totala" => "Precio total",
+    "DEFINITIBOA" => "DEFINITIVO",
+    "ErosketaBurutu" => "Realizar compra",
+    "form" => "Rellena este formulario para ayudarnos a mejorar",
+    "Haukeratu ordainketa burutzeko metodoa" => "Eligue el metodo de pago",
+
+
+
+
+
+
+    "Izena" => "Nombre",
+    "abizena1" => "Primer apedillo",
+    "abizena2" => "Segundo apedillo",
+    "telefono" => "Numero de telefono",
+    "helbidea" => "Direccion",
+    "bankuZenb" => "Numero de banco",
+    "PagarCon" => "Pagar con",
+    "GordeDira" => "Los datos se han guardado",
+    "ezdaudePro" => "No hay productos en la cesta",
+    "erosEginda" => "La compra ha sido realizada",
+    "ErroreaDatu'" => "Error al meter datos en la base de datos",
+    "DEFINITIBOAñ" => "DEFINITIBOA",
+    "DEFINITIBdOA" => "DEFINITIBOA",
+    "DEFINITIBOdA" => "DEFINITIBOA",
+    "DEFINITIBOfA" => "DEFINITIBOA",
+    "DEFINITIsBOA" => "DEFINITIBOA",
+    "DEFINITIBsOA" => "DEFINITIBOA",
+
+    
 
     // index.php
     "OngiEtorri" => "Bienvenido a Black Market",
@@ -27,9 +61,27 @@ return [
     "Hornitzaileak" => "Proveedores",
     "Denak" => "Todos",
     "Ez dago irizpide hauek betetzen dituet produkturik." => "No hay productos que cumplan estos criterios.",
-    "aldatu5" => "Aldatu",
-    "aldatu6" => "Aldatu",
-    "aldatu7" => "Aldatu",
-    "aldatu8" => "Aldatu",
+    "saskiraGehitu" => "Añadir a la cesta",
+
+
+        // berriak
+    "azalpenaBerriak1" => "Anteriores o posteriores a un fecha",
+    "aurreragokoak" => "Posteriores",
+    "lehenagokoak" => "Anteriores",
+    "Egun hontatik" => "Desde este dia",
+    "Egun hontara" => "Hasta este dia",
+
+
+        // hornitzaileak
+
+    "HornitzaileaIzateko" => "Rellena este formulario para ser proveedor",
+    "Telefono" => "Numero de telefono de la empresa",
+    "Empresaren Izena" => "Nombre de la empresa",
+    "Korreoa" => "Correo de la empresa",
+    "Helbidea" => "Direccion de la empresa",
+    "NanNif" => "Dni/Nif",
+    "eskaintzen" => "Que nos ofrece?",
+    "Hornitzaile bihurtu" => "Convertirse en proveedor",
+    "Ezabatu" => "Borrar",
 ];
 

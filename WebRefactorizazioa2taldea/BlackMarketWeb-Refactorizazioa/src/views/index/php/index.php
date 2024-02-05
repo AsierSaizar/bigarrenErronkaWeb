@@ -18,10 +18,14 @@
                     <h2><?= trans("GuriBuruz") ?>:</h2>
                     <img src="../../../../public/empresaargazkia.jpg">
                 </div>
+
                 <div class="GBtext">
                     <p><?= trans("GuriBuruztext") ?></p>
                 </div>
-                
+            </div>
+            <div class="Form">
+                <h3><?= trans("form") ?></h3>
+                <iframe width="640px" height="480px" src="https://forms.office.com/e/tAgjtbb0y8?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
             </div>
             
         </div>

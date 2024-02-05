@@ -3,7 +3,38 @@ return [
     
     "zestokoVistaPrevia" => "Preview of cart products",
     "faboriton Lista" => "Favorite products",
+    "saskia" => "Cart",
+    "Bidalketako gastuak" => "Shipping costs",
+    "⚠100€ baino erosketa altuagoetan gastu gabe!⚠" => "⚠In purchases over 100€ without spending!⚠",
+    "Guztira" => "Total",
+    "Prezio totala" => "Total price",
+    "DEFINITIBOA" => "DEFINITIVE",
+    "ErosketaBurutu" => "Make the purchase",
+    "form" => "Fill the form to help us to improve our services",
+
+
+
     
+    "Haukeratu ordainketa burutzeko metodoa" => "choose the method of payment",
+    "Izena" => "Name",
+    "abizena1" => "First surname",
+    "abizena2" => "Second surname",
+    "telefono" => "Phone number",
+    "helbidea" => "Direction",
+    "bankuZenb" => "Bank account number",
+    "PagarCon" => "Pay with",
+    "GordeDira" => "Data have been saved",
+    "ezdaudePro" => "No items in cart",
+    "erosEginda'" => "The purchase has been made",
+    "ErroreaDatu" => "Error when entering data in database",
+    "DEFINITIBdOA" => "DEFINITIBOA",
+    "DEFINITIBOdA" => "DEFINITIBOA",
+    "DEFINITIBOfA" => "DEFINITIBOA",
+    "DEFINITIsBOA" => "DEFINITIBOA",
+    "DEFINITIBsOA" => "DEFINITIBOA",
+
+
+
     // index.php
     "OngiEtorri" => "Welcome to Black Market", 
     "GuriBuruztext" => "Hello! Although Black Market is in rehabilitation, our goal is to offer high-quality products at low cost. We offer opportunities and forecasts tailored to the needs of our customers, as long as technology is advancing to the world. Our commitment is to bring quality and customer satisfaction. With us, so that you have at our fingertips the new technologies!", 
@@ -28,10 +59,28 @@ return [
     "Hornitzaileak" => "Suppliers",
     "Denak" => "All",
     "Ez dago irizpide hauek betetzen dituet produkturik." => "There are no products that meet these criteria.",
-    "aldatu5" => "Aldatu",
-    "aldatu6" => "Aldatu",
-    "aldatu7" => "Aldatu",
-    "aldatu8" => "Aldatu",
+    "saskiraGehitu" => "Add to cart",
+
+
+    // berriak
+
+    "azalpenaBerriak1" => "Before or after a date",
+    "aurreragokoak" => "After",
+    "lehenagokoak" => "Before",
+    "Egun hontatik" => "From this date",
+    "Egun hontara" => "To this date",
+
+    // hornitzaileak
+
+    "HornitzaileaIzateko" => "Fill out this form to be a supplier",
+    "Telefono" => "Telephone number of the company",
+    "Empresaren Izena" => "Company name",
+    "Korreoa" => "Company mail",
+    "Helbidea" => "Company direction",
+    "NanNif" => "ID NIF",
+    "eskaintzen" => "What do you offer??",
+    "Hornitzaile bihurtu" => "Become supplier",
+    "Ezabatu" => "Delete",
 ];
     
  

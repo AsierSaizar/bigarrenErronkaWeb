@@ -69,17 +69,14 @@
                     </h3>
                     <br>
                     <div id="offcanvas-body">
-
+                        
 
 
                     </div>
 
                 </div>
             </div>
-            <?php
-            $link = APP_DIR . "/src/language/translations.php";
-            require_once($link); //APP_DIR erabilita itzulpenen dokumentua atzitu dugu.
-            ?>
+            
 
             <div class="search-form">
                 <input aria-label="Buscar" id="search-input" placeholder="<?= trans("Bilatu") ?>" class="search-input"
@@ -90,12 +87,10 @@
 
             </div>
             <div class="language">
-
                 <!-- HTML-A -->
                 <div class="header grid-elem">
                     <?php require_once(APP_DIR . "/src/required/selectLang.php"); ?>
                 </div>
-
             </div>
             <div class="zestoaIkono">
                 <a href="../../../../src/views/Zesta/php/zesta.php"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -103,7 +98,7 @@
 
         </nav>
         <!-- hau da menua eta logoa, pagina guztietan berdina (hemen bukatzen da) -->
-        
+        <input type="hidden" id="postDir" value="<?= HREF_SRC_DIR ?>/required/post.php">
      
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script src="<?= HREF_SRC_DIR ?>/required/funzioak.js"></script>

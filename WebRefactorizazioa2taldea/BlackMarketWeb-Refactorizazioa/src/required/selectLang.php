@@ -1,5 +1,5 @@
 <form id="languageForm" method="post">
-    <select name="selectedLang">
+    <select id="selectHizkuntzaAukeratzeko" name="selectedLang">
         <!-- PHPko logika honekin formularioan zein hizkuntza agertzen den aukeratuta erabakiko dugu -->
         <option value="eus" <?php
                             
