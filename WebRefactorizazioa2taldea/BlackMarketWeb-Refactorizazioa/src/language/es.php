@@ -29,7 +29,7 @@ return [
     "ezdaudePro" => "No hay productos en la cesta",
     "erosEginda" => "La compra ha sido realizada",
     "ErroreaDatu'" => "Error al meter datos en la base de datos",
-    "DEFINITIBOAñ" => "DEFINITIBOA",
+    "Eskaerak" => "Pedidos",
     "DEFINITIBdOA" => "DEFINITIBOA",
     "DEFINITIBOdA" => "DEFINITIBOA",
     "DEFINITIBOfA" => "DEFINITIBOA",

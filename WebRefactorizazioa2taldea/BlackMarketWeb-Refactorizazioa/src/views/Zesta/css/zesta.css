@@ -1,9 +1,9 @@
 .background{
-    background-color: grey;
+    background-color: #555; /* Cambiado a gris oscuro */
     min-height: 100%;
 }
 .saskiaContainer{
-    background-color: white;
+    background-color: #555; /* Cambiado a blanco */
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 10px;
@@ -27,40 +27,39 @@
 }
 
 #sasProGord{
-    background-color: rgb(255, 255, 255);
+    background-color: #fff; /* Cambiado a blanco */
     width: 700px;
     min-height: 350px;
     margin: 20px;
-    border: rgb(138, 138, 138) 20px solid;
-
+    border: #8a8a8a 20px solid; /* Cambiado a gris */
 }
 
 #metodoDePago{
-    background-color: rgb(255, 255, 255);
+    background-color: #fff; /* Cambiado a blanco */
     width: 100%;
     height: 200px;
     margin: 20px;
-    border: rgb(138, 138, 138) 20px solid;
+    border: #8a8a8a 20px solid; /* Cambiado a gris */
 }
 .prezioaEskubitanJartzeko{
     display: flex;
     justify-content:end;
 }
 .saskikoKajak{
-    background-color: rgb(233, 233, 233);
+    background-color: #e9e9e9; /* Cambiado a gris claro */
     row-gap: 1em;
 }
 
 .prezioakSaskia{
-    background-color: rgb(255, 255, 255);
+    background-color: #fff; /* Cambiado a blanco */
     width: 500px;
     max-height: 400px;
     margin: 20px;
-    border: rgb(138, 138, 138) 20px solid;
+    border: #8a8a8a 20px solid; /* Cambiado a gris */
 }
 .gastosEnvio{
-    background-color: rgb(0, 179, 255);
-    color: rgb(0, 0, 0);
+    background-color: #00b3ff; /* Cambiado a azul */
+    color: #000; /* Cambiado a negro */
 }
 #BidalketakoGastuakDiv,
  #prezioTotalaDiv,
@@ -76,31 +75,30 @@
 }
 
 .prezioaEskubitanJartzeko{
-    color: rgb(36, 13, 245);
+    color: #240df5; /* Cambiado a azul */
     text-decoration: double;
 }
 .kantitateaPro{
     color: red;
 }
 #erostekoBotoia{
-    background-color: rgb(7, 246, 7);
-    border-color:  rgb(7, 246, 7);
+    background-color: #07f607; /* Cambiado a verde */
+    border-color:  #07f607; /* Cambiado a verde */
     border-radius: 8px;
     color: white;
     height: 30px;
 }
 #erostekoBotoia:hover{
-    background-color:rgb(5, 242, 250);
-    border-color:  rgb(5, 242, 250);
+    background-color: #05f2fa; /* Cambiado a azul claro */
+    border-color:  #05f2fa; /* Cambiado a azul claro */
 }
 #erostekoBotoiaDiv{
     padding-left: 33%;
     padding-bottom: 15px;
-
 }
 .botoiaBorratzekoIndi{
-    background-color: rgb(246, 7, 7);
-    border-color:   rgb(246, 7, 7);
+    background-color: #f60707; /* Cambiado a rojo */
+    border-color:   #f60707; /* Cambiado a rojo */
     border-radius: 8px;
     color: white;
     height: 30px;
@@ -115,21 +113,18 @@
     height: 100px;
     width: 100px;
     padding: 3px;
-    background-color: rgb(245, 245, 245);
+    background-color: #f5f5f5; /* Cambiado a gris claro */
     border-radius: 15px;
     justify-self: center;
     text-align: center;
-
-
 }
 .aukerak:hover{
-    background-color: rgb(197, 197, 197);
+    background-color: #c5c5c5; /* Cambiado a gris más oscuro */
 }
 #img1MetoPag{
     height: 70px;
 }
 #img2MetoPag{
-
     height: 50px;
     width: 100px;
 }
@@ -140,15 +135,12 @@
 #paypalPago,
 #visaPago,
 #bizumPago{
-    background-color: rgb(255, 255, 255);
+    background-color: #fff; /* Cambiado a blanco */
     width: 80%;
     height: fit-content;
     margin: 20px;
-    border: rgb(138, 138, 138) 20px solid;
+    border: #8a8a8a 20px solid; /* Cambiado a gris */
 }
-
-
-
 
 .containerPatzeko {
     max-width: 400px;
@@ -158,8 +150,6 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-
 
 .form {
     margin-top: 20px;
@@ -183,7 +173,7 @@
 .botonPagar_3{
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #007bff; /* Cambiado a azul */
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -191,7 +181,7 @@
 }
 
 .botonPagar:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Cambiado a azul más oscuro */
 }
 .h2{
     text-align: center;

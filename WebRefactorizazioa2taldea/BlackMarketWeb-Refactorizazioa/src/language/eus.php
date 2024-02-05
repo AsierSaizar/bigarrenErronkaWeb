@@ -30,7 +30,7 @@ return [
     "ezdaudePro" => "Ez daude produktuak saskian",
     "erosEginda'" => "Erosketa egin da",
     "ErroreaDatu" => "Errorea datu basean sartzerakoan",
-    "DEFINITIBdOA" => "DEFINITIBOA",
+    "Eskaerak" => "Eskaerak",
     "DEFINITIBOdA" => "DEFINITIBOA",
     "DEFINITIBOfA" => "DEFINITIBOA",
     "DEFINITIsBOA" => "DEFINITIBOA",

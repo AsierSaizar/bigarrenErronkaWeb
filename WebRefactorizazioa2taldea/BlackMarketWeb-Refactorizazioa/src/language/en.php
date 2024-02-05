@@ -27,7 +27,7 @@ return [
     "ezdaudePro" => "No items in cart",
     "erosEginda'" => "The purchase has been made",
     "ErroreaDatu" => "Error when entering data in database",
-    "DEFINITIBdOA" => "DEFINITIBOA",
+    "Eskaerak" => "Orders",
     "DEFINITIBOdA" => "DEFINITIBOA",
     "DEFINITIBOfA" => "DEFINITIBOA",
     "DEFINITIsBOA" => "DEFINITIBOA",

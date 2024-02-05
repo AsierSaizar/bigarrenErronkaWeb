@@ -1,14 +1,15 @@
-        <link rel="stylesheet" type="text/css" href="../../../../src/views/Hornitzaileak/css/Hornitzaileak.css" media="screen" />
-        
-        
         <?php
         require_once("../../../required/header.php");
         ?>
+        <link rel="stylesheet" type="text/css" href="<?=HREF_SRC_DIR?>/views/Hornitzaileak/css/Hornitzaileak.css" media="screen" />
+        
+        
+        
  
         
 
         <div class="formularioa">
-            <h3><b><?= trans("HornitzaileaIzateko") ?>:</b></h3>
+            <h3 class="h3" ><b><?= trans("HornitzaileaIzateko") ?>:</b></h3>
             <form id="formularioaForm" method="post">
 
 

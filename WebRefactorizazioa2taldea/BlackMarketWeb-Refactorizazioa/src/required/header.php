@@ -50,17 +50,20 @@
                 </div>
                 <div class="offcanvas-body">
                     <div class="navMenu">
-                        <a class="menuNavBoton" href="../../../../src/views/index/php/index.php">
+                        <a class="menuNavBoton" href="<?= HREF_SRC_DIR ?>/views/index/php/index.php">
                             <?= trans("GuriBuruz") ?>
                         </a>
-                        <a class="menuNavBoton" href="../../../../src/views/konponenteak/php/pagina_konponenteak.php">
+                        <a class="menuNavBoton" href="<?= HREF_SRC_DIR ?>/views/konponenteak/php/pagina_konponenteak.php">
                             <?= trans("Konponenteak") ?>
                         </a>
-                        <a class="menuNavBoton" href="../../../../src/views/berriak/php/berriak.php">
+                        <a class="menuNavBoton" href="<?= HREF_SRC_DIR ?>/views/berriak/php/berriak.php">
                             <?= trans("Berriak") ?>
                         </a>
-                        <a class="menuNavBoton" href="../../../../src/views/Hornitzaileak/php/Hornitzaileak.php">
+                        <a class="menuNavBoton" href="<?= HREF_SRC_DIR ?>/views/Hornitzaileak/php/Hornitzaileak.php">
                             <?= trans("Hornitzaileak") ?>
+                        </a>
+                        <a class="menuNavBoton" href="<?= HREF_SRC_DIR ?>/views/eskaerak/php/eskaerak.php">
+                            <?= trans("Eskaerak") ?>
                         </a>
                     </div>
                     <br>
@@ -93,7 +96,7 @@
                 </div>
             </div>
             <div class="zestoaIkono">
-                <a href="../../../../src/views/Zesta/php/zesta.php"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="<?= HREF_SRC_DIR ?>/views/Zesta/php/zesta.php"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
 
         </nav>

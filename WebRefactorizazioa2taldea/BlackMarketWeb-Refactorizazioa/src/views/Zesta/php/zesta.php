@@ -1,7 +1,8 @@
-<link rel="stylesheet" type="text/css" href="../css/zesta.css" media="screen" />
+
 <?php
 require_once("../../../required/header.php");
 ?>
+<link rel="stylesheet" type="text/css" href="<?= HREF_SRC_DIR ?>/views/Zesta/css/zesta.css" media="screen" />
 <div class="background">
         <br>
         <div class="saskiaContainer">

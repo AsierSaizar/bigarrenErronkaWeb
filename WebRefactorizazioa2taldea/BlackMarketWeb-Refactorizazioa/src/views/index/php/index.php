@@ -1,9 +1,11 @@
 
-<link rel="stylesheet" type="text/css" href="../css/index.css" media="screen" />
         
         <?php
         require_once("../../../required/header.php");
         ?>
+        <link rel="stylesheet" type="text/css" href="<?= HREF_SRC_DIR ?>/views/index/css/index.css" media="screen" />
+        
+        
         
         <!-- ZER EGITEN DUGU? (hemen HASTEN da) -->
         <div class="main-content">

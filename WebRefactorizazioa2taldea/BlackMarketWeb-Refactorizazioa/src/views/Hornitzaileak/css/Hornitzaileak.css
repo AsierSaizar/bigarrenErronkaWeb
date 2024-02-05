@@ -1,4 +1,3 @@
-
 .myContainer {
   display: grid;
   grid-template-rows: auto auto 1fr;
@@ -7,7 +6,11 @@
 div.formularioa {
   align-self: center;
 }
-.formularioa>h3{
+body{
+  
+  background-color: #333;
+}
+.formularioa > h3 {
   text-align: center;
 }
 
@@ -15,7 +18,7 @@ div.formularioa {
     width: 60%;
     margin: 0 auto;
     padding: 20px;
-    background:#b1b1b1;
+    background: #111; /* Cambiado a negro */
     border-radius: 30px;
     grid-template-rows: repeat(30%, 300px);
   }
@@ -23,7 +26,7 @@ div.formularioa {
   label {
     display: block;
     margin-bottom: 8px;
-    color: #333;
+    color: #fff; /* Cambiado a blanco */
     font-weight: bold;
   }
   
@@ -33,21 +36,24 @@ div.formularioa {
     width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ffffff;
+    border: 1px solid #fff; /* Cambiado a blanco */
     border-radius: 20px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.7);
+    background: #333; /* Cambiado a negro */
+    color: #fff; /* Cambiado a blanco */
   }
   textarea{
-    
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ffffff;
+    border: 1px solid #fff; /* Cambiado a blanco */
     border-radius: 20px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.7);
     min-height: 40px;
     max-height: 40px;
     min-width: calc(100% - 20px);
     max-width: calc(100% - 20px);
+    background: #333; /* Cambiado a negro */
+    color: #fff; /* Cambiado a blanco */
   }
   input[type="submit"],
   input[type="reset"] {
@@ -57,11 +63,10 @@ div.formularioa {
     margin-top: 10px;
     border: none;
     border-radius: 20px;
-    background: linear-gradient(rgb(28, 177, 47), 10%, rgb(13, 207, 159));
+    background: linear-gradient(rgb(163, 163, 163), 10%, rgb(90, 90, 90));
     color: #fff;
     cursor: pointer;
     box-shadow: 2px 2px 2px 1px rgba(2, 2, 2, 0.7);
-
   }
   input[type="submit"]:hover,
   input[type="reset"]:hover {
@@ -74,11 +79,13 @@ div.formularioa {
   }
   input[type="reset"]:hover {
     background: #ff0404;
-    
   }
   
   input[type="submit"]:focus,
   input[type="reset"]:focus {
     outline: none;
   }
-  
+
+.h3{
+  color: #fff;
+}

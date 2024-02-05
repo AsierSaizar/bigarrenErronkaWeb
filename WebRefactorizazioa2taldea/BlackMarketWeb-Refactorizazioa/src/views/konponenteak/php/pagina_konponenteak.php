@@ -1,9 +1,11 @@
-<link rel="stylesheet" type="text/css" href="../../../../src/views/konponenteak/css/pagina_konponenteak.css"
-    media="screen" />
+
 
 <?php
 require_once("../../../required/header.php");
 ?>
+
+<link rel="stylesheet" type="text/css" href="<?= HREF_SRC_DIR ?>/views/konponenteak/css/pagina_konponenteak.css"
+    media="screen" />
 
 <div class="h1">
     <H1>

@@ -1,6 +1,6 @@
 .myContainer {
   min-height: 100vh;
-  background-color: whitesmoke;
+  background-color: #333; /* Cambiado a negro para que coincida con la paleta de colores */
 }
 .filtroForm {
   text-align: center;
@@ -8,7 +8,7 @@
 }
 
 .search-buttonFiltro {
-  background-color: grey;
+  background-color: #555; /* Cambiado a gris oscuro */
   border-radius: 6px;
   color: white;
   width: 60px;
@@ -26,7 +26,7 @@
 .filtroaFormDiv {
   border-radius: 20px;
   padding: 20px;
-  background-color: rgb(171, 169, 169);
+  background-color: #111; /* Cambiado a negro */
 }
 
 .myContainer > div.productuak {
@@ -55,7 +55,7 @@
   transition: border-radius, 0.3s;
   transition: background, 0.3s;
   border-radius: 20px;
-  background: #ffffff;
+  background: #a0a0a0; /* Cambiado a blanco */
   box-shadow: 2px 2px 2px 2px rgba(2, 2, 2, 0.5);
 }
 .myContainer > div.productuak > div:hover {
@@ -71,25 +71,25 @@ img {
 }
 
 .addToSaskia {
-  background-color: rgb(33, 29, 253);
-  border-color: rgb(33, 29, 253);
+  background-color: #2129fd; /* Cambiado a azul */
+  border-color: #2129fd; /* Cambiado a azul */
   border-radius: 3px;
-  color: rgb(255, 255, 255);
+  color: #fff; /* Cambiado a blanco */
   width: 200px;
   height: 35px;
   margin-bottom: 10px;
   position: -webkit-sticky;
 }
 .addToSaskia:hover {
-  background-color: rgb(137, 165, 250);
-  border-color: rgb(137, 165, 250);
+  background-color: #89a5fa; /* Cambiado a azul claro */
+  border-color: #89a5fa; /* Cambiado a azul claro */
   
 }
 .yaGehitutasaskia{
-  background-color: rgb(29, 253, 66);
-  border-color: rgb(29, 253, 66);
+  background-color: #1dfd42; /* Cambiado a verde */
+  border-color: #1dfd42; /* Cambiado a verde */
   border-radius: 3px;
-  color: rgb(255, 255, 255);
+  color: #fff; /* Cambiado a blanco */
   width: 200px;
   height: 35px;
   margin-bottom: 10px;
@@ -97,27 +97,32 @@ img {
 }
 
 .addToFavourite {
-  background-color: rgb(89, 129, 247);
-  border-color: rgb(89, 129, 247);
+  background-color: #5981f7; /* Cambiado a azul */
+  border-color: #5981f7; /* Cambiado a azul */
   border-radius: 3px;
-  color: rgb(255, 255, 255);
+  color: #fff; /* Cambiado a blanco */
   width: 50px;
   height: 35px;
   margin-bottom: 10px;
   position: -webkit-sticky;
 }
 .addToFavourite:hover {
-  background-color: rgb(137, 165, 250);
-  border-color: rgb(137, 165, 250);
+  background-color: #89a5fa; /* Cambiado a azul claro */
+  border-color: #89a5fa; /* Cambiado a azul claro */
 }
 .yaGehituta{
-    background-color: rgb(255, 232, 27);
-    border-color: rgb(255, 232, 27);
+    background-color: #ffe81b; /* Cambiado a amarillo */
+    border-color: #ffe81b; /* Cambiado a amarillo */
     border-radius: 3px;
-    color: rgb(255, 255, 255);
+    color: #fff; /* Cambiado a blanco */
     width: 50px;
     height: 35px;
     margin-bottom: 10px;
     position: -webkit-sticky;
 }
-
+label{
+  color: #fff;
+}
+h1{
+  color: #fff;
+}

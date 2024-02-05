@@ -2,7 +2,7 @@
 .myContainer {
     
     min-height: 100vh;
-    background-color:whitesmoke;
+    background-color: #333;
 } 
 .myContainer>div.BERRIAK{
     display: grid;
@@ -43,6 +43,7 @@
 }
 .h1{
     text-align: center;
+    color: #d6d6d6;
 }
 
 .myContainer>div.BERRIAK>table{
