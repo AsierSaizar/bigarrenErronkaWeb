@@ -1,6 +1,6 @@
 <?php
 return [
-
+ 
     "zestokoVistaPrevia" => "Vista previa de los productos de la cesta",
     "faboriton Lista" => "Productos favoritos",
     "saskia" => "Cesta",
@@ -30,12 +30,17 @@ return [
     "erosEginda" => "La compra ha sido realizada",
     "ErroreaDatu'" => "Error al meter datos en la base de datos",
     "Eskaerak" => "Pedidos",
-    "DEFINITIBdOA" => "DEFINITIBOA",
-    "DEFINITIBOdA" => "DEFINITIBOA",
-    "DEFINITIBOfA" => "DEFINITIBOA",
-    "DEFINITIsBOA" => "DEFINITIBOA",
-    "DEFINITIBsOA" => "DEFINITIBOA",
-
+    "RelleneEsteForEska" => "Mete los datos para ver tu pedido",
+    "NumeroDePedido" => "Numero de pedido",
+    "egoera" => "Situacion del pedido",
+    "eskaerarenPrezioTotal" => "Precio total del pedido",
+    "modelo" => "Modelo",
+    "kop" => "Cantidad",
+    "beteForm" => "Llena el formulario porfavor",
+    "bidali" => "Enviar",
+    "IngreseDNI" => "Ingrese su DNI",
+    "IngreseNUME" => "Ingrese el numero del pedido",
+    
     
 
     // index.php
@@ -60,7 +65,7 @@ return [
     "Berriak" => "Noticias",
     "Hornitzaileak" => "Proveedores",
     "Denak" => "Todos",
-    "Ez dago irizpide hauek betetzen dituet produkturik." => "No hay productos que cumplan estos criterios.",
+    "Ez dago irizpide hauek betetzen dituet produkturik." => "No hay pedidos que cumplan estos criterios.",
     "saskiraGehitu" => "Añadir a la cesta",
 
 

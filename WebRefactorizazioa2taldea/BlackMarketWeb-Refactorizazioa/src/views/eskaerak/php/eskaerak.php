@@ -5,26 +5,24 @@ require_once("../../../required/header.php");
 
 
 <div class="containerEskaerak">
-
-    <h2>Rellena este formulario para ver tu pedido</h2>
+    <h2><?= trans("RelleneEsteForEska") ?></h2>
     <form method="get">
         <div class="form-group">
             <label for="dni">DNI:</label>
-            <input type="text" id="dni" name="dni" placeholder="Ingrese su DNI" required>
+            <input type="text" id="dni" name="dni" placeholder="<?=trans('IngreseDNI')?>" required>
+        </div> 
+        <div class="form-group">
+            <label for="pedido"><?=trans('NumeroDePedido')?>:</label>
+            <input type="text" id="pedido" name="pedido" placeholder="<?=trans('IngreseNUME')?>" required>
         </div>
         <div class="form-group">
-            <label for="pedido">Número de Pedido:</label>
-            <input type="text" id="pedido" name="pedido" placeholder="Ingrese el número de pedido" required>
-        </div>
-        <div class="form-group">
-            <input type="submit" value="Enviar">
+            <input type="submit" value="<?=trans('bidali')?>">
         </div>
     </form>
-
 </div>
 <center>
 
-<div class="pedido">
+<div class="pedido"> 
     <?php
     if (isset($_GET['dni']) && isset($_GET['pedido'])) {
         $DNIeskaera = $_GET['dni'];
@@ -33,21 +31,24 @@ require_once("../../../required/header.php");
 
 
         echo "<b>DNI:<br></b> $DNIeskaera <br>";
-        echo "<b>Número de Pedido:<br></b> $IDeskaera <br>";
+        echo "<b>" .trans('NumeroDePedido'). ":<br></b> $IDeskaera <br>";
 
         require_once("../../../required/functions.php");
         $conn = connection();
-        $query = "select segimentua, prezioTotala from erronka2.saskia where id_eskaera=" . $IDeskaera . " 
+        $query = "select * from saskia where id_eskaera=" . $IDeskaera . " 
             and nan_bezeroa='" . $DNIeskaera . "'";
 
         $result = $conn->query($query);
+
+        $aukeraLanguage = $_SESSION["_LANGUAGE"];
+
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc()
                 ?>
-            <p><b>Eskaeraren egoera:</b> <br>
-                <?= $row["segimentua"] ?>
+            <p><b><?=trans('egoera')?>:</b><br>
+                <?= $row["segimentua_". $aukeraLanguage] ?>
             </p>
-            <p><b>Eskaeraren prezio totala:</b> <br>
+            <p><b><?=trans('eskaerarenPrezioTotal')?>:</b><br>
                 <?= $row["prezioTotala"] ?>€
             </p>
             <?php
@@ -57,16 +58,20 @@ require_once("../../../required/header.php");
             echo trans("Ez dago irizpide hauek betetzen dituet produkturik.");
         }
 
-        $query = "select b.modelo, a.kopurua, a.produktukoPrezioa from erronka2.produktueskaera a , erronka2.konponenteak b where (a.idProduktua = b.id) and (a.idEskaera=" . $IDeskaera . ");";
+        $query = "select b.modelo, a.kopurua, a.produktukoPrezioa from produktueskaera a , konponenteak b where (a.idProduktua = b.id) and (a.idEskaera=" . $IDeskaera . ");";
         $result = $conn->query($query);
         ?>
         <div class="containerEskaeraPro">
             <center>
 
-            <table id="tablaEskaera" border=5>
-            <tr><th><b>Modelo</b></th><th><b>Kopurua</b></th><th><b>Prezioa</b></th></tr>
+            
             <?php
+            
             if ($result->num_rows > 0) {
+                ?>
+                <table id="tablaEskaera" border=5>
+                <tr><th><b><?=trans('modelo')?></b></th><th><b><?=trans('kop')?></b></th><th><b><?=trans('Prezioa')?></b></th></tr>
+                <?php
                 while ($row = $result->fetch_assoc()) {
                     ?>
                     
@@ -90,7 +95,7 @@ require_once("../../../required/header.php");
         <?php
 
     } else {
-        echo "Por favor, rellene el formulario.";
+        echo trans('beteForm');
     }
     ?>
 </div>

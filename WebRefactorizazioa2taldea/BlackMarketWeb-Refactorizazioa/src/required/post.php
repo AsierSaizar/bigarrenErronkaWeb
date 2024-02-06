@@ -2,8 +2,6 @@
 
 session_start();
 
-
-
 if (isset($_POST["action"])) {
     switch ($_POST["action"]) {
         case "setInSession": {
@@ -61,7 +59,9 @@ if (isset($_POST["action"])) {
                 $telefono = $_POST["telefono"];
                 $helbidea = $_POST["helbidea"];
                 $dni = $_POST["dni"];
-                $egoera = "PROZESUAN";
+                $egoera_eus = "PROZESUAN";
+                $egoera_es = "EN PROCESO";
+                $egoera_en = "IN PROCESS";
 
                 require_once("functions.php");
 
@@ -75,10 +75,10 @@ if (isset($_POST["action"])) {
                 $stmt1 = $conn->prepare($sql);
                 $stmt1->bind_param("ssssss", $nombre, $abizena1, $abizena2, $dni, $helbidea, $telefono);
 
-                $sql = "INSERT INTO saskia (nan_bezeroa, segimentua, prezioTotala) VALUES (?, ?, ?);";
+                $sql = "INSERT INTO saskia (nan_bezeroa, segimentua_eus, segimentua_es, Segimentua_en, prezioTotala) VALUES (?, ?, ?, ?, ?);";
 
                 $stmt = $conn->prepare($sql);
-                $stmt->bind_param("sss", $dni, $egoera, $prezioTotala);
+                $stmt->bind_param("sssss", $dni, $egoera_eus, $egoera_es, $egoera_en, $prezioTotala);
 
                 if ($stmt->execute() && $stmt1->execute()) {
                     echo "Datuak zuzen gorde dira.";
@@ -157,7 +157,9 @@ if (isset($_POST["action"])) {
                 $telefono = $_POST["telefono"];
                 $helbidea = $_POST["helbidea"];
                 $dni = $_POST["dni"];
-                $egoera = "PROZESUAN";
+                $egoera_eus = "PROZESUAN";
+                $egoera_es = "EN PROCESO";
+                $egoera_en = "IN PROCESS";
 
 
                 require_once("functions.php");
@@ -174,9 +176,9 @@ if (isset($_POST["action"])) {
                 $stmt1->bind_param("ssssss", $nombre, $abizena1, $abizena2, $dni, $helbidea, $telefono);
 
 
-                $sql = "INSERT INTO saskia (nan_bezeroa, segimentua, prezioTotala) VALUES (?, ?, ?);";
+                $sql = "INSERT INTO saskia (nan_bezeroa, segimentua_eus, segimentua_es, Segimentua_en, prezioTotala) VALUES (?, ?, ?, ?, ?);";
                 $stmt = $conn->prepare($sql);
-                $stmt->bind_param("sss", $dni, $egoera, $prezioTotala);
+                $stmt->bind_param("sssss", $dni, $egoera_eus, $egoera_es, $egoera_en, $prezioTotala);
 
 
                 if ($stmt->execute() && $stmt1->execute()) {
@@ -255,7 +257,9 @@ if (isset($_POST["action"])) {
                 $banku_zenb = $_POST["banku_zenb"];
                 $helbidea = $_POST["helbidea"];
                 $dni = $_POST["dni"];
-                $egoera = "PROZESUAN";
+                $egoera_eus = "PROZESUAN";
+                $egoera_es = "EN PROCESO";
+                $egoera_en = "IN PROCESS";
 
                 require_once("functions.php");
 
@@ -273,9 +277,9 @@ if (isset($_POST["action"])) {
 
 
 
-                $sql = "INSERT INTO saskia (nan_bezeroa, segimentua, prezioTotala) VALUES (?, ?, ?);";
+                $sql = "INSERT INTO saskia (nan_bezeroa, segimentua_eus, segimentua_es, Segimentua_en, prezioTotala) VALUES (?, ?, ?, ?, ?);";
                 $stmt = $conn->prepare($sql);
-                $stmt->bind_param("sss", $dni, $egoera, $prezioTotala);
+                $stmt->bind_param("sssss", $dni, $egoera_eus, $egoera_es, $egoera_en, $prezioTotala);
 
 
                 if ($stmt->execute() && $stmt1->execute()) {
@@ -349,4 +353,3 @@ if (isset($_POST["action"])) {
 } else {
     echo "Error: Invalid action.";
 }
-

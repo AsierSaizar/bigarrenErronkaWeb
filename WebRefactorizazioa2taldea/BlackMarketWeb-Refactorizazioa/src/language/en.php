@@ -28,12 +28,18 @@ return [
     "erosEginda'" => "The purchase has been made",
     "ErroreaDatu" => "Error when entering data in database",
     "Eskaerak" => "Orders",
-    "DEFINITIBOdA" => "DEFINITIBOA",
-    "DEFINITIBOfA" => "DEFINITIBOA",
-    "DEFINITIsBOA" => "DEFINITIBOA",
-    "DEFINITIBsOA" => "DEFINITIBOA",
+    "RelleneEsteForEska" => "Enter the data to view your order",
+    "NumeroDePedido" => "Order number",
+    "egoera" => "Order situation",
+    "eskaerarenPrezioTotal" => "Total price of the order",
+    "modelo" => "Model",
+    "kop" => "Quantity",
+    "beteForm" => "Fill the form please",
+    "bidali" => "Send",
+    "IngreseDNI" => "Insert your DNI",
+    "IngreseNUME" => "Insert the order number",
 
-
+ 
 
     // index.php
     "OngiEtorri" => "Welcome to Black Market", 
@@ -58,7 +64,7 @@ return [
     "Berriak" => "News",
     "Hornitzaileak" => "Suppliers",
     "Denak" => "All",
-    "Ez dago irizpide hauek betetzen dituet produkturik." => "There are no products that meet these criteria.",
+    "Ez dago irizpide hauek betetzen dituet produkturik." => "There are no orders that meet these criteria.",
     "saskiraGehitu" => "Add to cart",
 
 

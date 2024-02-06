@@ -1,7 +1,7 @@
 <?php
 return [
     //ZESTA
-
+ 
 
     "zestokoVistaPrevia" => "Saskietako produktuen aurrebista", 
     "faboriton Lista" => "Gustuko productuak",
@@ -31,10 +31,17 @@ return [
     "erosEginda'" => "Erosketa egin da",
     "ErroreaDatu" => "Errorea datu basean sartzerakoan",
     "Eskaerak" => "Eskaerak",
-    "DEFINITIBOdA" => "DEFINITIBOA",
-    "DEFINITIBOfA" => "DEFINITIBOA",
-    "DEFINITIsBOA" => "DEFINITIBOA",
-    "DEFINITIBsOA" => "DEFINITIBOA",
+    "RelleneEsteForEska" => "Bete datuak zure eskaera ikusteko",
+    "NumeroDePedido" => "Eskaera zenbakia",
+    "egoera" => "Saskiaren egoera",
+    "eskaerarenPrezioTotal" => "Eskaeraren prezio totala",
+    "modelo" => "Modeloa",
+    "kop" => "Kopurua",
+    "beteForm" => "Mesedez bete formularioa",
+    "bidali" => "bidali",
+    "IngreseDNI" => "Sartu zure NAN-a",
+    "IngreseNUME" => "Sartu eskaeraren zenbakia",
+
 
 
     
@@ -63,7 +70,7 @@ return [
     "Berriak" => "Berriak",
     "Hornitzaileak" => "Hornitzaileak",
     "Denak" => "Denak",
-    "Ez dago irizpide hauek betetzen dituet produkturik." => "Ez dago irizpide hauek betetzen dituet produkturik.",
+    "Ez dago irizpide hauek betetzen dituet produkturik." => "Ez dago irizpide hauek betetzen dituen eskaerarik.",
     "saskiraGehitu" => "Saskira Gehitu",
 
 
