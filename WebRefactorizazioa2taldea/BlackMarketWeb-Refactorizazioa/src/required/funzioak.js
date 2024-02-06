@@ -12,20 +12,19 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!found) {
       var aukeraHizkuntzaSelect = $("#selectHizkuntzaAukeratzeko").val();
       switch (aukeraHizkuntzaSelect) {
-        case "eus":{
+        case "eus": {
           alert("Ez da aurkitu bilatutakoa.");
           break;
         }
-        case "es":{
+        case "es": {
           alert("No se encontraron coincidencias.");
           break;
         }
-        case "en":{
+        case "en": {
           alert("No matches found.");
           break;
         }
       }
-
     }
   }
 });
@@ -95,19 +94,18 @@ $(document).ready(function () {
 
     var aukeraHizkuntzaSelect = $("#selectHizkuntzaAukeratzeko").val();
     switch (aukeraHizkuntzaSelect) {
-      case "eus":{
+      case "eus": {
         alert(modelo + " saskian Sartu da");
         break;
       }
-      case "es":{
+      case "es": {
         alert(modelo + " se agrego a la cesta");
         break;
       }
-      case "en":{
+      case "en": {
         alert(modelo + " add to cart");
         break;
       }
-
     }
 
     var pModelo = $("<div><p>").text("Modelo: " + modelo);
@@ -140,15 +138,19 @@ $(document).ready(function () {
     if (!$("#metodoDePago").is(":hidden")) {
       var aukeraHizkuntzaSelect = $("#selectHizkuntzaAukeratzeko").val();
       switch (aukeraHizkuntzaSelect) {
-        case "eus":{
-          alert("Ordainketa martxan dago, ezin dituzu produktuak orain ezabatu");
+        case "eus": {
+          alert(
+            "Ordainketa martxan dago, ezin dituzu produktuak orain ezabatu"
+          );
           break;
         }
-        case "es":{
-          alert("La compra esta en proceso, no puedes borrar articulos en este momento");
+        case "es": {
+          alert(
+            "La compra esta en proceso, no puedes borrar articulos en este momento"
+          );
           break;
         }
-        case "en":{
+        case "en": {
           alert("Purchase is in process, you can't delete items right now");
           break;
         }
@@ -177,15 +179,15 @@ $(document).ready(function () {
     } else {
       var aukeraHizkuntzaSelect = $("#selectHizkuntzaAukeratzeko").val();
       switch (aukeraHizkuntzaSelect) {
-        case "eus":{
+        case "eus": {
           alert("Ez dago produkturik erosketa burutzeko");
           break;
         }
-        case "es":{
+        case "es": {
           alert("No hay ningun articulo para comprar");
           break;
         }
-        case "en":{
+        case "en": {
           alert("There is no item to buy");
           break;
         }
@@ -221,23 +223,30 @@ $(document).ready(function () {
       var telefono = $("#telefono_1").val();
       var helbidea = $("#helbidea_1").val();
       var dni = $("#dni_1").val();
-      var prezioTotalaDiv = $('#prezioTotalaZenbakiaDefini').text();
-      var prezioTotala = prezioTotalaDiv.replace('€', '');
-      
+      var prezioTotalaDiv = $("#prezioTotalaZenbakiaDefini").text();
+      var prezioTotala = prezioTotalaDiv.replace("€", "");
+
       var datosArray = {};
+      var preciosArray = {}; // Array para almacenar los precios
 
       // Iterar sobre cada div con la clase 'saskikoKajak'
       $(".saskikoKajak").each(function (index) {
         var id = $(this).attr("id").replace("kajasaskia", "");
+
+        // Obtener la cantidad
         var cantidad = $(this)
           .find('div[id^="prezioa"]')
           .text()
           .replace("x", "");
 
-       
-        datosArray[id] = parseInt(cantidad);
-      });
+        // Obtener el precio
+        var precio = $(this).find(".prezioProBakoitz").text().replace("€", "");
 
+        // Guardar la cantidad y el precio en los arrays respectivos
+        datosArray[id] = parseInt(cantidad);
+        preciosArray[id] = parseFloat(precio); // Convertir el precio a número flotante
+      });
+      console.log(preciosArray);
       console.log(datosArray);
 
       // Realizar la llamada AJAX a post.php
@@ -245,8 +254,9 @@ $(document).ready(function () {
         type: "POST",
         url: "../../../required/post.php",
         data: {
-          prezioTotala:prezioTotala,
-          erosketaData:datosArray,
+          preciosArray: preciosArray,
+          prezioTotala: prezioTotala,
+          erosketaData: datosArray,
           action: "erosi1Paypal",
           nombre: nombre,
           abizena1: abizena1,
@@ -289,25 +299,30 @@ $(document).ready(function () {
       var telefono = $("#telefono_2").val();
       var helbidea = $("#helbidea_2").val();
       var dni = $("#dni_2").val();
-      var prezioTotalaDiv = $('#prezioTotalaZenbakiaDefini').text();
-      var prezioTotala = prezioTotalaDiv.replace('€', '');
-      
-
+      var prezioTotalaDiv = $("#prezioTotalaZenbakiaDefini").text();
+      var prezioTotala = prezioTotalaDiv.replace("€", "");
 
       var datosArray = {};
+      var preciosArray = {}; // Array para almacenar los precios
 
       // Iterar sobre cada div con la clase 'saskikoKajak'
       $(".saskikoKajak").each(function (index) {
         var id = $(this).attr("id").replace("kajasaskia", "");
+
+        // Obtener la cantidad
         var cantidad = $(this)
           .find('div[id^="prezioa"]')
           .text()
           .replace("x", "");
 
-       
-        datosArray[id] = parseInt(cantidad);
-      });
+        // Obtener el precio
+        var precio = $(this).find(".prezioProBakoitz").text().replace("€", "");
 
+        // Guardar la cantidad y el precio en los arrays respectivos
+        datosArray[id] = parseInt(cantidad);
+        preciosArray[id] = parseFloat(precio); // Convertir el precio a número flotante
+      });
+      console.log(preciosArray);
       console.log(datosArray);
 
       // Realizar la llamada AJAX a post.php
@@ -315,8 +330,9 @@ $(document).ready(function () {
         type: "POST",
         url: "../../../required/post.php",
         data: {
-          prezioTotala:prezioTotala,
-          erosketaData:datosArray,
+          preciosArray: preciosArray,
+          prezioTotala: prezioTotala,
+          erosketaData: datosArray,
           action: "erosi2Bizum",
           nombre: nombre,
           abizena1: abizena1,
@@ -360,25 +376,30 @@ $(document).ready(function () {
       var banku_zenb = $("#banku_zenb_3").val();
       var helbidea = $("#helbidea_3").val();
       var dni = $("#dni_3").val();
-      var prezioTotalaDiv = $('#prezioTotalaZenbakiaDefini').text();
-      var prezioTotala = prezioTotalaDiv.replace('€', '');
-      
-
+      var prezioTotalaDiv = $("#prezioTotalaZenbakiaDefini").text();
+      var prezioTotala = prezioTotalaDiv.replace("€", "");
 
       var datosArray = {};
+      var preciosArray = {}; // Array para almacenar los precios
 
       // Iterar sobre cada div con la clase 'saskikoKajak'
       $(".saskikoKajak").each(function (index) {
         var id = $(this).attr("id").replace("kajasaskia", "");
+
+        // Obtener la cantidad
         var cantidad = $(this)
           .find('div[id^="prezioa"]')
           .text()
           .replace("x", "");
 
-       
-        datosArray[id] = parseInt(cantidad);
-      });
+        // Obtener el precio
+        var precio = $(this).find(".prezioProBakoitz").text().replace("€", "");
 
+        // Guardar la cantidad y el precio en los arrays respectivos
+        datosArray[id] = parseInt(cantidad);
+        preciosArray[id] = parseFloat(precio); // Convertir el precio a número flotante
+      });
+      console.log(preciosArray);
       console.log(datosArray);
 
       // Realizar la llamada AJAX a post.php
@@ -386,8 +407,9 @@ $(document).ready(function () {
         type: "POST",
         url: "../../../required/post.php",
         data: {
-          prezioTotala:prezioTotala,
-          erosketaData:datosArray,
+          preciosArray: preciosArray,
+          prezioTotala: prezioTotala,
+          erosketaData: datosArray,
           action: "erosi3Visa",
           nombre: nombre,
           abizena1: abizena1,
@@ -441,20 +463,19 @@ $(document).ready(function () {
     if (!allFilled) {
       var aukeraHizkuntzaSelect = $("#selectHizkuntzaAukeratzeko").val();
       switch (aukeraHizkuntzaSelect) {
-        case "eus":{
+        case "eus": {
           alert("Bete hutsune guztiak mesedez.");
           break;
         }
-        case "es":{
+        case "es": {
           alert("Por favor, rellene todos los campos.");
           break;
         }
-        case "en":{
+        case "en": {
           alert("Fill all the gaps please");
           break;
         }
       }
-
     }
 
     return allFilled;
@@ -546,20 +567,23 @@ function idatziSaskian(parsedSaskiZerrenda) {
     if (!$("#metodoDePago").is(":hidden")) {
       var aukeraHizkuntzaSelect = $("#selectHizkuntzaAukeratzeko").val();
       switch (aukeraHizkuntzaSelect) {
-        case "eus":{
-          alert("Ordainketa martxan dago, ezin dituzu produktuak orain ezabatu");
+        case "eus": {
+          alert(
+            "Ordainketa martxan dago, ezin dituzu produktuak orain ezabatu"
+          );
           break;
         }
-        case "es":{
-          alert("La compra esta en proceso, no puedes borrar articulos en este momento");
+        case "es": {
+          alert(
+            "La compra esta en proceso, no puedes borrar articulos en este momento"
+          );
           break;
         }
-        case "en":{
+        case "en": {
           alert("Purchase is in process, you can't delete items right now");
           break;
         }
       }
-      
     } else {
       var postDir = $("#postDir").val();
       var idDelBoton = $(this).attr("id");

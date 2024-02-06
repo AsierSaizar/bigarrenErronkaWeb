@@ -1,4 +1,3 @@
-
 <?php
 require_once("../../../required/header.php");
 ?>
@@ -66,7 +65,9 @@ require_once("../../../required/header.php");
                                 </div>
                         </div>
                         <div id="metodoDePago">
-                                <h2><?= trans("Haukeratu ordainketa burutzeko metodoa") ?>:</h2>
+                                <h2>
+                                        <?= trans("Haukeratu ordainketa burutzeko metodoa") ?>:
+                                </h2>
                                 <div id="aukerak">
                                         <div id="paypal" class="aukerak">Paypal<br><img id="img1MetoPag"
                                                         src="../../../../public/Paypal.png">
@@ -84,29 +85,41 @@ require_once("../../../required/header.php");
                                 <h2 class="h2">PAYPAL</h2>
                                 <div class="containerPatzeko">
 
-                                        <label class="label" for="nombre"><?= trans("Izena") ?>:</label>
+                                        <label class="label" for="nombre">
+                                                <?= trans("Izena") ?>:
+                                        </label>
                                         <input class="patzekoInputak" type="text" id="nombre_1" name="nombre" required>
 
-                                        <label class="label" for="abizena1"><?= trans("abizena1") ?>:</label>
+                                        <label class="label" for="abizena1">
+                                                <?= trans("abizena1") ?>:
+                                        </label>
                                         <input class="patzekoInputak" type="text" id="abizena1_1" name="abizena1"
                                                 required>
 
-                                        <label class="label" for="abizena2"><?= trans("abizena2") ?>:</label>
+                                        <label class="label" for="abizena2">
+                                                <?= trans("abizena2") ?>:
+                                        </label>
                                         <input class="patzekoInputak" type="text" id="abizena2_1" name="abizena2"
                                                 required>
 
-                                        <label class="label" for="telefono"><?= trans("telefono") ?>:</label>
+                                        <label class="label" for="telefono">
+                                                <?= trans("telefono") ?>:
+                                        </label>
                                         <input class="patzekoInputak" type="number" id="telefono_1" name="telefono"
                                                 required>
 
-                                        <label class="label" for="helbidea"><?= trans("helbidea") ?>:</label>
+                                        <label class="label" for="helbidea">
+                                                <?= trans("helbidea") ?>:
+                                        </label>
                                         <input class="patzekoInputak" type="text" id="helbidea_1" name="helbidea"
                                                 required>
 
                                         <label class="label" for="dni">Dni:</label>
                                         <input class="patzekoInputak" type="text" id="dni_1" name="dni" required>
 
-                                        <button type="submit" class="botonPagar_1"><?= trans("PagarCon") ?> Paypal</button>
+                                        <button type="submit" class="botonPagar_1">
+                                                <?= trans("PagarCon") ?> Paypal
+                                        </button>
 
                                 </div>
                         </div>
@@ -114,29 +127,41 @@ require_once("../../../required/header.php");
                                 <h2 class="h2">BIZUM</h2>
                                 <div class="containerPatzeko">
 
-                                        <label class="label" for="nombre"><?= trans("Izena") ?>:</label>
+                                        <label class="label" for="nombre">
+                                                <?= trans("Izena") ?>:
+                                        </label>
                                         <input class="patzekoInputak" type="text" id="nombre_2" name="nombre" required>
 
-                                        <label class="label" for="abizena1"><?= trans("abizena1") ?>:</label>
+                                        <label class="label" for="abizena1">
+                                                <?= trans("abizena1") ?>:
+                                        </label>
                                         <input class="patzekoInputak" type="text" id="abizena1_2" name="abizena1"
                                                 required>
 
-                                        <label class="label" for="abizena2"><?= trans("abizena2") ?>:</label>
+                                        <label class="label" for="abizena2">
+                                                <?= trans("abizena2") ?>:
+                                        </label>
                                         <input class="patzekoInputak" type="text" id="abizena2_2" name="abizena2"
                                                 required>
 
-                                        <label class="label" for="telefono"><?= trans("telefono") ?>:</label>
+                                        <label class="label" for="telefono">
+                                                <?= trans("telefono") ?>:
+                                        </label>
                                         <input class="patzekoInputak" type="number" id="telefono_2" name="telefono"
                                                 required>
 
-                                        <label class="label" for="helbidea"><?= trans("helbidea") ?>:</label>
+                                        <label class="label" for="helbidea">
+                                                <?= trans("helbidea") ?>:
+                                        </label>
                                         <input class="patzekoInputak" type="text" id="helbidea_2" name="helbidea"
                                                 required>
 
                                         <label class="label" for="dni">Dni:</label>
                                         <input class="patzekoInputak" type="text" id="dni_2" name="dni" required>
 
-                                        <button type="submit" class="botonPagar_2"><?= trans("PagarCon") ?> Bizum</button>
+                                        <button type="submit" class="botonPagar_2">
+                                                <?= trans("PagarCon") ?> Bizum
+                                        </button>
 
                                 </div>
 
@@ -146,33 +171,47 @@ require_once("../../../required/header.php");
                                 <h2 class="h2">VISA</h2>
                                 <div class="containerPatzeko">
 
-                                        <label class="label" for="nombre"><?= trans("Izena") ?>:</label>
+                                        <label class="label" for="nombre">
+                                                <?= trans("Izena") ?>:
+                                        </label>
                                         <input class="patzekoInputak" type="text" id="nombre_3" name="nombre" required>
 
-                                        <label class="label" for="abizena1"><?= trans("abizena1") ?>:</label>
+                                        <label class="label" for="abizena1">
+                                                <?= trans("abizena1") ?>:
+                                        </label>
                                         <input class="patzekoInputak" type="text" id="abizena1_3" name="abizena1"
                                                 required>
 
-                                        <label class="label" for="abizena2"><?= trans("abizena2") ?>:</label>
+                                        <label class="label" for="abizena2">
+                                                <?= trans("abizena2") ?>:
+                                        </label>
                                         <input class="patzekoInputak" type="text" id="abizena2_3" name="abizena2"
                                                 required>
 
-                                        <label class="label" for="telefono"><?= trans("telefono") ?>:</label>
+                                        <label class="label" for="telefono">
+                                                <?= trans("telefono") ?>:
+                                        </label>
                                         <input class="patzekoInputak" type="number" id="telefono_3" name="telefono"
                                                 required>
 
-                                        <label class="label" for="banku_zenb"><?= trans("bankuZenb") ?>:</label>
+                                        <label class="label" for="banku_zenb">
+                                                <?= trans("bankuZenb") ?>:
+                                        </label>
                                         <input class="patzekoInputak" type="number" id="banku_zenb_3" name="banku_zenb"
                                                 required>
 
-                                        <label class="label" for="helbidea"><?= trans("helbidea") ?>:</label>
+                                        <label class="label" for="helbidea">
+                                                <?= trans("helbidea") ?>:
+                                        </label>
                                         <input class="patzekoInputak" type="text" id="helbidea_3" name="helbidea"
                                                 required>
 
                                         <label class="label" for="dni">Dni:</label>
                                         <input class="patzekoInputak" type="text" id="dni_3" name="dni" required>
 
-                                        <button type="submit" class="botonPagar_3"><?= trans("PagarCon") ?> Visa</button>
+                                        <button type="submit" class="botonPagar_3">
+                                                <?= trans("PagarCon") ?> Visa
+                                        </button>
 
                                 </div>
 
@@ -187,3 +226,5 @@ require_once("../../../required/header.php");
 
 
         </div>
+
+        

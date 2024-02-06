@@ -53,6 +53,7 @@ if (isset($_POST["action"])) {
         case "erosi1Paypal": {
                 $erosketaData = $_POST["erosketaData"];
                 $prezioTotala = $_POST["prezioTotala"];
+                $preciosArray = $_POST["preciosArray"];
 
                 $nombre = $_POST["nombre"];
                 $abizena1 = $_POST["abizena1"];
@@ -60,7 +61,7 @@ if (isset($_POST["action"])) {
                 $telefono = $_POST["telefono"];
                 $helbidea = $_POST["helbidea"];
                 $dni = $_POST["dni"];
-                $egoera = "PRAZESUAN";
+                $egoera = "PROZESUAN";
 
                 require_once("functions.php");
 
@@ -93,8 +94,10 @@ if (isset($_POST["action"])) {
                 while ($row = $result->fetch_assoc()) {
                     $id_eskaera = $row["id_eskaera"];
                 }
+                
+                echo "\nZure eskaeraren zenbakia:" . $id_eskaera;
 
-                $sql = "INSERT INTO produktueskaera(ideskaera, idProduktua, Kopurua) VALUES (?, ?, ?)";
+                $sql = "INSERT INTO produktueskaera(ideskaera, idProduktua, Kopurua, produktukoPrezioa) VALUES (?, ?, ?, ?)";
                 $stmt3 = $conn->prepare($sql);
 
                 // Verificar si la preparación de la consulta fue exitosa
@@ -104,8 +107,9 @@ if (isset($_POST["action"])) {
                 }
                 // Iterar sobre el array
                 foreach ($erosketaData as $idProduktua => $Kopurua) {
+                    $valuePrecioa = $preciosArray[$idProduktua];
                     // Asignar los valores y ejecutar la consulta
-                    $stmt3->bind_param("iii", $id_eskaera, $idProduktua, $Kopurua);
+                    $stmt3->bind_param("iiii", $id_eskaera, $idProduktua, $Kopurua, $valuePrecioa);
                     $result = $stmt3->execute();
 
                     // Verificar si la ejecución de la consulta fue exitosa
@@ -115,7 +119,7 @@ if (isset($_POST["action"])) {
                     }
                 }
 
-
+                
 
 
                 // Iterar sobre el array
@@ -145,6 +149,7 @@ if (isset($_POST["action"])) {
         case "erosi2Bizum": {
                 $erosketaData = $_POST["erosketaData"];
                 $prezioTotala = $_POST["prezioTotala"];
+                $preciosArray = $_POST["preciosArray"];
 
                 $nombre = $_POST["nombre"];
                 $abizena1 = $_POST["abizena1"];
@@ -152,7 +157,7 @@ if (isset($_POST["action"])) {
                 $telefono = $_POST["telefono"];
                 $helbidea = $_POST["helbidea"];
                 $dni = $_POST["dni"];
-                $egoera = "PRAZESUAN";
+                $egoera = "PROZESUAN";
 
 
                 require_once("functions.php");
@@ -188,7 +193,8 @@ if (isset($_POST["action"])) {
                     $id_eskaera = $row["id_eskaera"];
                 }
 
-                $sql = "INSERT INTO produktueskaera(ideskaera, idProduktua, Kopurua) VALUES (?, ?, ?)";
+                echo "\nZure eskaeraren zenbakia:" . $id_eskaera;
+                $sql = "INSERT INTO produktueskaera(ideskaera, idProduktua, Kopurua, produktukoPrezioa) VALUES (?, ?, ?, ?)";
                 $stmt3 = $conn->prepare($sql);
 
                 // Verificar si la preparación de la consulta fue exitosa
@@ -198,8 +204,9 @@ if (isset($_POST["action"])) {
                 }
                 // Iterar sobre el array
                 foreach ($erosketaData as $idProduktua => $Kopurua) {
+                    $valuePrecioa = $preciosArray[$idProduktua];
                     // Asignar los valores y ejecutar la consulta
-                    $stmt3->bind_param("iii", $id_eskaera, $idProduktua, $Kopurua);
+                    $stmt3->bind_param("iiii", $id_eskaera, $idProduktua, $Kopurua, $valuePrecioa);
                     $result = $stmt3->execute();
 
                     // Verificar si la ejecución de la consulta fue exitosa
@@ -239,6 +246,7 @@ if (isset($_POST["action"])) {
         case "erosi3Visa": {
                 $erosketaData = $_POST["erosketaData"];
                 $prezioTotala = $_POST["prezioTotala"];
+                $preciosArray = $_POST["preciosArray"];
 
                 $nombre = $_POST["nombre"];
                 $abizena1 = $_POST["abizena1"];
@@ -247,7 +255,7 @@ if (isset($_POST["action"])) {
                 $banku_zenb = $_POST["banku_zenb"];
                 $helbidea = $_POST["helbidea"];
                 $dni = $_POST["dni"];
-                $egoera = "PRAZESUAN";
+                $egoera = "PROZESUAN";
 
                 require_once("functions.php");
 
@@ -284,7 +292,9 @@ if (isset($_POST["action"])) {
                     $id_eskaera = $row["id_eskaera"];
                 }
 
-                $sql = "INSERT INTO produktueskaera(ideskaera, idProduktua, Kopurua) VALUES (?, ?, ?)";
+                echo "\nZure eskaeraren zenbakia:" . $id_eskaera;
+
+                $sql = "INSERT INTO produktueskaera(ideskaera, idProduktua, Kopurua, produktukoPrezioa) VALUES (?, ?, ?, ?)";
                 $stmt3 = $conn->prepare($sql);
 
                 // Verificar si la preparación de la consulta fue exitosa
@@ -294,8 +304,9 @@ if (isset($_POST["action"])) {
                 }
                 // Iterar sobre el array
                 foreach ($erosketaData as $idProduktua => $Kopurua) {
+                    $valuePrecioa = $preciosArray[$idProduktua];
                     // Asignar los valores y ejecutar la consulta
-                    $stmt3->bind_param("iii", $id_eskaera, $idProduktua, $Kopurua);
+                    $stmt3->bind_param("iiii", $id_eskaera, $idProduktua, $Kopurua, $valuePrecioa);
                     $result = $stmt3->execute();
 
                     // Verificar si la ejecución de la consulta fue exitosa

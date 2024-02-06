@@ -51,19 +51,19 @@
                 <div class="offcanvas-body">
                     <div class="navMenu">
                         <a class="menuNavBoton" href="<?= HREF_SRC_DIR ?>/views/index/php/index.php">
-                            <?= trans("GuriBuruz") ?>
+                            <i class="fa-solid fa-circle-info"></i>  <?= trans("GuriBuruz") ?>
                         </a>
                         <a class="menuNavBoton" href="<?= HREF_SRC_DIR ?>/views/konponenteak/php/pagina_konponenteak.php">
-                            <?= trans("Konponenteak") ?>
+                            <i class="fa-solid fa-laptop"></i>  <?= trans("Konponenteak") ?>
                         </a>
                         <a class="menuNavBoton" href="<?= HREF_SRC_DIR ?>/views/berriak/php/berriak.php">
-                            <?= trans("Berriak") ?>
+                            <i class="fa-solid fa-newspaper"></i>  <?= trans("Berriak") ?>
                         </a>
                         <a class="menuNavBoton" href="<?= HREF_SRC_DIR ?>/views/Hornitzaileak/php/Hornitzaileak.php">
-                            <?= trans("Hornitzaileak") ?>
+                            <i class="fa-solid fa-truck-field"></i>  <?= trans("Hornitzaileak") ?>
                         </a>
                         <a class="menuNavBoton" href="<?= HREF_SRC_DIR ?>/views/eskaerak/php/eskaerak.php">
-                            <?= trans("Eskaerak") ?>
+                            <i class="fa-solid fa-cart-arrow-down"></i>  <?= trans("Eskaerak") ?>
                         </a>
                     </div>
                     <br>
