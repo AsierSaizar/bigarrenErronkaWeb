@@ -61,7 +61,7 @@ require_once("../../../required/header.php");
         $query = "select b.modelo, a.kopurua, a.produktukoPrezioa from produktueskaera a , konponenteak b where (a.idProduktua = b.id) and (a.idEskaera=" . $IDeskaera . ");";
         $result = $conn->query($query);
         ?>
-        <div class="containerEskaeraPro">
+        <div class="containerEskaeraPro"> 
             <center>
 
             

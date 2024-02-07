@@ -108,8 +108,7 @@ $(document).ready(function () {
       }
     }
 
-    var pModelo = $("<div><p>").text("Modelo: " + modelo);
-    var pPrecio = $("<p>").text("Precio: " + precio + "€");
+
 
     saskikoProductuakGordetzekoLekua =
       saskikoProductuakGordetzekoLekua +
