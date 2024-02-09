@@ -18,7 +18,7 @@
     define('HREF_VIEWS_DIR', '/Desktop/WebRefactorizazioa/WebRefactorizazioa2taldea/BlackMarketWeb-Refactorizazioa/src/views'); //Aplikazioaren views karpeta edozein lekutatik deitzeko
     define('HREF_SRC_DIR', '/Desktop/WebRefactorizazioa/WebRefactorizazioa2taldea/BlackMarketWeb-Refactorizazioa/src'); //Aplikazioaren views karpeta edozein lekutatik deitzeko
 
-    ?>
+    ?><!--HAU ALDATU BEHAR DA SERVIDOREAN!!!!!!!-->
 
     <!-- servidorea pasatzeakon aldatu hau!!!!!!!! -->
 

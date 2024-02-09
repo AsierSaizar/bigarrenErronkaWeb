@@ -77,12 +77,12 @@ $(document).ready(function () {
     }
   });
 });
- 
+
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //      SASKIA GEHITZEKOSCRIPTA:
 
 $(document).ready(function () {
-  getInPHPSession("saskikoGauzak", idatziSaskian); /////////////////
+  getInPHPSession("saskikoGauzak", idatziSaskian);
 
   $(".saskiaBotoia").click(function () {
     var id = $(this).siblings("#id").val();
@@ -107,8 +107,6 @@ $(document).ready(function () {
         break;
       }
     }
-
-
 
     saskikoProductuakGordetzekoLekua =
       saskikoProductuakGordetzekoLekua +
@@ -477,6 +475,11 @@ $(document).ready(function () {
       }
     }
 
+
+
+
+
+
     return allFilled;
   }
 });
@@ -484,7 +487,7 @@ $(document).ready(function () {
 function setInPHPSession(sessionKey, sessionValue, idProduct) {
   var postDir = $("#postDir").val();
   var balioa = "setInSession";
-
+s
   $.ajax({
     url: postDir,
     type: "POST",
